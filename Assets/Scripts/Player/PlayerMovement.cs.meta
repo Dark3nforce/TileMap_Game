@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e4f5e1bab3971834687a9da4da8b2f9d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - northSprite: {fileID: 1750363475519744411, guid: dbf833bb1856d49408cdabe5bd24954a,
+      type: 3}
+  - eastSprite: {fileID: -946733402834906574, guid: dbf833bb1856d49408cdabe5bd24954a,
+      type: 3}
+  - southSprite: {fileID: -2788236152951045596, guid: dbf833bb1856d49408cdabe5bd24954a,
+      type: 3}
+  - westSprite: {fileID: 3919701827104124988, guid: dbf833bb1856d49408cdabe5bd24954a,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
