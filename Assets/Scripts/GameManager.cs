@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
 
         Debug.Log(battlePokemon.name);
 
-        player.GetComponent<PlayerMovement>().isAllowedToMove = false;
+       // player.GetComponent<PlayerMovement>().isAllowedToMove = false;
 
         GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
 

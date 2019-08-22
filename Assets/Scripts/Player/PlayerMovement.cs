@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
@@ -103,4 +103,54 @@ enum Direction
     East,
     South,
     West
+}*/
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour
+{
+    public float speed;
+    private Rigidbody2D myRigidBod;
+    private Vector3 change;
+    private Animator Ani;
+    // Start is called before the first frame update
+    void Start()
+    {
+        Ani = GetComponent<Animator>();
+        myRigidBod = GetComponent<Rigidbody2D>();
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        change = Vector3.zero;
+        change.x = Input.GetAxisRaw("Horizontal");
+        change.y = Input.GetAxisRaw("Vertical");
+        AnimateMove();
+
+
+    }
+    void AnimateMove()
+    {
+        if (change != Vector3.zero)
+        {
+            Move();
+            Ani.SetFloat("inputX", change.x);
+            Ani.SetFloat("inputY", change.y);
+            Ani.SetBool("moving", true);
+        }
+        else
+        {
+            Ani.SetBool("moving", false);
+        }
+    }
+    void Move()
+    {
+        myRigidBod.MovePosition(
+            transform.position + change * speed * Time.deltaTime
+            );
+    }
 }

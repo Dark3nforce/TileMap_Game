@@ -4,14 +4,10 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - northSprite: {fileID: 1750363475519744411, guid: dbf833bb1856d49408cdabe5bd24954a,
-      type: 3}
-  - eastSprite: {fileID: -946733402834906574, guid: dbf833bb1856d49408cdabe5bd24954a,
-      type: 3}
-  - southSprite: {fileID: -2788236152951045596, guid: dbf833bb1856d49408cdabe5bd24954a,
-      type: 3}
-  - westSprite: {fileID: 3919701827104124988, guid: dbf833bb1856d49408cdabe5bd24954a,
-      type: 3}
+  - northSprite: {fileID: 21300000, guid: dbf833bb1856d49408cdabe5bd24954a, type: 3}
+  - eastSprite: {instanceID: 0}
+  - southSprite: {instanceID: 0}
+  - westSprite: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
