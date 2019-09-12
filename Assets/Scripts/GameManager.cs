@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour {
     public Transform attackPodium;
     public GameObject emptyPoke;
 
+    public BattleManager bm;
+
 	void Start () {
         playerCamera.SetActive(true);
         battleCamera.SetActive(false);
@@ -44,6 +46,8 @@ public class GameManager : MonoBehaviour {
         tempPoke.AddMember(battlePokemon);
 
         dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.image;
+
+        bm.changeMenu(BattleMenu.Selection);
 
     }
 

@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 81718372}
   - component: {fileID: 81718371}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: Pokemon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 86039731}
   - component: {fileID: 86039730}
   - component: {fileID: 86039729}
+  - component: {fileID: 86039732}
   m_Layer: 5
   m_Name: Battle Camera
   m_TagString: Untagged
@@ -441,6 +442,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &86039732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86039728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6cf3c2dce7864f9698f58d35f6d0ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMenu: 0
+  SelectionMenu: {fileID: 1609772892}
+  SelectionInfo: {fileID: 988007665}
+  SelectionInfoText: {fileID: 1586617248}
+  fight: {fileID: 304121303}
+  bag: {fileID: 2038974735}
+  pokemon: {fileID: 81718371}
+  run: {fileID: 105182485}
+  movesMenu: {fileID: 547562923}
+  movesDetails: {fileID: 1954950339}
+  PP: {fileID: 1924513241}
+  pType: {fileID: 633374370}
+  Move1: {fileID: 1682478293}
+  Move2: {fileID: 898901952}
+  Move3: {fileID: 535912715}
+  Move4: {fileID: 510881740}
+  InfoMenu: {fileID: 1932656519}
+  InfoText: {fileID: 1836835228}
+  currentSelection: 0
 --- !u!1 &105182483
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +485,7 @@ GameObject:
   - component: {fileID: 105182486}
   - component: {fileID: 105182485}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: Run
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,7 +784,7 @@ GameObject:
   - component: {fileID: 304121304}
   - component: {fileID: 304121303}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Fight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2884,6 +2916,7 @@ MonoBehaviour:
   attackPodium: {fileID: 904013589}
   emptyPoke: {fileID: 8677351444709367626, guid: f9d9da25ce293f84b9e275d41892f70f,
     type: 3}
+  bm: {fileID: 86039732}
 --- !u!4 &1965821308
 Transform:
   m_ObjectHideFlags: 0
@@ -2910,7 +2943,7 @@ GameObject:
   - component: {fileID: 2038974736}
   - component: {fileID: 2038974735}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Bag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
