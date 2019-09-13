@@ -1,10 +1,11 @@
 # TileMap_Game
 
-Introduction
+**Introduction**
+
 2D Top down Open World Video Game, similar to Pokemon with the teams own creative story , save points/checkpoints, a map, side quests and a main story for users to follow.
 
 
-Requirements, Features and Priorities
+**Requirements, Features and Priorities**
 
 Character Animations - user needs to be able to move around the game and it takes very little time to create blend trees and have characters animated/moving around
 
