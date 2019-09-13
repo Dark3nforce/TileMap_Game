@@ -30,5 +30,7 @@ Game was made in Unity and written in C#.
 **The Sqaud**
 
 Joseph Zoretic
+
 Lukas Walsh
+
 Shawna Cassagnol
