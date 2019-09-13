@@ -4,6 +4,8 @@
 
 2D Top down Open World Video Game, similar to Pokemon with the teams own creative story , save points/checkpoints, a map, side quests and a main story for users to follow.
 
+![hometown](https://user-images.githubusercontent.com/46454791/64890609-0fa07080-d63e-11e9-9c0f-fd0030b5710b.png)
+
 
 **Requirements, Features and Priorities**
 
