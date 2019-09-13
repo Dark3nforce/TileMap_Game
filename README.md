@@ -25,3 +25,4 @@ Side Quests - gives users more to play and possibly expand on the map.
 
 Connecting Firebase to Unity to have a username and password - users are able to save or delete data that way they don’t have to start at the beginning every time they play.
 
+Game was made in Unity and written in C#. 
