@@ -115,14 +115,14 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D myRigidBod;
     private Vector3 change;
     private Animator Ani;
-    AudioSource music;
+  //  AudioSource music;
     
     // Start is called before the first frame update
     void Start()
     {
         Ani = GetComponent<Animator>();
         myRigidBod = GetComponent<Rigidbody2D>();
-        AudioSource music = GetComponent<AudioSource>();
+       // AudioSource music = GetComponent<AudioSource>();
 
     }
 
@@ -132,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
-        music.Play();
+       // music.Play();
         AnimateMove();
 
     }
