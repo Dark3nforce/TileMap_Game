@@ -473,6 +473,10 @@ MonoBehaviour:
   InfoMenu: {fileID: 1932656519}
   InfoText: {fileID: 1836835228}
   currentSelection: 0
+  defencePodium: {fileID: 1318166611}
+  attackPodium: {fileID: 904013589}
+  emptyPoke: {fileID: 8677351444709367626, guid: f9d9da25ce293f84b9e275d41892f70f,
+    type: 3}
 --- !u!1 &105182483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1491,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -197.52502, y: 46.600006}
+  m_AnchoredPosition: {x: -197.52501, y: 46.600006}
   m_SizeDelta: {x: -405, y: 88.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988007667
@@ -2899,11 +2903,6 @@ MonoBehaviour:
   - {fileID: 4258350337317684576, guid: 202fc7eedec77ef4d82146c638f3b46b, type: 3}
   - {fileID: 2405054582829893953, guid: 519b6c2dd27077144b25a1f0b108093d, type: 3}
   allMoves: []
-  defencePodium: {fileID: 1318166611}
-  attackPodium: {fileID: 904013589}
-  emptyPoke: {fileID: 8677351444709367626, guid: f9d9da25ce293f84b9e275d41892f70f,
-    type: 3}
-  bm: {fileID: 86039732}
 --- !u!4 &1965821308
 Transform:
   m_ObjectHideFlags: 0

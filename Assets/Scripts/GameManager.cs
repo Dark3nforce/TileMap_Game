@@ -14,49 +14,67 @@ public class GameManager : MonoBehaviour {
     public List<BasePokemon> allPokemon = new List<BasePokemon>();
     public List<PokemonMoves> allMoves = new List<PokemonMoves>();
 
-    public Transform defencePodium;
-    public Transform attackPodium;
-    public GameObject emptyPoke;
+    // private Transform defencePodium;
+    // private Transform attackPodium;
+    // public GameObject emptyPoke;
 
-    public BattleManager bm;
+    private BattleManager bm;
 
 	void Start () {
         // playerCamera.SetActive(true);
         // battleCamera.SetActive(false);
+        // defencePodium = GameObject.Find("DefensePodium").GetComponent<Transform>();
+        // attackPodium = GameObject.Find("AttackPodium").GetComponent<Transform>();
+        // bm = GameObject.Find("Battle Camera").GetComponent<BattleManager>();
+        bm = GetComponent<BattleManager>();
+
     }
 	
 	void Update () {
-	
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            // EnterBattle(Rarity.Common);
+            EnterBattle();
+       } 
 	}
 
-    public void EnterBattle(Rarity rarity)
+    // public void EnterBattle(Rarity rarity)
+    public void EnterBattle()
     {
         // playerCamera.SetActive(false);
         // battleCamera.SetActive(true);
+        // var rarity = this.rarity;
+        // BasePokemon battlePokemon = GetRandomPokemonFromList(GetPokemonByRarity(rarity));
 
-        BasePokemon battlePokemon = GetRandomPokemonFromList(GetPokemonByRarity(rarity));
-
-        Debug.Log(battlePokemon.name);
+        // Debug.Log(rarity);
 
        // player.GetComponent<PlayerMovement>().isAllowedToMove = false;
 
-        GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
 
-        dPoke.transform.parent = defencePodium;
-
-        BasePokemon tempPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
-        tempPoke.AddMember(battlePokemon);
-
-        dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.image;
-
-        bm.changeMenu(BattleMenu.Selection);
+        // Time.timeScale = 0f;
         SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
+        // SceneManager.LoadScene("Battle_Scene");
+        // bm.loadBattle(rarity);
+        // bm.loadBattle();
+
+        // GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
+
+        // dPoke.transform.parent = defencePodium;
+
+        // BasePokemon tempPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
+        // tempPoke.AddMember(battlePokemon);
+
+        // dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.image;
+
+        // bm.changeMenu(BattleMenu.Selection);
+        Debug.Log("EnterBattle method finish");
+        // SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
         
 
     }
 
     public void ExitBattle() {
         SceneManager.UnloadScene("Battle_Scene");
+        Time.timeScale = 1f;
     }
 
     public List<BasePokemon> GetPokemonByRarity(Rarity rarity)

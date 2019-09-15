@@ -38,27 +38,32 @@ public class LongGrass : MonoBehaviour {
                 if(p < vr*100)
                 {
                     if (gm != null)
-                        gm.EnterBattle(Rarity.VeryRare);
+                        // gm.EnterBattle(Rarity.VeryRare);
+                        Debug.Log(Rarity.VeryRare);
                 }
                 else if(p < r*100)
                 {
                     if (gm != null)
-                        gm.EnterBattle(Rarity.Rare);
+                        // gm.EnterBattle(Rarity.Rare);
+                        Debug.Log(Rarity.Rare);
                 }
                 else if(p < sr*100)
                 {
                     if (gm != null)
-                        gm.EnterBattle(Rarity.SemiRare);
+                        // gm.EnterBattle(Rarity.SemiRare);
+                        Debug.Log(Rarity.SemiRare);
                 }
                 else if(p < c*100)
                 {
                     if (gm != null)
-                        gm.EnterBattle(Rarity.Common);
+                        // gm.EnterBattle(Rarity.Common);
+                        Debug.Log(Rarity.Common);
                 }
                 else if(p < vc*100)
                 {
                     if (gm != null)
-                        gm.EnterBattle(Rarity.VeryCommon);
+                        // gm.EnterBattle(Rarity.VeryCommon);
+                        Debug.Log(Rarity.VeryCommon);
                 }
             }
         }
@@ -72,27 +77,32 @@ public class LongGrass : MonoBehaviour {
                 if(p < vr*100)
                 {
                     if (gm != null)
-                        gm.EnterBattle(Rarity.VeryRare);
+                        // gm.EnterBattle(Rarity.VeryRare);
+                        Debug.Log(Rarity.VeryRare);
                 }
                 else if(p < r*100)
                 {
                     if (gm != null)
-                        gm.EnterBattle(Rarity.Rare);
+                        // gm.EnterBattle(Rarity.Rare);
+                        Debug.Log(Rarity.Rare);
                 }
                 else if(p < sr*100)
                 {
                     if (gm != null)
-                        gm.EnterBattle(Rarity.SemiRare);
+                        // gm.EnterBattle(Rarity.SemiRare);
+                        Debug.Log(Rarity.SemiRare);
                 }
                 else if(p < c*100)
                 {
                     if (gm != null)
-                        gm.EnterBattle(Rarity.Common);
+                        // gm.EnterBattle(Rarity.Common);
+                        Debug.Log(Rarity.Common);
                 }
                 else if(p < vc*100)
                 {
                     if (gm != null)
-                        gm.EnterBattle(Rarity.VeryCommon);
+                        // gm.EnterBattle(Rarity.VeryCommon);
+                        Debug.Log(Rarity.VeryCommon);
                 }
         }
 }
