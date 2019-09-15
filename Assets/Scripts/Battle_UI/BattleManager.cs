@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BattleManager : MonoBehaviour
 {
+    public GameManager gm;
+    
     public BattleMenu currentMenu;
     [Header("Selection")]
     public GameObject SelectionMenu;
@@ -126,9 +128,22 @@ public class BattleManager : MonoBehaviour
                         bagT = bag.text;
                         pokemonT = pokemon.text;
                         runT = "> " + run.text;
+                        // gm.ExitBattle();
                         break;               
                 }
                 break;    
+       }
+       if(Input.GetKeyDown(KeyCode.Return)) {
+            if(currentSelection==1) {
+                Debug.Log("Fight Selected");
+            } else if(currentSelection==2) {
+                Debug.Log("Bag Selected");
+            } else if(currentSelection==3){
+                Debug.Log("Pokemon Selected");
+            } else if(currentSelection==4){
+                Debug.Log("Run Selected");
+                gm.ExitBattle();
+            }
        }
     }
 

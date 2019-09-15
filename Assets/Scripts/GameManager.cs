@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject playerCamera;
-    public GameObject battleCamera;
+    // public GameObject playerCamera;
+    // public GameObject battleCamera;
 
-    public GameObject player;
+    // public GameObject player;
+    // SceneManager sm;
 
     public List<BasePokemon> allPokemon = new List<BasePokemon>();
     public List<PokemonMoves> allMoves = new List<PokemonMoves>();
@@ -19,8 +21,8 @@ public class GameManager : MonoBehaviour {
     public BattleManager bm;
 
 	void Start () {
-        playerCamera.SetActive(true);
-        battleCamera.SetActive(false);
+        // playerCamera.SetActive(true);
+        // battleCamera.SetActive(false);
     }
 	
 	void Update () {
@@ -29,8 +31,8 @@ public class GameManager : MonoBehaviour {
 
     public void EnterBattle(Rarity rarity)
     {
-        playerCamera.SetActive(false);
-        battleCamera.SetActive(true);
+        // playerCamera.SetActive(false);
+        // battleCamera.SetActive(true);
 
         BasePokemon battlePokemon = GetRandomPokemonFromList(GetPokemonByRarity(rarity));
 
@@ -48,7 +50,13 @@ public class GameManager : MonoBehaviour {
         dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.image;
 
         bm.changeMenu(BattleMenu.Selection);
+        SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
+        
 
+    }
+
+    public void ExitBattle() {
+        SceneManager.UnloadScene("Battle_Scene");
     }
 
     public List<BasePokemon> GetPokemonByRarity(Rarity rarity)
