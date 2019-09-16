@@ -31,10 +31,10 @@ public class GameManager : MonoBehaviour {
     }
 	
 	void Update () {
-        if(Input.GetKeyDown(KeyCode.Space)) {
-            // EnterBattle(Rarity.Common);
-            EnterBattle();
-       } 
+    //     if(Input.GetKeyDown(KeyCode.Space)) {
+    //         // EnterBattle(Rarity.Common);
+    //         EnterBattle();
+    //    } 
 	}
 
     // public void EnterBattle(Rarity rarity)
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour {
 
 
         // Time.timeScale = 0f;
+        // bm.start(rarity);
         SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
         // SceneManager.LoadScene("Battle_Scene");
         // bm.loadBattle(rarity);

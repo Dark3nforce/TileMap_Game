@@ -51,10 +51,13 @@ public class BattleManager : MonoBehaviour
     public GameObject emptyPoke;
 
 
+    public Rarity rarityBM;
+    private LongGrass lg;
+
     // Start is called before the first frame update
     void Start()
     {
-        loadBattle();
+        // loadBattle(rarity);
        fightT = fight.text;
        bagT = bag.text; 
        pokemonT = pokemon.text;
@@ -64,6 +67,8 @@ public class BattleManager : MonoBehaviour
        Move2T = Move2.text;
        Move3T = Move3.text;
        Move4T = Move4.text;
+       rarityBM = lg.raritySet;
+       loadBattle(rarityBM);
     }
 
     // Update is called once per frame
@@ -189,11 +194,11 @@ public class BattleManager : MonoBehaviour
     }
 
 
-    // public void loadBattle(Rarity rarity) {
-        public void loadBattle() {
+    public void loadBattle(Rarity rarity) {
+        // public void loadBattle() {
             changeMenu(BattleMenu.Selection);
-        // BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(rarity));
-        BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(Rarity.Common));
+        BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(rarity));
+        // BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(Rarity.Common));
 
         Debug.Log(battlePokemon.name);
         GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
