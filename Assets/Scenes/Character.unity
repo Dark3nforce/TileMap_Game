@@ -88060,6 +88060,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 233cf79a01236ef4f8b717e05fb8a9ee, type: 3}
+--- !u!1 &1932258803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1932258805}
+  - component: {fileID: 1932258804}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1932258804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932258803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110ce18ca44b0bb458a27694e99ff4f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPokemon:
+  - {fileID: 5900891777610994904, guid: f6554920830d16244a265f1f3b4765f7, type: 3}
+  - {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6, type: 3}
+  - {fileID: 6876473659914758365, guid: 98c3fa9d0a9eba449a9f6b4de8e98ad9, type: 3}
+  - {fileID: 5672179643844261084, guid: b39ee2cdf74ef0d4fa4d42c57bcffa18, type: 3}
+  - {fileID: 2405054582829893953, guid: 519b6c2dd27077144b25a1f0b108093d, type: 3}
+  - {fileID: 4258350337317684576, guid: 202fc7eedec77ef4d82146c638f3b46b, type: 3}
+  allMoves: []
+--- !u!4 &1932258805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932258803}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.8501053, y: 3.561147, z: -2.8773704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2052034739
 GameObject:
   m_ObjectHideFlags: 0

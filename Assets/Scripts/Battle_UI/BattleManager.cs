@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BattleManager : MonoBehaviour
 {
+    public GameManager gm;
+    
     public BattleMenu currentMenu;
     [Header("Selection")]
     public GameObject SelectionMenu;
@@ -41,10 +43,18 @@ public class BattleManager : MonoBehaviour
     [Header("Misc")]
     public int currentSelection;
 
+    [Header("ATK/DEF Podium")]
+    public Transform defencePodium;
+    public Transform attackPodium;
+
+    [Header("Misc")]
+    public GameObject emptyPoke;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        loadBattle();
        fightT = fight.text;
        bagT = bag.text; 
        pokemonT = pokemon.text;
@@ -62,11 +72,13 @@ public class BattleManager : MonoBehaviour
        if(Input.GetKeyDown(KeyCode.DownArrow)) {
             if(currentSelection<4) {
                 currentSelection++;
+                Debug.Log(currentSelection);
             }
        } 
        if(Input.GetKeyDown(KeyCode.UpArrow)) {
             if(currentSelection>0) {
                 currentSelection--;
+                Debug.Log(currentSelection);
             }
        }
        if(currentSelection == 0)
@@ -126,9 +138,25 @@ public class BattleManager : MonoBehaviour
                         bagT = bag.text;
                         pokemonT = pokemon.text;
                         runT = "> " + run.text;
+                        // gm.ExitBattle();
                         break;               
                 }
                 break;    
+       }
+       if(Input.GetKeyDown(KeyCode.Return)) {
+            if(currentSelection==1) {
+                Debug.Log("Fight Selected");
+                gm.ExitBattle();
+            } else if(currentSelection==2) {
+                Debug.Log("Bag Selected");
+                gm.ExitBattle();
+            } else if(currentSelection==3){
+                Debug.Log("Pokemon Selected");
+                gm.ExitBattle();
+            } else if(currentSelection==4){
+                Debug.Log("Run Selected");
+                gm.ExitBattle();
+            }
        }
     }
 
@@ -158,6 +186,26 @@ public class BattleManager : MonoBehaviour
                 InfoMenu.gameObject.SetActive(true);
                 break;    
         }
+    }
+
+
+    // public void loadBattle(Rarity rarity) {
+        public void loadBattle() {
+            changeMenu(BattleMenu.Selection);
+        // BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(rarity));
+        BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(Rarity.Common));
+
+        Debug.Log(battlePokemon.name);
+        GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
+
+        dPoke.transform.parent = defencePodium;
+
+        BasePokemon tempPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
+        tempPoke.AddMember(battlePokemon);
+
+        dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.image;
+
+        // changeMenu(BattleMenu.Selection);
     }
 }
 public enum BattleMenu {
