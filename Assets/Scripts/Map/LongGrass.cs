@@ -13,6 +13,7 @@ public class LongGrass : MonoBehaviour {
     private float r = 3.33f / 187.5f;
     private float vr = 1.25f / 187.5f;
     public Rarity raritySet;
+    public bool triggered = false;
 
 	void Start () {
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
@@ -37,42 +38,49 @@ public class LongGrass : MonoBehaviour {
                 // float vr = 1.25f / 187.5f;
 
                 float p = Random.Range(0.0f, 100.0f);
-
-                if(p < vr*100)
+                if (triggered == false)
                 {
-                    if (gm != null) {
-                        raritySet = Rarity.VeryRare;
-                        gm.EnterBattle();
+                        if(p < vr*100)
+                    {
+                        if (gm != null) {
+                            raritySet = Rarity.VeryRare;
+                            gm.EnterBattle();
+                            triggered = true;
+                        }
                     }
-                }
-                else if(p < r*100)
-                {
-                    if (gm != null) {
-                        raritySet = Rarity.Rare;
-                        gm.EnterBattle();
+                    else if(p < r*100)
+                    {
+                        if (gm != null) {
+                            raritySet = Rarity.Rare;
+                            gm.EnterBattle();
+                            triggered = true;
+                        }
                     }
-                }
-                else if(p < sr*100)
-                {
-                    if (gm != null) {
-                        raritySet = Rarity.SemiRare;
-                        gm.EnterBattle();
+                    else if(p < sr*100)
+                    {
+                        if (gm != null) {
+                            raritySet = Rarity.SemiRare;
+                            gm.EnterBattle();
+                            triggered = true;
+                        }
                     }
-                }
-                else if(p < c*100)
-                {
-                    if (gm != null) {
-                        raritySet  = Rarity.Common;
-                        gm.EnterBattle();
+                    else if(p < c*100)
+                    {
+                        if (gm != null) {
+                            raritySet  = Rarity.Common;
+                            gm.EnterBattle();
+                            triggered = true;
+                        }
+                            
                     }
-                        
-                }
-                else if(p < vc*100)
-                {
-                    if (gm != null) {
-                        raritySet = Rarity.VeryCommon;
-                        gm.EnterBattle();
-                    }
+                    else if(p < vc*100)
+                    {
+                        if (gm != null) {
+                            raritySet = Rarity.VeryCommon;
+                            gm.EnterBattle();
+                            triggered = true;
+                        }
+                    }   
                 }
             }
         }
@@ -83,41 +91,49 @@ public class LongGrass : MonoBehaviour {
         {
             float p = Random.Range(0.0f, 100.0f);
 
-                if(p < vr*100)
+                if (triggered == false)
                 {
-                    if (gm != null) {
-                        raritySet = Rarity.VeryRare;
-                        gm.EnterBattle();
+                        if(p < vr*100)
+                    {
+                        if (gm != null) {
+                            raritySet = Rarity.VeryRare;
+                            gm.EnterBattle();
+                            triggered = true;
+                        }
                     }
-                }
-                else if(p < r*100)
-                {
-                    if (gm != null) {
-                        raritySet = Rarity.Rare;
-                        gm.EnterBattle();
+                    else if(p < r*100)
+                    {
+                        if (gm != null) {
+                            raritySet = Rarity.Rare;
+                            gm.EnterBattle();
+                            triggered = true;
+                        }
                     }
-                }
-                else if(p < sr*100)
-                {
-                    if (gm != null) {
-                        raritySet = Rarity.SemiRare;
-                        gm.EnterBattle();
+                    else if(p < sr*100)
+                    {
+                        if (gm != null) {
+                            raritySet = Rarity.SemiRare;
+                            gm.EnterBattle();
+                            triggered = true;
+                        }
                     }
-                }
-                else if(p < c*100)
-                {
-                    if (gm != null) {
-                        raritySet  = Rarity.Common;
-                        gm.EnterBattle();
+                    else if(p < c*100)
+                    {
+                        if (gm != null) {
+                            raritySet  = Rarity.Common;
+                            gm.EnterBattle();
+                            triggered = true;
+                        }
+                            
                     }
-                        
-                }
-                else if(p < vc*100)
-                {
-                    if (gm != null) {
-                        raritySet = Rarity.VeryCommon;
-                        gm.EnterBattle();
-                    }
+                    else if(p < vc*100)
+                    {
+                        if (gm != null) {
+                            raritySet = Rarity.VeryCommon;
+                            gm.EnterBattle();
+                            triggered = true;
+                        }
+                    }   
                 }
         }
 }

@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
     // public GameObject emptyPoke;
 
     private BattleManager bm;
+    private LongGrass lg;
 
 	void Start () {
         // playerCamera.SetActive(true);
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour {
         // attackPodium = GameObject.Find("AttackPodium").GetComponent<Transform>();
         // bm = GameObject.Find("Battle Camera").GetComponent<BattleManager>();
         bm = GetComponent<BattleManager>();
+        lg = GetComponent<LongGrass>();
 
     }
 	
@@ -50,7 +52,7 @@ public class GameManager : MonoBehaviour {
        // player.GetComponent<PlayerMovement>().isAllowedToMove = false;
 
 
-        // Time.timeScale = 0f;
+        Time.timeScale = 0f;
         // bm.start(rarity);
         SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
         // SceneManager.LoadScene("Battle_Scene");
@@ -76,6 +78,8 @@ public class GameManager : MonoBehaviour {
     public void ExitBattle() {
         SceneManager.UnloadScene("Battle_Scene");
         Time.timeScale = 1f;
+        lg.triggered = false;
+        Debug.Log(lg.triggered);
     }
 
     public List<BasePokemon> GetPokemonByRarity(Rarity rarity)

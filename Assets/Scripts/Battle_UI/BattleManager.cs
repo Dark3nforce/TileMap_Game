@@ -57,6 +57,8 @@ public class BattleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lg = GetComponent<LongGrass>();
+
         // loadBattle(rarity);
        fightT = fight.text;
        bagT = bag.text; 
@@ -67,7 +69,9 @@ public class BattleManager : MonoBehaviour
        Move2T = Move2.text;
        Move3T = Move3.text;
        Move4T = Move4.text;
+       currentSelection = 1;
        rarityBM = lg.raritySet;
+       Debug.Log(rarityBM);
        loadBattle(rarityBM);
     }
 
@@ -196,7 +200,7 @@ public class BattleManager : MonoBehaviour
 
     public void loadBattle(Rarity rarity) {
         // public void loadBattle() {
-            changeMenu(BattleMenu.Selection);
+        changeMenu(BattleMenu.Selection);
         BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(rarity));
         // BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(Rarity.Common));
 
