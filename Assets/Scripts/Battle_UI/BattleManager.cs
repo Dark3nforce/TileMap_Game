@@ -57,7 +57,8 @@ public class BattleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lg = GetComponent<LongGrass>();
+        lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
+        changeMenu(BattleMenu.Selection);
 
         // loadBattle(rarity);
        fightT = fight.text;
@@ -86,12 +87,16 @@ public class BattleManager : MonoBehaviour
        } 
        if(Input.GetKeyDown(KeyCode.UpArrow)) {
             if(currentSelection>0) {
-                currentSelection--;
+                if(currentSelection == 0)
+                    currentSelection = 1;
+                else
+                    currentSelection--;
                 Debug.Log(currentSelection);
             }
        }
        if(currentSelection == 0)
        currentSelection = 1;
+       
 
        switch(currentMenu) {
             case BattleMenu.Fight:
@@ -125,48 +130,68 @@ public class BattleManager : MonoBehaviour
             case BattleMenu.Selection:
                 switch(currentSelection) {
                     case 1:
+                        // Debug.Log("can fight");
                         fightT = "> " + fight.text;
                         bagT = bag.text;
                         pokemonT = pokemon.text;
                         runT = run.text;
+                        if(Input.GetKeyDown(KeyCode.Return)){
+                            changeMenu(BattleMenu.Fight);
+                        }
                         break;
                     case 2:
+                        // Debug.Log("can bag");
                         fightT = fight.text;
                         bagT = "> " + bag.text;
                         pokemonT = pokemon.text;
                         runT = run.text;
+                        if(Input.GetKeyDown(KeyCode.Return)){
+                            changeMenu(BattleMenu.Bag);
+                        }
                         break;
                     case 3:
+                        // Debug.Log("can pokemon");
                         fightT = fight.text;
                         bagT = bag.text;
                         pokemonT = "> " + pokemon.text;
                         runT = run.text;
+                        if(Input.GetKeyDown(KeyCode.Return)){
+                            // changeMenu(BattleMenu.Pokemon);
+                            Debug.Log("can change pokemon");
+                        }
                         break;
                     case 4:
+                        // Debug.Log("can run");
                         fightT = fight.text;
                         bagT = bag.text;
                         pokemonT = pokemon.text;
                         runT = "> " + run.text;
                         // gm.ExitBattle();
+                        if(Input.GetKeyDown(KeyCode.Return)){
+                            gm.ExitBattle();
+                        }
                         break;               
                 }
                 break;    
        }
-       if(Input.GetKeyDown(KeyCode.Return)) {
-            if(currentSelection==1) {
-                Debug.Log("Fight Selected");
-                gm.ExitBattle();
-            } else if(currentSelection==2) {
-                Debug.Log("Bag Selected");
-                gm.ExitBattle();
-            } else if(currentSelection==3){
-                Debug.Log("Pokemon Selected");
-                gm.ExitBattle();
-            } else if(currentSelection==4){
-                Debug.Log("Run Selected");
-                gm.ExitBattle();
-            }
-       }
+    //    if(Input.GetKeyDown(KeyCode.Return)) {
+    //         if(currentSelection==1) {
+    //             Debug.Log("Fight Selected");
+    //             // gm.ExitBattle();
+    //             changeMenu(BattleMenu.Fight);
+    //         } else if(currentSelection==2) {
+    //             Debug.Log("Bag Selected");
+    //             changeMenu(BattleMenu.Bag);
+    //             // gm.ExitBattle();
+    //         } else if(currentSelection==3){
+    //             Debug.Log("Pokemon Selected");
+    //             changeMenu(BattleMenu.Pokemon);
+    //             // gm.ExitBattle();
+    //         } else if(currentSelection==4){
+    //             Debug.Log("Run Selected");
+    //             gm.ExitBattle();
+    //         }
+    //    }
     }
 
     public void changeMenu(BattleMenu m) {

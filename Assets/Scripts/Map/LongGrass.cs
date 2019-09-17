@@ -26,9 +26,11 @@ public class LongGrass : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "Long_Grass") {
-            if(col.GetComponent<PlayerMovement>())
-            {
+        Debug.Log("entering: " + triggered + " gm: " + gm);
+        // if(col.tag == "Long_Grass") {
+            Debug.Log("entering: " + triggered + " gm: " + gm);
+            // if(col.GetComponent<PlayerMovement>())
+            // {
                 //P = x / 187.5
                 //VC = 10, C = 8.5, Semi-Are = 6.75, Rare = 3.33, VR = 1.25
                 // float vc = 10 / 187.5f;
@@ -76,66 +78,67 @@ public class LongGrass : MonoBehaviour {
                     else if(p < vc*100)
                     {
                         if (gm != null) {
+                            Debug.Log("very common");
                             raritySet = Rarity.VeryCommon;
                             gm.EnterBattle();
                             triggered = true;
                         }
                     }   
                 }
-            }
-        }
+            // }
+        // }
     }
 
         //Might be forcing battle every grass step and not random
-        private void OnTriggerStay2D(Collider2D collision)
-        {
-            float p = Random.Range(0.0f, 100.0f);
+        // private void OnTriggerStay2D(Collider2D collision)
+        // {
+        //     float p = Random.Range(0.0f, 100.0f);
 
-                if (triggered == false)
-                {
-                        if(p < vr*100)
-                    {
-                        if (gm != null) {
-                            raritySet = Rarity.VeryRare;
-                            gm.EnterBattle();
-                            triggered = true;
-                        }
-                    }
-                    else if(p < r*100)
-                    {
-                        if (gm != null) {
-                            raritySet = Rarity.Rare;
-                            gm.EnterBattle();
-                            triggered = true;
-                        }
-                    }
-                    else if(p < sr*100)
-                    {
-                        if (gm != null) {
-                            raritySet = Rarity.SemiRare;
-                            gm.EnterBattle();
-                            triggered = true;
-                        }
-                    }
-                    else if(p < c*100)
-                    {
-                        if (gm != null) {
-                            raritySet  = Rarity.Common;
-                            gm.EnterBattle();
-                            triggered = true;
-                        }
+        //         if (triggered == false)
+        //         {
+        //                 if(p < vr*100)
+        //             {
+        //                 if (gm != null) {
+        //                     raritySet = Rarity.VeryRare;
+        //                     gm.EnterBattle();
+        //                     triggered = true;
+        //                 }
+        //             }
+        //             else if(p < r*100)
+        //             {
+        //                 if (gm != null) {
+        //                     raritySet = Rarity.Rare;
+        //                     gm.EnterBattle();
+        //                     triggered = true;
+        //                 }
+        //             }
+        //             else if(p < sr*100)
+        //             {
+        //                 if (gm != null) {
+        //                     raritySet = Rarity.SemiRare;
+        //                     gm.EnterBattle();
+        //                     triggered = true;
+        //                 }
+        //             }
+        //             else if(p < c*100)
+        //             {
+        //                 if (gm != null) {
+        //                     raritySet  = Rarity.Common;
+        //                     gm.EnterBattle();
+        //                     triggered = true;
+        //                 }
                             
-                    }
-                    else if(p < vc*100)
-                    {
-                        if (gm != null) {
-                            raritySet = Rarity.VeryCommon;
-                            gm.EnterBattle();
-                            triggered = true;
-                        }
-                    }   
-                }
-        }
+        //             }
+        //             else if(p < vc*100)
+        //             {
+        //                 if (gm != null) {
+        //                     raritySet = Rarity.VeryCommon;
+        //                     gm.EnterBattle();
+        //                     triggered = true;
+        //                 }
+        //             }   
+        //         }
+        // }
 }
 
 // using System.Collections;

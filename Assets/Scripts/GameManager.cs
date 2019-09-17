@@ -28,8 +28,9 @@ public class GameManager : MonoBehaviour {
         // attackPodium = GameObject.Find("AttackPodium").GetComponent<Transform>();
         // bm = GameObject.Find("Battle Camera").GetComponent<BattleManager>();
         bm = GetComponent<BattleManager>();
-        lg = GetComponent<LongGrass>();
-
+        // lg = gameObject.find().GetComponent<LongGrass>();
+        lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
+        Debug.Log(lg);
     }
 	
 	void Update () {
