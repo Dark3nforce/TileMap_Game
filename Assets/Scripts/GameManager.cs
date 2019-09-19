@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void ExitBattle() {
-        SceneManager.UnloadScene("Battle_Scene");
+        SceneManager.UnloadSceneAsync("Battle_Scene");
         Time.timeScale = 1f;
         lg.triggered = false;
         Debug.Log(lg.triggered);
