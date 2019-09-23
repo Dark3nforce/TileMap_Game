@@ -9,6 +9,7 @@ TagManager:
   - player
   - Potion
   - pokeball
+  - MenuCanvas
   layers:
   - Default
   - TransparentFX
