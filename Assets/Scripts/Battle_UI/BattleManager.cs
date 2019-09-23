@@ -13,13 +13,17 @@ public class BattleManager : MonoBehaviour
     public GameObject SelectionInfo;
     public Text SelectionInfoText;
     public Text fight;
-    private string fightT;
+    private string fightSelected = "> Fight";
+    private string fightUnSelected = "Fight";
     public Text bag;
-    private string bagT;
+    private string bagSelected = "> Bag";
+    private string bagUnSelected = "Bag";
     public Text pokemon;
-    private string pokemonT;
+    private string pokemonSelected = "> Pokemon";
+    private string pokemonUnSelected = "Pokemon";
     public Text run;
-    private string runT;
+    private string runSelected = "> Run";
+    private string runUnSelected = "Run";
 
     [Header("Moves")]
     public GameObject movesMenu;
@@ -28,13 +32,17 @@ public class BattleManager : MonoBehaviour
     
     public Text pType;
     public Text Move1;
-    private string Move1T;
     public Text Move2;
-    private string Move2T;
     public Text Move3;
-    private string Move3T;
     public Text Move4;
-    private string Move4T;
+    private string Move1Selected = "> Move 1";
+    private string Move1UnSelected = "Move 1";
+    private string Move2Selected = "> Move 2";
+    private string Move2UnSelected = "Move 2";
+    private string Move3Selected = "> Move 3";
+    private string Move3UnSelected = "Move 3";
+    private string Move4Selected = "> Move 4";
+    private string Move4UnSelected = "Move 4";
 
     [Header("Info")]
     public GameObject InfoMenu;
@@ -61,15 +69,6 @@ public class BattleManager : MonoBehaviour
         changeMenu(BattleMenu.Selection);
 
         // loadBattle(rarity);
-       fightT = fight.text;
-       bagT = bag.text; 
-       pokemonT = pokemon.text;
-       runT = run.text;
-
-       Move1T = Move1.text;
-       Move2T = Move2.text;
-       Move3T = Move3.text;
-       Move4T = Move4.text;
        currentSelection = 1;
        rarityBM = lg.raritySet;
        Debug.Log(rarityBM);
@@ -102,28 +101,48 @@ public class BattleManager : MonoBehaviour
             case BattleMenu.Fight:
                 switch(currentSelection) {
                     case 1:
-                        Move1T = "> " + Move1.text;
-                        Move2T = Move2.text;
-                        Move3T = Move3.text;
-                        Move4T = Move4.text;
+                        Move1.text = Move1Selected; //Arrow here
+                        Move2.text = Move2UnSelected;
+                        Move3.text = Move3UnSelected;
+                        Move4.text = Move4UnSelected;
+                        if(Input.GetKeyDown(KeyCode.Return)){
+                            Debug.Log("Move1 Selected");
+                        } else if(Input.GetKeyDown(KeyCode.Escape)) {
+                            changeMenu(BattleMenu.Selection);
+                        }
                         break;
                     case 2:
-                        Move1T = Move1.text;
-                        Move2T = "> " + Move2.text;
-                        Move3T = Move3.text;
-                        Move4T = Move4.text;
+                        Move1.text = Move1UnSelected;
+                        Move2.text = Move2Selected; //Arrow here
+                        Move3.text = Move3UnSelected;
+                        Move4.text = Move4UnSelected;
+                        if(Input.GetKeyDown(KeyCode.Return)){
+                            Debug.Log("Move2 Selected");
+                        } else if(Input.GetKeyDown(KeyCode.Escape)) {
+                            changeMenu(BattleMenu.Selection);
+                        }
                         break;
                     case 3:
-                        Move1T = Move1.text;
-                        Move2T = Move2.text;
-                        Move3T = "> " + Move3.text;
-                        Move4T = Move4.text;
+                        Move1.text = Move1UnSelected;
+                        Move2.text = Move2UnSelected;
+                        Move3.text = Move3Selected; //Arrow here
+                        Move4.text = Move4UnSelected;
+                        if(Input.GetKeyDown(KeyCode.Return)){
+                            Debug.Log("Move3 Selected");
+                        } else if(Input.GetKeyDown(KeyCode.Escape)) {
+                            changeMenu(BattleMenu.Selection);
+                        }
                         break;
                     case 4:
-                        Move1T = Move1.text;
-                        Move2T = Move2.text;
-                        Move3T = Move3.text;
-                        Move4T = "> " + Move4.text;
+                        Move1.text = Move1UnSelected;
+                        Move2.text = Move2UnSelected;
+                        Move3.text = Move3UnSelected;
+                        Move4.text = Move4Selected; //Arrow here
+                        if(Input.GetKeyDown(KeyCode.Return)){
+                            Debug.Log("Move4 Selected");
+                        } else if(Input.GetKeyDown(KeyCode.Escape)) {
+                            changeMenu(BattleMenu.Selection);
+                        }
                         break;               
                 }
                 break;
@@ -131,30 +150,31 @@ public class BattleManager : MonoBehaviour
                 switch(currentSelection) {
                     case 1:
                         // Debug.Log("can fight");
-                        fightT = "> " + fight.text;
-                        bagT = bag.text;
-                        pokemonT = pokemon.text;
-                        runT = run.text;
+                        fight.text = fightSelected; //Arrow here
+                        bag.text = bagUnSelected;
+                        pokemon.text = pokemonUnSelected;
+                        run.text = runUnSelected;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             changeMenu(BattleMenu.Fight);
                         }
                         break;
                     case 2:
                         // Debug.Log("can bag");
-                        fightT = fight.text;
-                        bagT = "> " + bag.text;
-                        pokemonT = pokemon.text;
-                        runT = run.text;
+                        fight.text = fightUnSelected;
+                        bag.text = bagSelected; //Arrow here
+                        pokemon.text = pokemonUnSelected;
+                        run.text = runUnSelected;
                         if(Input.GetKeyDown(KeyCode.Return)){
-                            changeMenu(BattleMenu.Bag);
+                            // changeMenu(BattleMenu.Bag);
+                            Debug.Log("can go to bag");
                         }
                         break;
                     case 3:
                         // Debug.Log("can pokemon");
-                        fightT = fight.text;
-                        bagT = bag.text;
-                        pokemonT = "> " + pokemon.text;
-                        runT = run.text;
+                        fight.text = fightUnSelected;
+                        bag.text = bagUnSelected;
+                        pokemon.text = pokemonSelected; //Arrow here
+                        run.text = runUnSelected;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             // changeMenu(BattleMenu.Pokemon);
                             Debug.Log("can change pokemon");
@@ -162,10 +182,10 @@ public class BattleManager : MonoBehaviour
                         break;
                     case 4:
                         // Debug.Log("can run");
-                        fightT = fight.text;
-                        bagT = bag.text;
-                        pokemonT = pokemon.text;
-                        runT = "> " + run.text;
+                        fight.text = fightUnSelected;
+                        bag.text = bagUnSelected;
+                        pokemon.text = pokemonUnSelected;
+                        run.text = runSelected; //Arrow here
                         // gm.ExitBattle();
                         if(Input.GetKeyDown(KeyCode.Return)){
                             gm.ExitBattle();
