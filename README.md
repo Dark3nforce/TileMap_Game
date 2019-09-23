@@ -27,7 +27,7 @@ Connecting Firebase to Unity to have a username and password - users are able to
 
 Game was made in Unity and written in C#. 
 
-This game was made for fun and a project for school. We do not have any rights or own pokemon in any way.
+This game is a project for school. We do not have any rights or own pokemon in any way.
 
 Music can be found at https://soundcloud.com/aural-space/sets/puzzle-game-music/ .
 
