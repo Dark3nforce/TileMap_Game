@@ -380,7 +380,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86039728}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &86039730
 Camera:
   m_ObjectHideFlags: 0
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1965821307}
-  currentMenu: 0
+  currentMenu: 4
   SelectionMenu: {fileID: 1609772892}
   SelectionInfo: {fileID: 988007665}
   SelectionInfoText: {fileID: 1586617248}
@@ -477,6 +477,7 @@ MonoBehaviour:
   attackPodium: {fileID: 904013589}
   emptyPoke: {fileID: 8677351444709367626, guid: f9d9da25ce293f84b9e275d41892f70f,
     type: 3}
+  rarityBM: 0
 --- !u!1 &105182483
 GameObject:
   m_ObjectHideFlags: 0
