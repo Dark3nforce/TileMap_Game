@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour {
 
     private BattleManager bm;
     private LongGrass lg;
+    
+
+    public GameObject menu;
+    // private MenuController mc;
 
 	void Start () {
         // playerCamera.SetActive(true);
@@ -30,7 +34,10 @@ public class GameManager : MonoBehaviour {
         bm = GetComponent<BattleManager>();
         // lg = gameObject.find().GetComponent<LongGrass>();
         lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
+        
         Debug.Log(lg);
+        // mc = GetComponent<MenuController>();
+
     }
 	
 	void Update () {
@@ -38,7 +45,21 @@ public class GameManager : MonoBehaviour {
     //         // EnterBattle(Rarity.Common);
     //         EnterBattle();
     //    } 
+        if(Input.GetKeyDown(KeyCode.E)) {
+            // Debug.Log("E button pressed");
+            toggleMenuUI();
+        }
 	}
+
+    public void toggleMenuUI() {
+        if (menu.activeInHierarchy)
+            {
+                menu.SetActive(false);
+            }
+            else {
+                menu.SetActive(true);
+            }
+    }
 
     // public void EnterBattle(Rarity rarity)
     public void EnterBattle()
