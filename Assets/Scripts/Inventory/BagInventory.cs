@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BagInventory : MonoBehaviour
 {
+    public GameObject inventory;
+    public Text inventoryText;
+    public string text;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,13 +25,14 @@ public class BagInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (active && Input.GetKeyDown(KeyCode.F))
+        if (active && Input.GetButtonDown("Fire1"))
         {
             if (gameObject.tag == "Potion")
             {
                 Destroy(gameObject);
                 potion++;
-                print("You now have " + potion + " * potion");
+                CountPotion();
+
                 //  print(inventory);
             }
 
@@ -35,7 +40,7 @@ public class BagInventory : MonoBehaviour
             {
                 Destroy(gameObject);
                 pokeball++;
-                print("You now have " + pokeball + " * pokeball");
+                CountBall();
                 // print(inventory);
             }
         }
@@ -60,5 +65,13 @@ public class BagInventory : MonoBehaviour
             active = false;
 
         }
+    }
+
+    void CountPotion() {
+        inventoryText.text = potion.ToString("potion x " + potion);
+      
+    }
+    void CountBall() {
+        inventoryText.text = pokeball.ToString("pokeball x " + pokeball);
     }
 }

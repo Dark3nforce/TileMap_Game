@@ -18,7 +18,7 @@ public class Sign : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && active) {
+        if (Input.GetButtonDown("Fire1") && active) {
             if (sign.activeInHierarchy)
             {
                 sign.SetActive(false);
