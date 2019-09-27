@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
+
     public GameObject menuUI;
     private int currentSelection;
     public Text PokeDexTxt;
@@ -35,12 +36,15 @@ public class MenuController : MonoBehaviour
     {
         gm = GetComponent<GameManager>();
         currentSelection = 1;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(menuUI.activeInHierarchy) {
+       
+
+        if (menuUI.activeInHierarchy) {
             if(Input.GetKeyDown(KeyCode.DownArrow)) {
                 if(currentSelection<6) {
                     currentSelection++;

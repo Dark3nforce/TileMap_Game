@@ -108,37 +108,64 @@ enum Direction
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float speed;
-    private Rigidbody2D myRigidBod;
-    private Vector3 change;
-    private Animator Ani;
-  //  AudioSource music;
+    public Rigidbody2D myRigidBod;
+    public Vector3 change;
+    public Animator Ani;
+    public bool canMove;
     
     // Start is called before the first frame update
     void Start()
     {
         Ani = GetComponent<Animator>();
         myRigidBod = GetComponent<Rigidbody2D>();
-       // AudioSource music = GetComponent<AudioSource>();
-
+        
+        canMove = true;
+      
     }
 
-    // Update is called once per frame
+  
+// Update is called once per frame
     void Update()
     {
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
-       // music.Play();
         AnimateMove();
-
+        StopMovement();
     }
+
+    public void StopMovement()
+    {
+        if (SceneManager.GetSceneByName("Battle_Scene").isLoaded)
+        {
+            //myRigidBod.constraints = RigidbodyConstraints2D.FreezeAll;
+            Ani.SetFloat("inputX", 0);
+            Ani.SetFloat("inputY",0);
+            Ani.SetBool("moving",false);
+          
+            // Time.timeScale = 0;
+            //  Ani.speed = 0 ;
+        }
+        else {
+            MoveAgain();
+        }
+    }
+
+    public void MoveAgain()
+    {
+        myRigidBod.constraints = RigidbodyConstraints2D.None;
+        Ani.speed = speed;
+    }
+
+
     void AnimateMove()
     {
-        if (change != Vector3.zero)
+        if (canMove && change != Vector3.zero)
         {
             Move();
             Ani.SetFloat("inputX", change.x);
@@ -156,4 +183,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position + change * speed * Time.deltaTime
             );
     }
+
 }
+
+

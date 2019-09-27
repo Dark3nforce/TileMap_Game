@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: General_352
       objectReference: {fileID: 0}
+    - target: {fileID: 5160429906494103867, guid: 94b0007d8d2d9944d925aef00fb4b141,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sign
+      objectReference: {fileID: 0}
     - target: {fileID: 5160429906494103863, guid: 94b0007d8d2d9944d925aef00fb4b141,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -698,6 +703,79 @@ Transform:
   m_Father: {fileID: 463771484}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &181700776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 181700777}
+  - component: {fileID: 181700779}
+  - component: {fileID: 181700778}
+  m_Layer: 0
+  m_Name: GameObject (32)
+  m_TagString: Long_Grass
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &181700777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181700776}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 46.634, y: 20.52, z: -3.333903}
+  m_LocalScale: {x: 0.33333334, y: 1, z: 0.6666667}
+  m_Children: []
+  m_Father: {fileID: 1664682184}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &181700778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181700776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassType: 0
+  raritySet: 0
+  triggered: 0
+--- !u!61 &181700779
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181700776}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &182062523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -709,6 +787,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: General_352 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160429906494103867, guid: 94b0007d8d2d9944d925aef00fb4b141,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sign
       objectReference: {fileID: 0}
     - target: {fileID: 5160429906494103863, guid: 94b0007d8d2d9944d925aef00fb4b141,
         type: 3}
@@ -1550,7 +1633,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f5e1bab3971834687a9da4da8b2f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 15
+  myRigidBod: {fileID: 0}
+  change: {x: 0, y: 0, z: 0}
+  Ani: {fileID: 0}
+  canMove: 0
 --- !u!82 &463771488
 AudioSource:
   m_ObjectHideFlags: 0
@@ -86486,6 +86573,12 @@ PrefabInstance:
       propertyPath: inventoryText
       value: 
       objectReference: {fileID: 1736935726}
+    - target: {fileID: 1970955264507845707, guid: 0730acb59a7daac45a489c6ff8658fb4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f2de8bf5ebcb8e94fb318c00e29edd73,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0730acb59a7daac45a489c6ff8658fb4, type: 3}
 --- !u!1 &1096522817
@@ -90746,6 +90839,79 @@ MonoBehaviour:
   CardTxt: {fileID: 1418300768}
   SaveTxt: {fileID: 1003539591}
   SettingsTxt: {fileID: 1156490552}
+--- !u!1 &1138901352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1138901353}
+  - component: {fileID: 1138901355}
+  - component: {fileID: 1138901354}
+  m_Layer: 0
+  m_Name: GameObject (35)
+  m_TagString: Long_Grass
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1138901353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138901352}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 46.634, y: 19.54, z: -3.333903}
+  m_LocalScale: {x: 0.33333334, y: 1, z: 0.6666667}
+  m_Children: []
+  m_Father: {fileID: 1664682184}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138901354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138901352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassType: 0
+  raritySet: 0
+  triggered: 0
+--- !u!61 &1138901355
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138901352}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1156490548
 GameObject:
   m_ObjectHideFlags: 0
@@ -92344,6 +92510,10 @@ Transform:
   - {fileID: 1262684014}
   - {fileID: 289408273}
   - {fileID: 1172632593}
+  - {fileID: 181700777}
+  - {fileID: 1820327484}
+  - {fileID: 1710385870}
+  - {fileID: 1138901353}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -92570,8 +92740,87 @@ PrefabInstance:
       propertyPath: inventoryText
       value: 
       objectReference: {fileID: 1860998304}
+    - target: {fileID: 1970955264507845707, guid: 0730acb59a7daac45a489c6ff8658fb4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f2de8bf5ebcb8e94fb318c00e29edd73,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0730acb59a7daac45a489c6ff8658fb4, type: 3}
+--- !u!1 &1710385869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1710385870}
+  - component: {fileID: 1710385872}
+  - component: {fileID: 1710385871}
+  m_Layer: 0
+  m_Name: GameObject (34)
+  m_TagString: Long_Grass
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1710385870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710385869}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 46.634, y: 17.56, z: -3.333903}
+  m_LocalScale: {x: 0.33333334, y: 1, z: 0.6666667}
+  m_Children: []
+  m_Father: {fileID: 1664682184}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1710385871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710385869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassType: 0
+  raritySet: 0
+  triggered: 0
+--- !u!61 &1710385872
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710385869}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1731465236
 GameObject:
   m_ObjectHideFlags: 0
@@ -92929,6 +93178,79 @@ MonoBehaviour:
   grassType: 0
   raritySet: 0
   triggered: 0
+--- !u!1 &1820327483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1820327484}
+  - component: {fileID: 1820327486}
+  - component: {fileID: 1820327485}
+  m_Layer: 0
+  m_Name: GameObject (33)
+  m_TagString: Long_Grass
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1820327484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820327483}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 46.634, y: 18.47, z: -3.333903}
+  m_LocalScale: {x: 0.33333334, y: 1, z: 0.6666667}
+  m_Children: []
+  m_Father: {fileID: 1664682184}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1820327485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820327483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassType: 0
+  raritySet: 0
+  triggered: 0
+--- !u!61 &1820327486
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820327483}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1836893640
 GameObject:
   m_ObjectHideFlags: 0
@@ -92986,7 +93308,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5c1e50b6d83b89940bc530006dabc842, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2de8bf5ebcb8e94fb318c00e29edd73, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -93305,6 +93627,12 @@ PrefabInstance:
       propertyPath: inventoryText
       value: 
       objectReference: {fileID: 1860998304}
+    - target: {fileID: 1970955264507845707, guid: 0730acb59a7daac45a489c6ff8658fb4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f2de8bf5ebcb8e94fb318c00e29edd73,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0730acb59a7daac45a489c6ff8658fb4, type: 3}
 --- !u!1 &1932258803
