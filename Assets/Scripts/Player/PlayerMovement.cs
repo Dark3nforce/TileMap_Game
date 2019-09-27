@@ -118,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator Ani;
     public bool canMove;
     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -150,6 +151,13 @@ public class PlayerMovement : MonoBehaviour
           
             // Time.timeScale = 0;
             //  Ani.speed = 0 ;
+        }
+        if (GameObject.FindGameObjectWithTag("MenuCanvas")) {
+            myRigidBod.constraints = RigidbodyConstraints2D.FreezeAll;
+            Ani.SetFloat("inputX", 0);
+            Ani.SetFloat("inputY", 0);
+            Ani.SetBool("moving", false);
+
         }
         else {
             MoveAgain();

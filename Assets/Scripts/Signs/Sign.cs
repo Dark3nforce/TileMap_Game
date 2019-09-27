@@ -14,13 +14,13 @@ public class Sign : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerMovement movement = gameObject.GetComponent<PlayerMovement>();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlayerMovement movement = gameObject.GetComponent<PlayerMovement>();
+        
 
         if (Input.GetButtonDown("Fire1") && active) {
 
