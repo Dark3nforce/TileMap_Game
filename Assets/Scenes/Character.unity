@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  myRigidBod: {fileID: 0}
+  myRigidBod: {fileID: 463771486}
   change: {x: 0, y: 0, z: 0}
   Ani: {fileID: 0}
   canMove: 0
@@ -85767,7 +85767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &867525244
 RectTransform:
   m_ObjectHideFlags: 0
@@ -92839,7 +92839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1731465237
 RectTransform:
   m_ObjectHideFlags: 0
