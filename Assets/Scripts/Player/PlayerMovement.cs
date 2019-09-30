@@ -124,7 +124,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Ani = GetComponent<Animator>();
         myRigidBod = GetComponent<Rigidbody2D>();
-        
         canMove = true;
       
     }
@@ -144,20 +143,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (SceneManager.GetSceneByName("Battle_Scene").isLoaded)
         {
-            //myRigidBod.constraints = RigidbodyConstraints2D.FreezeAll;
-            Ani.SetFloat("inputX", 0);
-            Ani.SetFloat("inputY",0);
-            Ani.SetBool("moving",false);
-          
-            // Time.timeScale = 0;
-            //  Ani.speed = 0 ;
+            StopMoving();
         }
         if (GameObject.FindGameObjectWithTag("MenuCanvas")) {
-            myRigidBod.constraints = RigidbodyConstraints2D.FreezeAll;
-            Ani.SetFloat("inputX", 0);
-            Ani.SetFloat("inputY", 0);
-            Ani.SetBool("moving", false);
-
+            StopMoving();
         }
         else {
             MoveAgain();
@@ -170,6 +159,13 @@ public class PlayerMovement : MonoBehaviour
         Ani.speed = speed;
     }
 
+    public void StopMoving() {
+        myRigidBod.constraints = RigidbodyConstraints2D.FreezeAll;
+        Ani.SetFloat("inputX", 0);
+        Ani.SetFloat("inputY", 0);
+        Ani.SetBool("moving", false);
+
+    }
 
     void AnimateMove()
     {
