@@ -154,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
             Ani.SetBool("moving", false);
         }
         else {
-            myRigidBod.constraints = RigidbodyConstraints2D.None;
+            myRigidBod.constraints = RigidbodyConstraints2D.FreezeRotation;
             AnimateMove();
         }
     }
