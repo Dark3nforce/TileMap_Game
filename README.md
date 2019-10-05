@@ -37,7 +37,7 @@ This game is a project for school. We do not have any rights or own pokemon in a
 Music can be found at https://soundcloud.com/aural-space/sets/puzzle-game-music/ .
 
 
-## The Sqaud
+## The Team
 
 Joseph Zoretic
 
