@@ -9,23 +9,31 @@ public class Sign : MonoBehaviour
     public Text signText;
     public string text;
     public bool active;
+    
+   
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+
         if (Input.GetButtonDown("Fire1") && active) {
+
+
             if (sign.activeInHierarchy)
             {
                 sign.SetActive(false);
+                
             }
             else {
                 sign.SetActive(true);
                 signText.text = text;
+
             }
 
         }

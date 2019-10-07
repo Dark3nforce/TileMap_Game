@@ -10,6 +10,8 @@ TagManager:
   - Potion
   - pokeball
   - MenuCanvas
+  - Sign
+  - Inventory
   layers:
   - Default
   - TransparentFX
