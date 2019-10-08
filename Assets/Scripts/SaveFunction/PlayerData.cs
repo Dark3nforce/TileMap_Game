@@ -7,6 +7,8 @@ public class PlayerData
 {
     //variables to be saved
     public float[] position; //player position at time of save
+    public int sceneIndex;
+    // public List<OwnedPokemon> ownedPokemon = new List<OwnedPokemon>();
 
     public PlayerData(Player player) {
         //converts vector3 into a serializable format
@@ -14,6 +16,9 @@ public class PlayerData
         position[0] = player.transform.position.x;
         position[1] = player.transform.position.y;
         position[2] = player.transform.position.z;
+
+        //current scene
+        sceneIndex = player.sceneIndex;
     }
 
 }

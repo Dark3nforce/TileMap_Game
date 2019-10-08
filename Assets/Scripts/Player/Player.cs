@@ -5,13 +5,14 @@ using System.Collections.Generic;
 public class Player : MonoBehaviour {
 
     public List<OwnedPokemon> ownedPokemon = new List<OwnedPokemon>();
+    public int sceneIndex;
 
 	void Start () {
-	
+        // sceneIndex = Scene.buildIndex();
 	}
 	
 	void Update () {
-	
+        // sceneIndex = Scene.buildIndex();
 	}
 
     public void SavePlayer() {
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour {
     }
     public void LoadPlayer() {
         PlayerData data = SaveSystem.LoadPlayer();
+        // SceneManager.LoadScene(data.sceneIndex);
         Vector3 position;
         position.x = data.position[0];
         position.y = data.position[1];
