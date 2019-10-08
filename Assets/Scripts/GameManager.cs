@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour {
 
     private BattleManager bm;
     private LongGrass lg;
+    Player player;
     
 
     public GameObject menu;
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour {
         bm = GetComponent<BattleManager>();
         // lg = gameObject.find().GetComponent<LongGrass>();
         lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
-        
+        player = GameObject.Find("Player").GetComponent<Player>();
         Debug.Log(lg);
         // mc = GetComponent<MenuController>();
 
@@ -48,6 +49,10 @@ public class GameManager : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.E)) {
             // Debug.Log("E button pressed");
             toggleMenuUI();
+        }
+        if (Input.GetKeyDown(KeyCode.L)) 
+        {
+            player.LoadPlayer();
         }
 	}
 

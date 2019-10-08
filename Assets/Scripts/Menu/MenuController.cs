@@ -10,6 +10,7 @@ public class MenuController : MonoBehaviour
 {
 
     public GameObject inventory;
+    private Player player;
     public Text inventoryText;
     public GameObject menuUI;
     private int currentSelection;
@@ -40,6 +41,8 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         gm = GetComponent<GameManager>();
+        // player = GetComponent<Player>();
+        player = GameObject.Find("Player").GetComponent<Player>();
         currentSelection = 1;
 
     }
@@ -123,7 +126,7 @@ public class MenuController : MonoBehaviour
                         SaveTxt.text = SaveSelected;
                         SettingsTxt.text = SetUnSelected;
                         if(Input.GetKeyDown(KeyCode.Return)){
-                            saveState();
+                            player.SavePlayer();
                         } 
                         break;             
                     case 6:
@@ -157,7 +160,8 @@ public class MenuController : MonoBehaviour
         Debug.Log("Go to TranerCard");
     }
     public void saveState() {
-        Debug.Log("Go to Save");
+        // Debug.Log("Go to Save");
+        player.SavePlayer();
     }
     public void goToSettings() {
         Debug.Log("Go to Settings");
