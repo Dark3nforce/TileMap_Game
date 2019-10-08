@@ -130,7 +130,7 @@ PrefabInstance:
     - target: {fileID: 5160429906494103867, guid: 94b0007d8d2d9944d925aef00fb4b141,
         type: 3}
       propertyPath: m_Name
-      value: General_352
+      value: NeighborSign
       objectReference: {fileID: 0}
     - target: {fileID: 5160429906494103867, guid: 94b0007d8d2d9944d925aef00fb4b141,
         type: 3}
@@ -786,7 +786,7 @@ PrefabInstance:
     - target: {fileID: 5160429906494103867, guid: 94b0007d8d2d9944d925aef00fb4b141,
         type: 3}
       propertyPath: m_Name
-      value: General_352 (1)
+      value: PlayerSign
       objectReference: {fileID: 0}
     - target: {fileID: 5160429906494103867, guid: 94b0007d8d2d9944d925aef00fb4b141,
         type: 3}
@@ -1749,7 +1749,6 @@ MonoBehaviour:
   inventory: {fileID: 0}
   inventoryText: {fileID: 0}
   text: 
-  potionTxt: {fileID: 0}
   active: 0
 --- !u!1 &534355394
 GameObject:
@@ -86502,7 +86501,7 @@ PrefabInstance:
     - target: {fileID: 1970955264507845706, guid: 0730acb59a7daac45a489c6ff8658fb4,
         type: 3}
       propertyPath: m_Name
-      value: item (2)
+      value: pokeball
       objectReference: {fileID: 0}
     - target: {fileID: 1970955264507845706, guid: 0730acb59a7daac45a489c6ff8658fb4,
         type: 3}
@@ -92073,7 +92072,7 @@ PrefabInstance:
     - target: {fileID: 1970955264507845706, guid: 0730acb59a7daac45a489c6ff8658fb4,
         type: 3}
       propertyPath: m_Name
-      value: item (5)
+      value: potion
       objectReference: {fileID: 0}
     - target: {fileID: 1970955264507845706, guid: 0730acb59a7daac45a489c6ff8658fb4,
         type: 3}
@@ -93773,7 +93772,7 @@ PrefabInstance:
     - target: {fileID: 1970955264507845706, guid: 0730acb59a7daac45a489c6ff8658fb4,
         type: 3}
       propertyPath: m_Name
-      value: item (3)
+      value: potion
       objectReference: {fileID: 0}
     - target: {fileID: 1970955264507845706, guid: 0730acb59a7daac45a489c6ff8658fb4,
         type: 3}
@@ -93977,7 +93976,7 @@ PrefabInstance:
     - target: {fileID: 1970955264507845706, guid: 0730acb59a7daac45a489c6ff8658fb4,
         type: 3}
       propertyPath: m_Name
-      value: item (4)
+      value: pokeball
       objectReference: {fileID: 0}
     - target: {fileID: 1970955264507845706, guid: 0730acb59a7daac45a489c6ff8658fb4,
         type: 3}

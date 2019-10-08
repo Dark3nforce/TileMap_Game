@@ -42,13 +42,11 @@ public class MenuController : MonoBehaviour
         gm = GetComponent<GameManager>();
         currentSelection = 1;
 
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
        
 
         if (menuUI.activeInHierarchy) {
@@ -69,6 +67,7 @@ public class MenuController : MonoBehaviour
             }
             if(Input.GetKeyDown(KeyCode.E)) {
                 gm.toggleMenuUI();
+                
             }
 
             switch(currentSelection) {
@@ -153,12 +152,6 @@ public class MenuController : MonoBehaviour
         inventory.SetActive(true);
         Debug.Log("Go to Bag");
 
-        if (Input.GetKey("Space")) {
-            inventory.SetActive(false);
-
-        }
-          //  yield return new WaitUntil(() => Input.GetKey("Space"));
-        // yield return waitForKeyPress(KeyCode.Space); 
     }
     public void goToTrainerCard() {
         Debug.Log("Go to TranerCard");
