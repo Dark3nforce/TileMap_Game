@@ -240,7 +240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 59.26, y: -104.935}
+  m_AnchoredPosition: {x: 59.26, y: -100.551}
   m_SizeDelta: {x: 118.52, y: 29.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &12501742
@@ -372,7 +372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 59.26, y: -75.525}
+  m_AnchoredPosition: {x: 59.26, y: -34.850334}
   m_SizeDelta: {x: 118.52, y: 29.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &59766849
@@ -1749,6 +1749,7 @@ MonoBehaviour:
   inventory: {fileID: 0}
   inventoryText: {fileID: 0}
   text: 
+  potionTxt: {fileID: 0}
   active: 0
 --- !u!1 &534355394
 GameObject:
@@ -90872,6 +90873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b564a7ebdefe4e0d8448ab21de86f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 1552863463}
+  inventoryText: {fileID: 1060161715}
   menuUI: {fileID: 694700889}
   PokeDexTxt: {fileID: 165031233}
   PokeTxt: {fileID: 1528742999}
@@ -91668,7 +91671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 59.26, y: -163.755}
+  m_AnchoredPosition: {x: 59.26, y: -231.95235}
   m_SizeDelta: {x: 118.52, y: 29.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369183795
@@ -91800,7 +91803,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 59.26, y: -134.345}
+  m_AnchoredPosition: {x: 59.26, y: -166.25168}
   m_SizeDelta: {x: 118.52, y: 29.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1399032992
@@ -92371,7 +92374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1552863464
 RectTransform:
   m_ObjectHideFlags: 0
