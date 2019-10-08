@@ -8,6 +8,10 @@ public class BagInventory : MonoBehaviour
     public GameObject inventory;
     public Text inventoryText;
     public string text;
+
+    public Text potionTxt;
+    private string potionSelected = "> Potion";
+    private string potionUnSelected = "Potion";
     // Start is called before the first frame update
     void Start()
     {
@@ -73,5 +77,9 @@ public class BagInventory : MonoBehaviour
     }
     void CountBall() {
         inventoryText.text = pokeball.ToString("pokeball x " + pokeball);
+    }
+    public void goToMenu()
+    {
+        Debug.Log("Go to Menu");
     }
 }

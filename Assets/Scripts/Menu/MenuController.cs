@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+
 
 public class MenuController : MonoBehaviour
 {
 
+    public GameObject inventory;
+    public Text inventoryText;
     public GameObject menuUI;
     private int currentSelection;
     public Text PokeDexTxt;
@@ -37,11 +42,13 @@ public class MenuController : MonoBehaviour
         gm = GetComponent<GameManager>();
         currentSelection = 1;
 
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
        
 
         if (menuUI.activeInHierarchy) {
@@ -143,7 +150,15 @@ public class MenuController : MonoBehaviour
         Debug.Log("Go to Party");
     }
     public void goToBag() {
+        inventory.SetActive(true);
         Debug.Log("Go to Bag");
+
+        if (Input.GetKey("Space")) {
+            inventory.SetActive(false);
+
+        }
+          //  yield return new WaitUntil(() => Input.GetKey("Space"));
+        // yield return waitForKeyPress(KeyCode.Space); 
     }
     public void goToTrainerCard() {
         Debug.Log("Go to TranerCard");
