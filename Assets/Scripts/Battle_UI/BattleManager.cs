@@ -78,13 +78,13 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetKeyDown(KeyCode.DownArrow)) {
+       if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
             if(currentSelection<4) {
                 currentSelection++;
                 Debug.Log(currentSelection);
             }
        } 
-       if(Input.GetKeyDown(KeyCode.UpArrow)) {
+       if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) {
             if(currentSelection>0) {
                 if(currentSelection == 0)
                     currentSelection = 1;
