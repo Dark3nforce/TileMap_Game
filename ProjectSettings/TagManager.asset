@@ -12,6 +12,8 @@ TagManager:
   - MenuCanvas
   - Sign
   - Inventory
+  - PlayerHome
+  - Exit
   layers:
   - Default
   - TransparentFX
