@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -6,13 +7,14 @@ public class Player : MonoBehaviour {
 
     public List<OwnedPokemon> ownedPokemon = new List<OwnedPokemon>();
     public int sceneIndex;
+    
 
 	void Start () {
         // sceneIndex = Scene.buildIndex();
 	}
 	
 	void Update () {
-        // sceneIndex = Scene.buildIndex();
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
 	}
 
     public void SavePlayer() {
@@ -20,13 +22,14 @@ public class Player : MonoBehaviour {
     }
     public void LoadPlayer() {
         PlayerData data = SaveSystem.LoadPlayer();
-        // SceneManager.LoadScene(data.sceneIndex);
+        SceneManager.LoadScene(data.sceneIndex);
         Vector3 position;
         position.x = data.position[0];
         position.y = data.position[1];
         position.z = data.position[2];
         transform.position = position;
     }
+    
 }
 
 [System.Serializable]
