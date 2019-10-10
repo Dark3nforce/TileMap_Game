@@ -7,6 +7,10 @@ public class Player : MonoBehaviour {
 
     public List<OwnedPokemon> ownedPokemon = new List<OwnedPokemon>();
     public int sceneIndex;
+    public Time timeplayed;
+    public string player_Name;
+    public int numBadges;
+    public int numPokemonOwned;
     
 
 	void Start () {
