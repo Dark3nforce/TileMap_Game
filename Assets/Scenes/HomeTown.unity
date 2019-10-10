@@ -192,6 +192,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6721183539781720770, guid: 96048770f50f014439cc386a5eaa186f,
+        type: 3}
+      propertyPath: ownedPokemon.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6721183539781720770, guid: 96048770f50f014439cc386a5eaa186f,
+        type: 3}
+      propertyPath: ownedPokemon.Array.data[0].pokemon
+      value: 
+      objectReference: {fileID: 5900891777610994904, guid: 32b4d76a360a44d7b86596b01cffcf32,
+        type: 3}
+    - target: {fileID: 6721183539781720770, guid: 96048770f50f014439cc386a5eaa186f,
+        type: 3}
+      propertyPath: ownedPokemon.Array.data[0].level
+      value: 36
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96048770f50f014439cc386a5eaa186f, type: 3}
 --- !u!1 &329447354 stripped
@@ -127222,23 +127238,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1762436065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6201637463867112217, guid: 96048770f50f014439cc386a5eaa186f,
-    type: 3}
-  m_PrefabInstance: {fileID: 237824460}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1762436066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762436065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a42e8720c628a4643a26881b9e773b67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownedPokemon: []
-  sceneIndex: 0

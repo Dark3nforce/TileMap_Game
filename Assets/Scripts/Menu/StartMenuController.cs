@@ -79,10 +79,6 @@ public class StartMenuController : MonoBehaviour
                     Debug.Log(currentSelection);
                 }
             }
-            // if(Input.GetKeyDown(KeyCode.E)) {
-            //     gameManager.toggleMenuUI();
-                
-            // }
 
             switch(currentSelection) {
                     case 1:
@@ -133,6 +129,8 @@ public class StartMenuController : MonoBehaviour
     }
 
     void continueGame() {
+        //needs a reference
+        //need a better way to start this up
         player.LoadPlayer();
     }
     void newGame() {

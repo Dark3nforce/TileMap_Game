@@ -1060,9 +1060,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMenuUI: {fileID: 1813987912}
-  continuePanel: {fileID: 1105685707}
-  newGamePanel: {fileID: 1843631801}
-  optionsPanel: {fileID: 1583184514}
+  continuePanel: {fileID: 0}
+  newGamePanel: {fileID: 0}
+  optionsPanel: {fileID: 0}
   continueTxt: {fileID: 1996477460}
   newGameTxt: {fileID: 2053848305}
   optionsTxt: {fileID: 1467297337}
