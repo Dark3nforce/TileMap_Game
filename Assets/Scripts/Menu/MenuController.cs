@@ -10,7 +10,7 @@ public class MenuController : MonoBehaviour
 {
 
     public GameObject inventory;
-    private Player player;
+    Player player;
     public Text inventoryText;
     public GameObject menuUI;
     private int currentSelection;
