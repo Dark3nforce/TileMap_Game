@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8495432905382789224}
   - component: {fileID: 5900891777610994904}
   m_Layer: 0
-  m_Name: Blastoise
+  m_Name: BlastoiseFrontFace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

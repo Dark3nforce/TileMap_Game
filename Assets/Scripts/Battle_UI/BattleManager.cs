@@ -78,13 +78,13 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetKeyDown(KeyCode.DownArrow)) {
+       if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
             if(currentSelection<4) {
                 currentSelection++;
                 Debug.Log(currentSelection);
             }
        } 
-       if(Input.GetKeyDown(KeyCode.UpArrow)) {
+       if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) {
             if(currentSelection>0) {
                 if(currentSelection == 0)
                     currentSelection = 1;
@@ -254,12 +254,21 @@ public class BattleManager : MonoBehaviour
 
         dPoke.transform.parent = defencePodium;
 
-        BasePokemon tempPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
-        tempPoke.AddMember(battlePokemon);
+        BasePokemon tempDefPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
+        tempDefPoke.AddMember(battlePokemon);
 
         dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.image;
 
-        // changeMenu(BattleMenu.Selection);
+        //Setting players pokemon to attack podium
+        GameObject aPoke = Instantiate(emptyPoke, attackPodium.transform.position, Quaternion.identity) as GameObject;
+        aPoke.transform.parent = attackPodium;
+
+        BasePokemon tempAtkPoke = aPoke.AddComponent<BasePokemon>() as BasePokemon;
+        // tempAtkPoke.AddMember(playerPokemon);
+        // aPoke.GetComponent<SpriteRenderer>().sprite = playerPokemon.image;
+
+
+
     }
 }
 public enum BattleMenu {

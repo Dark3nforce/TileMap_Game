@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
     // public GameObject emptyPoke;
 
     private BattleManager bm;
-    private LongGrass lg;
+    // private LongGrass lg;
     Player player;
     
 
@@ -34,9 +34,9 @@ public class GameManager : MonoBehaviour {
         // bm = GameObject.Find("Battle Camera").GetComponent<BattleManager>();
         bm = GetComponent<BattleManager>();
         // lg = gameObject.find().GetComponent<LongGrass>();
-        lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
+        // lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
         player = GameObject.Find("Player").GetComponent<Player>();
-        Debug.Log(lg);
+        // Debug.Log(lg);
         // mc = GetComponent<MenuController>();
 
     }
@@ -105,8 +105,8 @@ public class GameManager : MonoBehaviour {
     public void ExitBattle() {
         SceneManager.UnloadSceneAsync("Battle_Scene");
         Time.timeScale = 1f;
-        lg.triggered = false;
-        Debug.Log(lg.triggered);
+        // lg.triggered = false;
+        // Debug.Log(lg.triggered);s
     }
 
     public List<BasePokemon> GetPokemonByRarity(Rarity rarity)

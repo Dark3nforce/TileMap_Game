@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -699,7 +699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.083, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -11.175003, y: 0}
+  m_AnchoredPosition: {x: -11.175018, y: 0}
   m_SizeDelta: {x: 22.349993, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1467297337
@@ -744,6 +744,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467297335}
   m_CullTransparentMesh: 0
+--- !u!1 &1474323679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474323681}
+  - component: {fileID: 1474323680}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1474323680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474323679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110ce18ca44b0bb458a27694e99ff4f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPokemon: []
+  allMoves: []
+  menu: {fileID: 1813987912}
+--- !u!4 &1474323681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474323679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -80.97242, y: 12.398236, z: -57.960667}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1583184514
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +957,7 @@ GameObject:
   - component: {fileID: 1813987915}
   - component: {fileID: 1813987914}
   - component: {fileID: 1813987913}
+  - component: {fileID: 1813987917}
   m_Layer: 5
   m_Name: StartMenu
   m_TagString: Untagged
@@ -1000,6 +1047,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1813987917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813987912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6516a3753c754543aa8545eca37f4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMenuUI: {fileID: 1813987912}
+  continuePanel: {fileID: 0}
+  newGamePanel: {fileID: 0}
+  optionsPanel: {fileID: 0}
+  continueTxt: {fileID: 1996477460}
+  newGameTxt: {fileID: 2053848305}
+  optionsTxt: {fileID: 1467297337}
+  playerNameTxt: {fileID: 1808125226}
+  timePlayedTxt: {fileID: 1092233220}
+  badgesOwnedTxt: {fileID: 1920556950}
+  pokemonOwnedTxt: {fileID: 1001254342}
 --- !u!1 &1816500324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,7 +1342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.083000004, y: 0.75510955}
   m_AnchorMax: {x: 1, y: 0.94900006}
-  m_AnchoredPosition: {x: -13.800003, y: 3}
+  m_AnchoredPosition: {x: -13.800018, y: 3}
   m_SizeDelta: {x: 17.1, y: -10.571926}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1996477460
@@ -1430,7 +1500,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.083, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -11.1775055, y: 0}
+  m_AnchoredPosition: {x: -11.177521, y: 0}
   m_SizeDelta: {x: 22.345001, y: -14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2053848305
