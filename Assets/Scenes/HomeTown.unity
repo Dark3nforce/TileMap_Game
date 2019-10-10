@@ -187,6 +187,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6201637463867112225, guid: 96048770f50f014439cc386a5eaa186f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96048770f50f014439cc386a5eaa186f, type: 3}
 --- !u!1 &329447354 stripped
@@ -127236,3 +127241,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedPokemon: []
+  sceneIndex: 0

@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
         // bm = GameObject.Find("Battle Camera").GetComponent<BattleManager>();
         bm = GetComponent<BattleManager>();
         // lg = gameObject.find().GetComponent<LongGrass>();
-        lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
+        // lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
         player = GameObject.Find("Player").GetComponent<Player>();
         Debug.Log(lg);
         // mc = GetComponent<MenuController>();
