@@ -14,6 +14,7 @@ TagManager:
   - Inventory
   - PlayerHome
   - Exit
+  - Music
   layers:
   - Default
   - TransparentFX
