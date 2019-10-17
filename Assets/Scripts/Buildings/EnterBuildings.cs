@@ -5,22 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class EnterBuildings : MonoBehaviour
 {
-
+    public GameObject player;
     public bool active;
     // Start is called before the first frame update
     void Start()
     {
-       
+        player = GameObject.FindGameObjectWithTag("Player");
+
         
-        }
+
+
+    }
 
     // Update is called once per frame
     void Update()
     {
+        Scene home = SceneManager.GetSceneByName("Home");
+
         if (active && Input.GetButtonDown("Fire1"))
         {
-            load("Home");
-
+             load("Home");
+           
+            
         }
 
     }
@@ -28,6 +34,7 @@ public class EnterBuildings : MonoBehaviour
     public void load(string PlayerHome){
         SceneManager.LoadScene("Home");
         SceneManager.UnloadSceneAsync("Character");
+       
 }
 
 
@@ -37,7 +44,7 @@ public class EnterBuildings : MonoBehaviour
 
             active = true;
             Debug.Log("active");
-            //DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Player"));
+         
         }
     }
     public void OnTriggerExit2D(Collider2D collision){

@@ -15,6 +15,18 @@ PluginImporter:
   validateReferences: 1
   platformData:
   - first:
+      '': Linux
+    second:
+      enabled: 1
+      settings:
+        CPU: x86
+  - first:
+      '': LinuxUniversal
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+  - first:
       '': OSXIntel
     second:
       enabled: 1
@@ -60,27 +72,15 @@ PluginImporter:
     second:
       enabled: 1
       settings:
-        CPU: AnyCPU
+        CPU: x86
   - first:
       Facebook: Win64
     second:
       enabled: 1
       settings:
-        CPU: AnyCPU
-  - first:
-      Standalone: Linux
-    second:
-      enabled: 1
-      settings:
-        CPU: x86
+        CPU: x86_64
   - first:
       Standalone: Linux64
-    second:
-      enabled: 1
-      settings:
-        CPU: AnyCPU
-  - first:
-      Standalone: LinuxUniversal
     second:
       enabled: 1
       settings:
@@ -96,13 +96,13 @@ PluginImporter:
     second:
       enabled: 1
       settings:
-        CPU: AnyCPU
+        CPU: x86
   - first:
       Standalone: Win64
     second:
       enabled: 1
       settings:
-        CPU: AnyCPU
+        CPU: x86_64
   - first:
       Windows Store Apps: WindowsStoreApps
     second:
