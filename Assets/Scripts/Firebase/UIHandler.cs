@@ -22,6 +22,7 @@ namespace Firebase.Sample.Auth {
   using System.Collections.Generic;
   using System.Threading.Tasks;
   using UnityEngine;
+    using UnityEngine.SceneManagement;
 
   // Handler for UI buttons on the scene.  Also performs some
   // necessary setup (initializing the firebase app, etc) on
@@ -309,14 +310,20 @@ namespace Firebase.Sample.Auth {
     public Task SigninWithEmailAsync() {
       DebugLog(String.Format("Attempting to sign in as {0}...", email));
       DisableUI();
-      if (signInAndFetchProfile) {
-        return auth.SignInAndRetrieveDataWithCredentialAsync(
+            SceneManager.LoadScene("Character"); //when a user logs in the game will start
+            SceneManager.UnloadSceneAsync("Firebase");
+            if (signInAndFetchProfile) {
+                
+                return auth.SignInAndRetrieveDataWithCredentialAsync(
           Firebase.Auth.EmailAuthProvider.GetCredential(email, password)).ContinueWithOnMainThread(
             HandleSignInWithSignInResult);
+
       } else {
         return auth.SignInWithEmailAndPasswordAsync(email, password)
           .ContinueWithOnMainThread(HandleSignInWithUser);
+                
       }
+
     }
 
     // This is functionally equivalent to the Signin() function.  However, it
