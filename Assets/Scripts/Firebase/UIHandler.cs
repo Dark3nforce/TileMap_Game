@@ -22,7 +22,7 @@ namespace Firebase.Sample.Auth {
   using System.Collections.Generic;
   using System.Threading.Tasks;
   using UnityEngine;
-    using UnityEngine.SceneManagement;
+  using UnityEngine.SceneManagement;
 
   // Handler for UI buttons on the scene.  Also performs some
   // necessary setup (initializing the firebase app, etc) on
@@ -310,19 +310,21 @@ namespace Firebase.Sample.Auth {
     public Task SigninWithEmailAsync() {
       DebugLog(String.Format("Attempting to sign in as {0}...", email));
       DisableUI();
-            SceneManager.LoadScene("Character"); //when a user logs in the game will start
+
             SceneManager.UnloadSceneAsync("Firebase");
+            SceneManager.LoadScene("Character"); //when a user logs in the game will start
+
             if (signInAndFetchProfile) {
-                
+
                 return auth.SignInAndRetrieveDataWithCredentialAsync(
+
           Firebase.Auth.EmailAuthProvider.GetCredential(email, password)).ContinueWithOnMainThread(
             HandleSignInWithSignInResult);
-
-      } else {
+            } else {
         return auth.SignInWithEmailAndPasswordAsync(email, password)
           .ContinueWithOnMainThread(HandleSignInWithUser);
-                
-      }
+
+            }
 
     }
 
@@ -391,8 +393,10 @@ namespace Firebase.Sample.Auth {
       EnableUI();
       if (LogTaskCompletion(task, "Sign-in")) {
         DisplaySignInResult(task.Result, 1);
-      }
-    }
+                
+
+            }
+        }
 
     // Link the current user with an email / password credential.
     protected Task LinkWithEmailCredentialAsync() {
@@ -733,6 +737,7 @@ namespace Firebase.Sample.Auth {
                                             signInAndFetchProfile ?
                                               "Enabled" : "Disabled"))) {
           signInAndFetchProfile = !signInAndFetchProfile;
+
         }
         if (HasOtherAuth && GUILayout.Button(String.Format("Switch to auth object {0}",
                                                             otherAuth.App.Name))) {
