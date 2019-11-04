@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnterGym1 : MonoBehaviour
+public class EnterGymOne : MonoBehaviour
 {
     public GameObject player;
     public bool active;
@@ -24,7 +24,7 @@ public class EnterGym1 : MonoBehaviour
 
         if (active && Input.GetButtonDown("Fire1"))
         {
-            load("Gym_Town_One");
+            load("GymOne");
 
 
         }
@@ -33,7 +33,7 @@ public class EnterGym1 : MonoBehaviour
 
     public void load(string PlayerHome)
     {
-        SceneManager.LoadScene("Gym_Town_One");
+        SceneManager.LoadScene("GymOne");
         SceneManager.UnloadSceneAsync("OverWorld");
 
     }

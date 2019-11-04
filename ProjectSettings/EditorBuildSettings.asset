@@ -33,6 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/pokecenter_interior.unity
     guid: 51e63018e8e428c41854aba37e8135fa
   - enabled: 1
-    path: Assets/Scenes/Gym_Town_One.unity
+    path: Assets/Scenes/GymOne.unity
     guid: d5e3787d4e6aa38449d0292831b50725
   m_configObjects: {}
