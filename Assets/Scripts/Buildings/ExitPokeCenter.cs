@@ -3,29 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnterGym1 : MonoBehaviour
+public class ExitPokeCenter : MonoBehaviour
 {
-    public GameObject player;
     public bool active;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-
-
-
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Scene home = SceneManager.GetSceneByName("");
-
         if (active && Input.GetButtonDown("Fire1"))
         {
-            load("Gym_Town_One");
-
+            load("OverWorld");
 
         }
 
@@ -33,9 +25,8 @@ public class EnterGym1 : MonoBehaviour
 
     public void load(string PlayerHome)
     {
-        SceneManager.LoadScene("Gym_Town_One");
-        SceneManager.UnloadSceneAsync("OverWorld");
-
+        SceneManager.LoadScene("OverWorld");
+        SceneManager.UnloadSceneAsync("pokecenter_interior");
     }
 
 
@@ -46,7 +37,6 @@ public class EnterGym1 : MonoBehaviour
 
             active = true;
             Debug.Log("active");
-
         }
     }
     public void OnTriggerExit2D(Collider2D collision)
@@ -57,4 +47,3 @@ public class EnterGym1 : MonoBehaviour
         }
     }
 }
-
