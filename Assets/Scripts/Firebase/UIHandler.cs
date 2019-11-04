@@ -310,17 +310,16 @@ namespace Firebase.Sample.Auth {
     public Task SigninWithEmailAsync() {
       DebugLog(String.Format("Attempting to sign in as {0}...", email));
       DisableUI();
-
-            SceneManager.UnloadSceneAsync("Firebase");
-            SceneManager.LoadScene("Character"); //when a user logs in the game will start
-
+            //SceneManager.UnloadSceneAsync("Firebase");
+            //SceneManager.LoadSceneAsync("Character");
             if (signInAndFetchProfile) {
-
+                
                 return auth.SignInAndRetrieveDataWithCredentialAsync(
-
           Firebase.Auth.EmailAuthProvider.GetCredential(email, password)).ContinueWithOnMainThread(
             HandleSignInWithSignInResult);
-            } else {
+                
+            }
+            else {
         return auth.SignInWithEmailAndPasswordAsync(email, password)
           .ContinueWithOnMainThread(HandleSignInWithUser);
 
@@ -335,7 +334,7 @@ namespace Firebase.Sample.Auth {
       DebugLog(String.Format("Attempting to sign in as {0}...", email));
       DisableUI();
       if (signInAndFetchProfile) {
-        return auth.SignInAndRetrieveDataWithCredentialAsync(
+                return auth.SignInAndRetrieveDataWithCredentialAsync(
           Firebase.Auth.EmailAuthProvider.GetCredential(email, password)).ContinueWithOnMainThread(
             HandleSignInWithSignInResult);
       } else {
@@ -349,6 +348,8 @@ namespace Firebase.Sample.Auth {
     public Task SigninAnonymouslyAsync() {
       DebugLog("Attempting to sign anonymously...");
       DisableUI();
+            SceneManager.UnloadSceneAsync("Firebase");
+            SceneManager.LoadSceneAsync("Character");
       return auth.SignInAnonymouslyAsync().ContinueWithOnMainThread(HandleSignInWithUser);
     }
 
@@ -385,6 +386,8 @@ namespace Firebase.Sample.Auth {
       EnableUI();
       if (LogTaskCompletion(task, "Sign-in")) {
         DebugLog(String.Format("{0} signed in", task.Result.DisplayName));
+                SceneManager.UnloadSceneAsync("Firebase");
+                SceneManager.LoadSceneAsync("Character");
       }
     }
 

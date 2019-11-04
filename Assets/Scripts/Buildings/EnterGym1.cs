@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnterGunayOffice : MonoBehaviour
+public class EnterGym1 : MonoBehaviour
 {
     public GameObject player;
     public bool active;
@@ -12,7 +12,7 @@ public class EnterGunayOffice : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        
+
 
 
     }
@@ -24,33 +24,37 @@ public class EnterGunayOffice : MonoBehaviour
 
         if (active && Input.GetButtonDown("Fire1"))
         {
-             load("Home");
-           
-            
+            load("Gym1_interior");
+
+
         }
 
     }
 
-    public void load(string PlayerHome){
-        SceneManager.LoadScene("");
+    public void load(string PlayerHome)
+    {
+        SceneManager.LoadScene("Gym1_interior");
         SceneManager.UnloadSceneAsync("OverWorld");
-       
-}
+
+    }
 
 
-    public void OnTriggerEnter2D(Collider2D collision){
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.CompareTag("Player"))
         {
 
             active = true;
             Debug.Log("active");
-         
+
         }
     }
-    public void OnTriggerExit2D(Collider2D collision){
+    public void OnTriggerExit2D(Collider2D collision)
+    {
         if (collision.CompareTag("Player"))
         {
             active = false;
         }
     }
 }
+
