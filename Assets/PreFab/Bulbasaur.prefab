@@ -100,11 +100,11 @@ MonoBehaviour:
   rarity: 0
   HP: 45
   AttackStat:
-    minimum: 0
-    maximum: 0
+    minimum: 49
+    maximum: 70
   DefenceStat:
-    minimum: 0
-    maximum: 0
+    minimum: 49
+    maximum: 70
   pokemonStats:
     AttackStat: 49
     DefenceStat: 49
@@ -114,5 +114,6 @@ MonoBehaviour:
     EvasionStat: 0
   canEvolve: 1
   evolveTo:
-    nextEvolution: {fileID: 0}
+    nextEvolution: {fileID: 6876473659914758365, guid: 98c3fa9d0a9eba449a9f6b4de8e98ad9,
+      type: 3}
     levelUpLevel: 16

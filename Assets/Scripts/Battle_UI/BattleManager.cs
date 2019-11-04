@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BattleManager : MonoBehaviour
 {
     public GameManager gm;
+    public Player player;
     
     public BattleMenu currentMenu;
     [Header("Selection")]
@@ -32,9 +33,25 @@ public class BattleManager : MonoBehaviour
     
     public Text pType;
     public Text Move1;
+    public string Move1CurPP;
+    public string Move1MaxPP;
+    public string Move1PPDisplay;
+    public string Move1Type;
     public Text Move2;
+    public string Move2CurPP;
+    public string Move2MaxPP;
+    public string Move2PPDisplay;
+    public string Move2Type;
     public Text Move3;
+    public string Move3CurPP;
+    public string Move3MaxPP;
+    public string Move3PPDisplay;
+    public string Move3Type;
     public Text Move4;
+    public string Move4CurPP;
+    public string Move4MaxPP;
+    public string Move4PPDisplay;
+    public string Move4Type;
     private string Move1Selected = "> Move 1";
     private string Move1UnSelected = "Move 1";
     private string Move2Selected = "> Move 2";
@@ -66,6 +83,7 @@ public class BattleManager : MonoBehaviour
     void Start()
     {
         lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
+        player = GameObject.Find("Player").GetComponent<Player>();
         changeMenu(BattleMenu.Selection);
 
         // loadBattle(rarity);
@@ -105,17 +123,25 @@ public class BattleManager : MonoBehaviour
                         Move2.text = Move2UnSelected;
                         Move3.text = Move3UnSelected;
                         Move4.text = Move4UnSelected;
+                        //setting move1 stats
+                        PP.text = Move1PPDisplay;
+                        pType.text = Move1Type;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             Debug.Log("Move1 Selected");
                         } else if(Input.GetKeyDown(KeyCode.Escape)) {
                             changeMenu(BattleMenu.Selection);
                         }
+                        
+
                         break;
                     case 2:
                         Move1.text = Move1UnSelected;
                         Move2.text = Move2Selected; //Arrow here
                         Move3.text = Move3UnSelected;
                         Move4.text = Move4UnSelected;
+                        //setting move2 stats
+                        PP.text = Move2PPDisplay;
+                        pType.text = Move2Type;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             Debug.Log("Move2 Selected");
                         } else if(Input.GetKeyDown(KeyCode.Escape)) {
@@ -127,6 +153,9 @@ public class BattleManager : MonoBehaviour
                         Move2.text = Move2UnSelected;
                         Move3.text = Move3Selected; //Arrow here
                         Move4.text = Move4UnSelected;
+                        //setting move3 stats
+                        PP.text = Move3PPDisplay;
+                        pType.text = Move3Type;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             Debug.Log("Move3 Selected");
                         } else if(Input.GetKeyDown(KeyCode.Escape)) {
@@ -138,6 +167,9 @@ public class BattleManager : MonoBehaviour
                         Move2.text = Move2UnSelected;
                         Move3.text = Move3UnSelected;
                         Move4.text = Move4Selected; //Arrow here
+                        //setting move4 stats
+                        PP.text = Move4PPDisplay;
+                        pType.text = Move4Type;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             Debug.Log("Move4 Selected");
                         } else if(Input.GetKeyDown(KeyCode.Escape)) {
@@ -155,6 +187,7 @@ public class BattleManager : MonoBehaviour
                         pokemon.text = pokemonUnSelected;
                         run.text = runUnSelected;
                         if(Input.GetKeyDown(KeyCode.Return)){
+                            
                             changeMenu(BattleMenu.Fight);
                         }
                         break;
@@ -264,11 +297,72 @@ public class BattleManager : MonoBehaviour
         aPoke.transform.parent = attackPodium;
 
         BasePokemon tempAtkPoke = aPoke.AddComponent<BasePokemon>() as BasePokemon;
-        // tempAtkPoke.AddMember(playerPokemon);
-        // aPoke.GetComponent<SpriteRenderer>().sprite = playerPokemon.image;
+        //checking player pokemon's health
+        //if health is zero,check next and so on
+        //if health is not zero, deploy pokemon
+
+        for(int i=0; i<player.ownedPokemon.Count-1;i++) {
+            if(healthRemaining(i)) {
+                tempAtkPoke.AddMember(player.ownedPokemon[i].pokemon);
+                aPoke.GetComponent<SpriteRenderer>().sprite = player.ownedPokemon[i].pokemon.image;
+                // player.ownedPokemon[i].moves
+                // Move1.text = ;
+
+                //Move1
+                if(player.ownedPokemon[i].moves[1].Name != null) {
+                    Move1.text = player.ownedPokemon[i].moves[0].Name;
+                    Move1CurPP = player.ownedPokemon[i].moves[0].currentPP.ToString();
+                    Move1MaxPP = player.ownedPokemon[i].moves[0].PP.ToString();
+                    Move1Type = player.ownedPokemon[i].moves[0].moveType.ToString();
+                    Move1PPDisplay = Move1CurPP + "/" + Move1MaxPP;
+                    Move1Selected = "> " + Move1.text;
+                    Move1UnSelected = Move1.text;
+                }
+                //Move2
+                //Need to add else condition for null
+                if(player.ownedPokemon[i].moves[1].Name != null) {
+                    Move2.text = player.ownedPokemon[i].moves[1].Name;
+                    Move2CurPP = player.ownedPokemon[i].moves[1].currentPP.ToString();
+                    Move2MaxPP = player.ownedPokemon[i].moves[1].PP.ToString();
+                    Move2Type = player.ownedPokemon[i].moves[1].moveType.ToString();
+                    Move2PPDisplay = Move2CurPP + "/" + Move2MaxPP;
+                    Move2Selected = "> " + Move2.text;
+                    Move2UnSelected = Move2.text;
+                }
+                //Move3
+                //Need to add else condition for null
+                if(player.ownedPokemon[i].moves[1].Name != null) {
+                    Move3.text = player.ownedPokemon[i].moves[2].Name;
+                    Move3CurPP = player.ownedPokemon[i].moves[2].currentPP.ToString();
+                    Move3MaxPP = player.ownedPokemon[i].moves[2].PP.ToString();
+                    Move3Type = player.ownedPokemon[i].moves[2].moveType.ToString();
+                    Move3PPDisplay = Move3CurPP + "/" + Move3MaxPP;
+                    Move3Selected = "> " + Move3.text;
+                    Move3UnSelected = Move3.text;
+                }
+                //Move4
+                //Need to add else condition for null
+                if(player.ownedPokemon[i].moves[1].Name != null) {
+                    Move4.text = player.ownedPokemon[i].moves[3].Name;
+                    Move4CurPP = player.ownedPokemon[i].moves[3].currentPP.ToString();
+                    Move4MaxPP = player.ownedPokemon[i].moves[3].PP.ToString();
+                    Move4Type = player.ownedPokemon[i].moves[3].moveType.ToString();
+                    Move4PPDisplay = Move4CurPP + "/" + Move4MaxPP;
+                    Move4Selected = "> " + Move4.text;
+                    Move4UnSelected = Move4.text;
+                }
+            }
+        }
+        
 
 
 
+    }
+    public bool healthRemaining(int i) {
+        if(player.ownedPokemon[i].pokemon.HP == 0)
+            return false;
+        else 
+            return true;    
     }
 }
 public enum BattleMenu {
