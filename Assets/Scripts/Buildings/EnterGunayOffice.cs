@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnterGunayOffice : MonoBehaviour
+public class EnterBuildings : MonoBehaviour
 {
     public GameObject player;
     public bool active;
@@ -20,7 +20,7 @@ public class EnterGunayOffice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Scene home = SceneManager.GetSceneByName("");
+        Scene home = SceneManager.GetSceneByName("ProfessorGunayOffice");
 
         if (active && Input.GetButtonDown("Fire1"))
         {
@@ -32,8 +32,8 @@ public class EnterGunayOffice : MonoBehaviour
     }
 
     public void load(string PlayerHome){
-        SceneManager.LoadScene("");
-        SceneManager.UnloadSceneAsync("OverWorld");
+        SceneManager.LoadScene("Home");
+        SceneManager.UnloadSceneAsync("Character");
        
 }
 

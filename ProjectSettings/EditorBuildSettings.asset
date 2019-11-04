@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Home.unity
     guid: c0029abbc08ccac4c8844326c6eaf2f7
+  - enabled: 1
+    path: Assets/Scenes/OverWorld.unity
+    guid: 307da54809f17014781bfbacdbe5d4b7
+  - enabled: 1
+    path: Assets/Scenes/Gym1_interior.unity
+    guid: ecb32d0f1913c6b4db00844ff039d8b4
   m_configObjects: {}
