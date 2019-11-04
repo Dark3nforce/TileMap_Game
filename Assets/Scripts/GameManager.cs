@@ -133,13 +133,19 @@ public class GameManager : MonoBehaviour {
 [System.Serializable]
 public class PokemonMoves
 {
-    string Name;
+    public string Name;
     public MoveType category;
     public Stat moveStat;
     public PokemonType moveType;
+    public int currentPP;
     public int PP;
     public float power;
     public float accuracy;
+
+    // public override string ToString()
+    // {
+    //     return Name + category + moveStat.maximum + moveType + PP;
+    // }
 }
 
 [System.Serializable]

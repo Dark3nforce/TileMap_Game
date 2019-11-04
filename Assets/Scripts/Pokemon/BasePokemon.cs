@@ -89,4 +89,5 @@ public class PokemonStats
     public int SpAttackStat;
     public int SpDefenceStat;
     public int EvasionStat;
+    // public int HP;
 }

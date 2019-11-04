@@ -84801,7 +84801,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42e8720c628a4643a26881b9e773b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownedPokemon: []
+  ownedPokemon:
+  - NickName: Charizard
+    pokemon: {fileID: 5900891777610994904, guid: 32b4d76a360a44d7b86596b01cffcf32,
+      type: 3}
+    basePokemonID: 0
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 5
+        maximum: 20
+      moveType: 13
+      currentPP: 30
+      PP: 30
+      power: 20
+      accuracy: 80
+    - Name: Ember
+      category: 0
+      moveStat:
+        minimum: 20
+        maximum: 40
+      moveType: 4
+      currentPP: 0
+      PP: 15
+      power: 60
+      accuracy: 65
   sceneIndex: 0
   player_Name: 
   numBadges: 0
@@ -84818,6 +84844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98242bc50ea934644af5a36f59f3dee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   active: 0
 --- !u!1 &901237567
 GameObject:
@@ -85094,7 +85121,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
@@ -85105,6 +85132,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &996584680
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -85222,7 +85250,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -90132,6 +90160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98242bc50ea934644af5a36f59f3dee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   active: 0
 --- !u!1001 &1506836358
 PrefabInstance:
@@ -90322,7 +90351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
@@ -90333,6 +90362,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1552863466
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -90870,7 +90900,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -91168,7 +91198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: f2de8bf5ebcb8e94fb318c00e29edd73, type: 3}
   m_Type: 0
@@ -91179,6 +91209,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1836893643
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -91315,7 +91346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -91722,7 +91753,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: b72b1b6b86fd9e44ebbca7622777fb59, type: 3}
   m_Type: 0
@@ -91733,6 +91764,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1996751007
 CanvasRenderer:
   m_ObjectHideFlags: 0

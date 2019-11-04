@@ -15,6 +15,41 @@ public class Player : MonoBehaviour {
 
 	void Start () {
         // sceneIndex = Scene.buildIndex();
+        // OwnedPokemon p1 = new OwnedPokemon();
+        // p1.level = 3;
+        // p1.NickName = "Bob";
+        // p1.basePokemonID = 17;
+
+        // PokemonMoves pMove = new PokemonMoves();
+
+        // pMove.accuracy = 1;
+        // pMove.category = MoveType.Physical;
+        // pMove.moveStat = new Stat();
+        // pMove.moveStat.minimum = 2;
+        // pMove.moveStat.maximum = 5;
+        // pMove.moveType = PokemonType.Dark;
+        // pMove.power = 2;
+        // pMove.PP = 3;
+        // p1.moves.Add(pMove);
+
+        // pMove = new PokemonMoves();
+        // pMove.accuracy = 2;
+        // pMove.category = MoveType.Status;
+        // pMove.moveStat = new Stat();
+        // pMove.moveStat.minimum = 12;
+        // pMove.moveStat.maximum = 15;
+        // pMove.moveType = PokemonType.Dragon;
+        // pMove.power = 12;
+        // pMove.PP = 13;
+        // p1.moves.Add(pMove);
+
+        // ownedPokemon.Add(p1);
+
+        // OwnedPokemon p2 = new OwnedPokemon();
+        // p2.level = 7;
+        // p2.NickName = "Lisa";
+        // p2.basePokemonID = 27;
+        // ownedPokemon.Add(p2);
 	}
 	
 	void Update () {
@@ -44,7 +79,25 @@ public class Player : MonoBehaviour {
 public class OwnedPokemon
 {
     public string NickName;
-    public BasePokemon pokemon;
+
+    //do not serailize this field, instead load it with ID
+    // [System.NonSerialized] public BasePokemon pokemon; 
+    public BasePokemon pokemon; 
+    // pokemon = 
+    // public int health = pokemon.HP;
+    public int basePokemonID;
+
     public int level;
     public List<PokemonMoves> moves = new List<PokemonMoves>();
+
+    public override string ToString()
+    {
+        string s = NickName + " PokID: " + basePokemonID + " Level: " + level;
+
+        foreach (PokemonMoves pm in moves)
+        {
+            s += ", " + pm;
+        }
+        return s;
+    }
 }
