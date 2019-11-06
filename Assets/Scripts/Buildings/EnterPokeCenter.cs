@@ -5,16 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class EnterPokeCenter : MonoBehaviour
 {
+    public GameObject theManager;
     public GameObject player;
     public bool active;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
-
-
-
     }
 
     // Update is called once per frame
@@ -25,17 +22,19 @@ public class EnterPokeCenter : MonoBehaviour
         if (active && Input.GetButtonDown("Fire1"))
         {
             load("pokecenter_interior");
-
-
+           // DontDestroyOnLoad(theManager);
+           
         }
 
     }
 
-    public void load(string PlayerHome)
+    public void load(string Location)
     {
-        SceneManager.LoadScene("pokecenter_interior");
-        SceneManager.UnloadSceneAsync("OverWorld");
-
+        SceneManager.LoadScene("pokecenter_interior", LoadSceneMode.Additive);
+        //SceneManager.LoadSceneAsync("pokecenter_interior");
+       // SceneManager.UnloadSceneAsync("OverWorld");
+        
+        
     }
 
 

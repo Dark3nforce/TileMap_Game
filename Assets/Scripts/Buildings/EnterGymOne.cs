@@ -31,10 +31,10 @@ public class EnterGymOne : MonoBehaviour
 
     }
 
-    public void load(string PlayerHome)
+    public void load(string Location)
     {
-        SceneManager.LoadScene("GymOne");
-        SceneManager.UnloadSceneAsync("OverWorld");
+        SceneManager.LoadSceneAsync("GymOne");
+       // SceneManager.UnloadSceneAsync("OverWorld");
 
     }
 

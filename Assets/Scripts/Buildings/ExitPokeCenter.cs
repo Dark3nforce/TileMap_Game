@@ -5,28 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class ExitPokeCenter : MonoBehaviour
 {
+    GameObject player;
     public bool active;
+
     // Start is called before the first frame update
     void Start()
     {
 
+        //DontDestroyOnLoad(theManager);
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
         if (active && Input.GetButtonDown("Fire1"))
         {
+            
             load("OverWorld");
 
+            player.transform.position = new Vector3(-76, 13, 0);
+            DontDestroyOnLoad(player);
         }
-
+        
     }
 
     public void load(string PlayerHome)
     {
-        SceneManager.LoadScene("OverWorld");
+        
+        //SceneManager.LoadSceneAsync("OverWorld");
         SceneManager.UnloadSceneAsync("pokecenter_interior");
+        
+
     }
 
 
@@ -37,6 +49,7 @@ public class ExitPokeCenter : MonoBehaviour
 
             active = true;
             Debug.Log("active");
+            
         }
     }
     public void OnTriggerExit2D(Collider2D collision)

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "676035988821",
+    "firebase_url": "https://tilemapgame.firebaseio.com",
+    "project_id": "tilemapgame",
+    "storage_bucket": "tilemapgame.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676035988821:android:484cb5ab3876375cc6b3dc",
+        "android_client_info": {
+          "package_name": "edu.ggc.tilemap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676035988821-ktv06eqqc7icgc2upm4d7ml4k4njp3oh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrE0mBhVAqJ5SLzzoXifpdVBM84_v9zzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676035988821-ktv06eqqc7icgc2upm4d7ml4k4njp3oh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
