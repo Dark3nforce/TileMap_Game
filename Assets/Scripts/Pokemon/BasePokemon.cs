@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
 public class BasePokemon : MonoBehaviour {
 
     public string PName;

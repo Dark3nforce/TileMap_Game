@@ -84824,7 +84824,27 @@ MonoBehaviour:
         minimum: 20
         maximum: 40
       moveType: 4
-      currentPP: 0
+      currentPP: 15
+      PP: 15
+      power: 60
+      accuracy: 65
+    - Name: Ember
+      category: 0
+      moveStat:
+        minimum: 20
+        maximum: 40
+      moveType: 4
+      currentPP: 15
+      PP: 15
+      power: 60
+      accuracy: 65
+    - Name: Ember
+      category: 0
+      moveStat:
+        minimum: 20
+        maximum: 40
+      moveType: 4
+      currentPP: 15
       PP: 15
       power: 60
       accuracy: 65
@@ -84832,6 +84852,18 @@ MonoBehaviour:
   player_Name: 
   numBadges: 0
   numPokemonOwned: 0
+--- !u!50 &875367566 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 50354309302074784, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 50354308876118782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &875367567 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 50354309302074788, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 50354308876118782}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &875367569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92033,6 +92065,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074784, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: c082ca0b99ccda940bc012e878940038, type: 2}
     - target: {fileID: 50354309302074786, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -92087,6 +92124,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074785, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
+        type: 3}
+      propertyPath: myRigidBod
+      value: 
+      objectReference: {fileID: 875367566}
+    - target: {fileID: 50354309302074785, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
+        type: 3}
+      propertyPath: Ani
+      value: 
+      objectReference: {fileID: 875367567}
+    - target: {fileID: 50354309302074785, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
+        type: 3}
+      propertyPath: canMove
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 50354309939810412, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
         type: 3}
