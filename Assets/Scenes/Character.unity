@@ -84803,6 +84803,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownedPokemon:
   - NickName: Charizard
+    pokemon: {fileID: 5900891777610994904, guid: 32b4d76a360a44d7b86596b01cffcf32,
+      type: 3}
     basePokemonID: 0
     level: 1
     moves:

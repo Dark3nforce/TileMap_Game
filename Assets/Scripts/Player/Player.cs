@@ -82,7 +82,7 @@ public class OwnedPokemon
 
     //do not serailize this field, instead load it with ID
     // [System.NonSerialized] public BasePokemon pokemon; 
-    [System.NonSerialized]
+    // [System.NonSerialized]
     public BasePokemon pokemon; 
     // pokemon = 
     // public int health = pokemon.HP;

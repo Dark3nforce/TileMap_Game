@@ -332,8 +332,10 @@ public class BattleManager : MonoBehaviour
         //checking player pokemon's health
         //if health is zero,check next and so on
         //if health is not zero, deploy pokemon
+        i = 0;
         print(player.ownedPokemon.Count);
         while(i<player.ownedPokemon.Count) {
+            print(player.ownedPokemon[i].pokemon.name);
             if(healthRemaining(i)) {
                 tempAtkPoke.AddMember(player.ownedPokemon[i].pokemon);
                 aPoke.GetComponent<SpriteRenderer>().sprite = player.ownedPokemon[i].pokemon.image;
