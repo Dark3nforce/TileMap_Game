@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour {
 
        // player.GetComponent<PlayerMovement>().isAllowedToMove = false;
 
-
+        // print("setting timeScale to 0");
         Time.timeScale = 0f;
         // bm.start(rarity);
         SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour {
         // dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.image;
 
         // bm.changeMenu(BattleMenu.Selection);
-        Debug.Log("EnterBattle method finish");
+        // Debug.Log("EnterBattle method finish");
         // SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
         
 

@@ -118,6 +118,7 @@ public class BattleManager : MonoBehaviour
     {
         lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
         player = GameObject.Find("Player").GetComponent<Player>();
+        print(player);
         changeMenu(BattleMenu.Selection);
 
         // loadBattle(rarity);
@@ -299,10 +300,13 @@ public class BattleManager : MonoBehaviour
     public void loadBattle(Rarity rarity) {
         // public void loadBattle() {
         changeMenu(BattleMenu.Selection);
+
+
+        //--------------Enemy----------------------
         BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(rarity));
         // BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(Rarity.Common));
 
-        Debug.Log(battlePokemon.name);
+        // Debug.Log(battlePokemon.name);
         GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
 
         dPoke.transform.parent = defencePodium;
@@ -315,8 +319,11 @@ public class BattleManager : MonoBehaviour
         enemyFullHealth = battlePokemon.HP;
         enemySpeed = battlePokemon.pokemonStats.SpeedStat;
         enemyName = battlePokemon.PName;
+        enemyHPForeground.fillAmount = enemyFullHealth;
         // enemyLevel = battlePokemon.level;
 
+
+        //---------------Player---------------------
         //Setting players pokemon to attack podium
         GameObject aPoke = Instantiate(emptyPoke, attackPodium.transform.position, Quaternion.identity) as GameObject;
         aPoke.transform.parent = attackPodium;
@@ -325,8 +332,8 @@ public class BattleManager : MonoBehaviour
         //checking player pokemon's health
         //if health is zero,check next and so on
         //if health is not zero, deploy pokemon
-
-        while(i<player.ownedPokemon.Count-1) {
+        print(player.ownedPokemon.Count);
+        while(i<player.ownedPokemon.Count) {
             if(healthRemaining(i)) {
                 tempAtkPoke.AddMember(player.ownedPokemon[i].pokemon);
                 aPoke.GetComponent<SpriteRenderer>().sprite = player.ownedPokemon[i].pokemon.image;
@@ -334,6 +341,7 @@ public class BattleManager : MonoBehaviour
                 playerFullHealth = player.ownedPokemon[i].pokemon.HP;
                 playerSpeed = player.ownedPokemon[i].pokemon.pokemonStats.SpeedStat;
                 playerName = player.ownedPokemon[i].pokemon.PName;
+                HPForeground.fillAmount = playerFullHealth;
                 // playerLevel = player.ownedPokemon[i].pokemon.level;
                     
                 // player.ownedPokemon[i].moves
@@ -366,6 +374,7 @@ public class BattleManager : MonoBehaviour
                 }
                 //Move3
                 //Need to add else condition for null
+                print(i + ","+ player.ownedPokemon.Count+ ",");
                 if(player.ownedPokemon[i].moves[2].Name != null) {
                     Move3.text = player.ownedPokemon[i].moves[2].Name;
                     Move3CurPP = player.ownedPokemon[i].moves[2].currentPP;
@@ -376,6 +385,8 @@ public class BattleManager : MonoBehaviour
                     Move3UnSelected = Move3.text;
                     move3Accuracy = player.ownedPokemon[i].moves[2].accuracy;
                     move3Power = player.ownedPokemon[i].moves[2].power;
+                } else {
+
                 }
                 //Move4
                 //Need to add else condition for null
@@ -389,7 +400,10 @@ public class BattleManager : MonoBehaviour
                     Move4UnSelected = Move4.text;
                     move4Accuracy = player.ownedPokemon[i].moves[3].accuracy;
                     move4Power = player.ownedPokemon[i].moves[3].power;
+                } else {
+                    
                 }
+                break;
             } else {
                 i++;
             }
@@ -408,8 +422,11 @@ public class BattleManager : MonoBehaviour
 
     //needs to be improved upon
     public void battle(float playerHealth, float enemyHealth, float accuracy, float power) {
+        print("battle called");
         if(playerSpeed >= enemySpeed) { //player speed > enemy speed
+            print("power" + power +", enemy health" + enemyHealth);
             enemyHealth -= power;
+            print(enemyHealth);
             updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
             changeMenu(BattleMenu.Selection);
         } else if(playerSpeed < enemySpeed) { //player speed < enemy speed
@@ -418,17 +435,22 @@ public class BattleManager : MonoBehaviour
         }
     }
     public void updateBattleStatus(float playerHealth, float playerFullHealth,float playerLevel, float enemyHealth, float enemyFullHealth, float enmeyLevel) {
+        print("update battle UI entered");
+        
         //updating player status
         playerPokemonName.text = playerName;
         // playerPokemonLevel.text = playerLevel.ToString();
-        HPInfo.text = playerHealth.ToString() + "/" + playerFullHealth.ToString();
-        HPForeground.fillAmount = playerHealth/playerFullHealth;
+        HPInfo.text = playerHealth + "/" + playerFullHealth;
+        // HPForeground.fillAmount = playerHealth/playerFullHealth;
+        HPForeground.fillAmount = playerHealth;
+        // print("Player HP" + playerHealth/playerFullHealth);
         
 
         //updating enemy status
         enemyPokemonName.text  = enemyName;
         // enemyPokemonLevel.text = enmeyLevel.ToString();
-        enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
+        enemyHPForeground.fillAmount = enemyHealth;
+        print("Enemy HP" + enemyHealth);
         
         //need to create method when player is faints
         //playerFaint();
@@ -444,7 +466,7 @@ public class BattleManager : MonoBehaviour
             
             playerFainted();
         }
-
+        print("update battle UI exited");
     }
     void bothFainted() {
         Debug.Log("Both Pokemon Fainted");

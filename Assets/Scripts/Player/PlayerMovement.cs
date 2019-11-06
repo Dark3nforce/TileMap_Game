@@ -142,9 +142,11 @@ public class PlayerMovement : MonoBehaviour
     public void StopMovement()
     {
         if (SceneManager.GetSceneByName("Battle_Scene").isLoaded){
+            //print("Trouble");
             CanNotMove();
         }
         if (GameObject.FindGameObjectWithTag("MenuCanvas")) {
+            //print("Trouble");
             myRigidBod.constraints = RigidbodyConstraints2D.FreezePosition;
             CanNotMove();  
         }
@@ -171,9 +173,11 @@ public class PlayerMovement : MonoBehaviour
     }
     void Move()
     {
+        
         myRigidBod.MovePosition(
             transform.position + change * speed * Time.deltaTime
             );
+        
     }
     void CanNotMove() {
         Ani.SetFloat("inputX", 0);

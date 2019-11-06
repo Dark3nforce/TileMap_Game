@@ -23,6 +23,7 @@ public class PlayerData
         foreach(OwnedPokemon op in player.ownedPokemon) {
             ownedPokemon.Add(op);
         }
+        
     }
 
     public override string ToString() {
