@@ -191,6 +191,6 @@ public class MenuController : MonoBehaviour
     }
     public void goToQuit() {
         Application.Quit();
-        UnityEditor.EditorApplication.Exit(0);
+       // UnityEditor.EditorApplication.Exit(0);
     }
 }
