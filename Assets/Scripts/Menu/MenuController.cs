@@ -29,6 +29,9 @@ public class MenuController : MonoBehaviour
     public Text SaveTxt;
     private string SaveSelected = "> Save";
     private string SaveUnSelected = "Save";
+    public Text QuitTxt;
+    private string QuitSelected = "> Quit";
+    private string QuitUnSelected = "Quit";
     public Text SettingsTxt;
     private string SetSelected = "> Settings";
     private string SetUnSelected = "Settings";
@@ -54,7 +57,7 @@ public class MenuController : MonoBehaviour
 
         if (menuUI.activeInHierarchy) {
             if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
-                if(currentSelection<6) {
+                if(currentSelection<7) {
                     currentSelection++;
                     Debug.Log(currentSelection);
                 }
@@ -80,6 +83,7 @@ public class MenuController : MonoBehaviour
                         BagTxt.text = BagUnSelected;
                         CardTxt.text = CardUnSelected;
                         SaveTxt.text = SaveUnSelected;
+                        QuitTxt.text = QuitUnSelected;
                         SettingsTxt.text = SetUnSelected;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             goToPokeDex();
@@ -91,6 +95,7 @@ public class MenuController : MonoBehaviour
                         BagTxt.text = BagUnSelected;
                         CardTxt.text = CardUnSelected;
                         SaveTxt.text = SaveUnSelected;
+                        QuitTxt.text = QuitUnSelected;
                         SettingsTxt.text = SetUnSelected;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             goToPokeParty();
@@ -102,6 +107,7 @@ public class MenuController : MonoBehaviour
                         BagTxt.text = BagSelected;
                         CardTxt.text = CardUnSelected;
                         SaveTxt.text = SaveUnSelected;
+                        QuitTxt.text = QuitUnSelected;
                         SettingsTxt.text = SetUnSelected;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             goToBag();
@@ -113,6 +119,7 @@ public class MenuController : MonoBehaviour
                         BagTxt.text = BagUnSelected;
                         CardTxt.text = CardSelected;
                         SaveTxt.text = SaveUnSelected;
+                        QuitTxt.text = QuitUnSelected;
                         SettingsTxt.text = SetUnSelected;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             goToTrainerCard();
@@ -124,6 +131,7 @@ public class MenuController : MonoBehaviour
                         BagTxt.text = BagUnSelected;
                         CardTxt.text = CardUnSelected;
                         SaveTxt.text = SaveSelected;
+                        QuitTxt.text = QuitUnSelected;
                         SettingsTxt.text = SetUnSelected;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             player.SavePlayer();
@@ -135,12 +143,27 @@ public class MenuController : MonoBehaviour
                         BagTxt.text = BagUnSelected;
                         CardTxt.text = CardUnSelected;
                         SaveTxt.text = SaveUnSelected;
+                        QuitTxt.text = QuitUnSelected;
                         SettingsTxt.text = SetSelected;
                         if(Input.GetKeyDown(KeyCode.Return)){
                             goToSettings();
                         } 
-                        break;          
-                }
+                        break;
+                case 7:
+                    PokeDexTxt.text = PokeDexUnSelected;
+                    PokeTxt.text = PokeUnSelected;
+                    BagTxt.text = BagUnSelected;
+                    CardTxt.text = CardUnSelected;
+                    SaveTxt.text = SaveUnSelected;
+                    QuitTxt.text = QuitSelected;
+                    SettingsTxt.text = SetUnSelected;
+                    if (Input.GetKeyDown(KeyCode.Return))
+                    {
+                        goToQuit();
+                    }
+                    break;
+
+            }
         }
 
     }
@@ -166,5 +189,8 @@ public class MenuController : MonoBehaviour
     public void goToSettings() {
         Debug.Log("Go to Settings");
     }
-
+    public void goToQuit() {
+        Application.Quit();
+        UnityEditor.EditorApplication.Exit(0);
+    }
 }
