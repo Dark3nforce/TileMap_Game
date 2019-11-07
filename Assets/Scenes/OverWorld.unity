@@ -276,6 +276,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   active: 0
+--- !u!1 &290283767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 50354308449886631, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2032273060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &455155185
 GameObject:
   m_ObjectHideFlags: 0
@@ -140209,7 +140215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allPokemon: []
   allMoves: []
-  menu: {fileID: 0}
+  menu: {fileID: 290283767}
 --- !u!4 &1297400640
 Transform:
   m_ObjectHideFlags: 0
