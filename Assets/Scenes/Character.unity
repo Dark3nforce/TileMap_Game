@@ -274,6 +274,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -321,6 +367,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -509,6 +601,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -582,6 +720,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -655,6 +839,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -728,6 +958,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -801,6 +1077,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -874,6 +1196,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -84243,6 +84611,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -84316,6 +84730,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -84455,6 +84915,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -84534,6 +85040,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -84607,6 +85159,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -84680,6 +85278,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -84834,6 +85478,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -84907,6 +85597,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -84980,6 +85716,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -85059,6 +85841,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -89326,6 +90154,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -89425,6 +90299,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -89498,6 +90418,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -89571,6 +90537,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -89644,6 +90656,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -89717,6 +90775,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90149,6 +91253,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90222,6 +91372,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90255,6 +91451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon: []
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90404,6 +91601,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90477,6 +91720,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90524,6 +91813,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90635,6 +91970,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90708,6 +92089,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90755,6 +92182,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90854,6 +92327,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90939,6 +92458,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -90972,12 +92537,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allPokemon:
-  - {fileID: 5900891777610994904, guid: f6554920830d16244a265f1f3b4765f7, type: 3}
-  - {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6, type: 3}
-  - {fileID: 6876473659914758365, guid: 98c3fa9d0a9eba449a9f6b4de8e98ad9, type: 3}
-  - {fileID: 5672179643844261084, guid: b39ee2cdf74ef0d4fa4d42c57bcffa18, type: 3}
-  - {fileID: 2405054582829893953, guid: 519b6c2dd27077144b25a1f0b108093d, type: 3}
-  - {fileID: 4258350337317684576, guid: 202fc7eedec77ef4d82146c638f3b46b, type: 3}
+  - pokemon: {fileID: 0}
+    basePokemonID: 0
+    level: 0
+    moves: []
+  - pokemon: {fileID: 0}
+    basePokemonID: 0
+    level: 0
+    moves: []
+  - pokemon: {fileID: 0}
+    basePokemonID: 0
+    level: 0
+    moves: []
+  - pokemon: {fileID: 0}
+    basePokemonID: 0
+    level: 0
+    moves: []
+  - pokemon: {fileID: 0}
+    basePokemonID: 0
+    level: 0
+    moves: []
+  - pokemon: {fileID: 0}
+    basePokemonID: 0
+    level: 0
+    moves: []
   allMoves: []
   menu: {fileID: 694700889}
 --- !u!4 &1932258805
@@ -91064,6 +92647,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -91442,6 +93071,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a0456c970d69349b04b3326d92bd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wildPokemon:
+  - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
+      type: 3}
+    basePokemonID: 101
+    level: 1
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 13
+      currentPP: 35
+      PP: 35
+      power: 40
+      accuracy: 100
+    - Name: Absorb
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 20
+      accuracy: 100
+    - Name: Energy Ball
+      category: 1
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 10
+      PP: 10
+      power: 90
+      accuracy: 100
+    - Name: Razor Leaf
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 6
+      currentPP: 25
+      PP: 25
+      power: 55
+      accuracy: 95
   grassType: 0
   raritySet: 0
   triggered: 0
@@ -91457,6 +93132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074784, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: c082ca0b99ccda940bc012e878940038, type: 2}
     - target: {fileID: 50354309302074786, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -91512,11 +93192,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 50354309302074784, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: c082ca0b99ccda940bc012e878940038, type: 2}
     - target: {fileID: 50354309302074785, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
         type: 3}
       propertyPath: myRigidBod

@@ -112,11 +112,13 @@ public class BattleManager : MonoBehaviour
     private LongGrass lg;
 
     int i=0;
+    int j;
+    int k;
 
     // Start is called before the first frame update
     void Start()
     {
-        lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
+        lg = GameObject.FindGameObjectWithTag("Long_Grass").GetComponent<LongGrass>();
         player = GameObject.Find("Player").GetComponent<Player>();
         print(player);
         changeMenu(BattleMenu.Selection);
@@ -298,13 +300,16 @@ public class BattleManager : MonoBehaviour
 
 
     public void loadBattle(Rarity rarity) {
-        // public void loadBattle() {
         changeMenu(BattleMenu.Selection);
-
-
+        print("wildPokemon count: "+lg.wildPokemon.Count);
+        // print("ownedPokemon count: "+player.ownedPokemon.Count);
+        j = Random.Range(0,lg.wildPokemon.Count);
+        // j=0;
+        // print("Rarity loadBattle: " + rarity);
         //--------------Enemy----------------------
-        BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(rarity));
-        // BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(Rarity.Common));
+        // WildPokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(rarity));
+
+        WildPokemon battlePokemon = lg.wildPokemon[j];
 
         // Debug.Log(battlePokemon.name);
         GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
@@ -312,13 +317,13 @@ public class BattleManager : MonoBehaviour
         dPoke.transform.parent = defencePodium;
 
         BasePokemon tempDefPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
-        tempDefPoke.AddMember(battlePokemon);
+        tempDefPoke.AddMember(battlePokemon.pokemon);
 
-        dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.image;
-        enemyHealth = battlePokemon.HP;
-        enemyFullHealth = battlePokemon.HP;
-        enemySpeed = battlePokemon.pokemonStats.SpeedStat;
-        enemyName = battlePokemon.PName;
+        dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.pokemon.image;
+        enemyHealth = battlePokemon.pokemon.HP;
+        enemyFullHealth = battlePokemon.pokemon.HP;
+        enemySpeed = battlePokemon.pokemon.pokemonStats.SpeedStat;
+        enemyName = battlePokemon.pokemon.PName;
         enemyHPForeground.fillAmount = enemyFullHealth;
         // enemyLevel = battlePokemon.level;
 
@@ -333,7 +338,7 @@ public class BattleManager : MonoBehaviour
         //if health is zero,check next and so on
         //if health is not zero, deploy pokemon
         i = 0;
-        print(player.ownedPokemon.Count);
+        print("ownedPokemon count: "+player.ownedPokemon.Count);
         while(i<player.ownedPokemon.Count) {
             print(player.ownedPokemon[i].pokemon.name);
             if(healthRemaining(i)) {
@@ -425,10 +430,19 @@ public class BattleManager : MonoBehaviour
     //needs to be improved upon
     public void battle(float playerHealth, float enemyHealth, float accuracy, float power) {
         print("battle called");
+        k = Random.Range(0, lg.wildPokemon[j].moves.Count);
+        float enemyAttack;
         if(playerSpeed >= enemySpeed) { //player speed > enemy speed
             print("power" + power +", enemy health" + enemyHealth);
             enemyHealth -= power;
-            print(enemyHealth);
+            print("enemyHealth" + enemyHealth);
+            //----------------------------------------------------
+            //need to rework this to check it the current PP of a move != 0
+                enemyAttack = lg.wildPokemon[j].moves[k].power;
+                lg.wildPokemon[j].moves[k].currentPP--;
+            //-----------------------------------------------------    
+            playerHealth -= enemyAttack;
+            print("PlayerHealth"+playerHealth);
             updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
             changeMenu(BattleMenu.Selection);
         } else if(playerSpeed < enemySpeed) { //player speed < enemy speed

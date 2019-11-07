@@ -92,3 +92,35 @@ public class PokemonStats
     public int EvasionStat;
     // public int HP;
 }
+
+[System.Serializable]
+public class PokemonMoves
+{
+    public string Name;
+    public MoveType category;
+    public Stat moveStat;
+    public PokemonType moveType;
+    public int currentPP;
+    public int PP;
+    public float power;
+    public float accuracy;
+
+    // public override string ToString()
+    // {
+    //     return Name + category + moveStat.maximum + moveType + PP;
+    // }
+}
+
+[System.Serializable]
+public class Stat
+{
+    public float minimum;
+    public float maximum;
+}
+
+public enum MoveType
+{
+    Physical,
+    Special,
+    Status
+}
