@@ -85360,8 +85360,8 @@ MonoBehaviour:
       moveType: 13
       currentPP: 30
       PP: 30
-      power: 20
-      accuracy: 80
+      power: 40
+      accuracy: 100
     - Name: Ember
       category: 0
       moveStat:
