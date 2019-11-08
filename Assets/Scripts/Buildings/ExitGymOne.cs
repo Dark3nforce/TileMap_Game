@@ -3,36 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnterGymOne : MonoBehaviour
+public class ExitGymOne : MonoBehaviour
 {
-    public GameObject theManager;
-    public GameObject player;
+    GameObject player;
     public bool active;
+
     // Start is called before the first frame update
     void Start()
     {
+
+        //DontDestroyOnLoad(theManager);
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Scene home = SceneManager.GetSceneByName("");
+
 
         if (active && Input.GetButtonDown("Fire1"))
         {
-            load("GymOne");
-            // DontDestroyOnLoad(theManager);
 
+            load("OverWorld");
+
+            player.transform.position = new Vector3(-93, 21, 0);
+            DontDestroyOnLoad(player);
         }
 
     }
 
-    public void load(string Location)
+    public void load(string PlayerHome)
     {
-        SceneManager.LoadScene("GymOne", LoadSceneMode.Additive);
-        //SceneManager.LoadSceneAsync("pokecenter_interior");
-        // SceneManager.UnloadSceneAsync("OverWorld");
+
+        //SceneManager.LoadSceneAsync("OverWorld");
+        SceneManager.UnloadSceneAsync("GymOne");
 
 
     }
@@ -56,4 +60,3 @@ public class EnterGymOne : MonoBehaviour
         }
     }
 }
-
