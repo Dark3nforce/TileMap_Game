@@ -94,6 +94,7 @@ public class BattleManager : MonoBehaviour
     float move4Power;
 
     [Header("Info")]
+    //Message/Info Panel
     public GameObject InfoMenu;
     public Text InfoText;
 
@@ -112,11 +113,13 @@ public class BattleManager : MonoBehaviour
     private LongGrass lg;
 
     int i=0;
+    int j;
+    int k;
 
     // Start is called before the first frame update
     void Start()
     {
-        lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
+        lg = GameObject.FindGameObjectWithTag("Long_Grass").GetComponent<LongGrass>();
         player = GameObject.Find("Player").GetComponent<Player>();
         print(player);
         changeMenu(BattleMenu.Selection);
@@ -131,6 +134,8 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HPForeground.fillAmount = playerHealth/playerFullHealth;
+        enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
        if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
             if(currentSelection<4) {
                 currentSelection++;
@@ -298,13 +303,16 @@ public class BattleManager : MonoBehaviour
 
 
     public void loadBattle(Rarity rarity) {
-        // public void loadBattle() {
         changeMenu(BattleMenu.Selection);
-
-
+        print("wildPokemon count: "+lg.wildPokemon.Count);
+        // print("ownedPokemon count: "+player.ownedPokemon.Count);
+        j = Random.Range(0,lg.wildPokemon.Count);
+        // j=0;
+        // print("Rarity loadBattle: " + rarity);
         //--------------Enemy----------------------
-        BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(rarity));
-        // BasePokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(Rarity.Common));
+        // WildPokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(rarity));
+
+        WildPokemon battlePokemon = lg.wildPokemon[j];
 
         // Debug.Log(battlePokemon.name);
         GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
@@ -312,13 +320,13 @@ public class BattleManager : MonoBehaviour
         dPoke.transform.parent = defencePodium;
 
         BasePokemon tempDefPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
-        tempDefPoke.AddMember(battlePokemon);
+        tempDefPoke.AddMember(battlePokemon.pokemon);
 
-        dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.image;
-        enemyHealth = battlePokemon.HP;
-        enemyFullHealth = battlePokemon.HP;
-        enemySpeed = battlePokemon.pokemonStats.SpeedStat;
-        enemyName = battlePokemon.PName;
+        dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.pokemon.image;
+        enemyHealth = battlePokemon.pokemon.HP;
+        enemyFullHealth = battlePokemon.pokemon.HP;
+        enemySpeed = battlePokemon.pokemon.pokemonStats.SpeedStat;
+        enemyName = battlePokemon.pokemon.PName;
         enemyHPForeground.fillAmount = enemyFullHealth;
         // enemyLevel = battlePokemon.level;
 
@@ -333,7 +341,7 @@ public class BattleManager : MonoBehaviour
         //if health is zero,check next and so on
         //if health is not zero, deploy pokemon
         i = 0;
-        print(player.ownedPokemon.Count);
+        print("ownedPokemon count: "+player.ownedPokemon.Count);
         while(i<player.ownedPokemon.Count) {
             print(player.ownedPokemon[i].pokemon.name);
             if(healthRemaining(i)) {
@@ -425,15 +433,40 @@ public class BattleManager : MonoBehaviour
     //needs to be improved upon
     public void battle(float playerHealth, float enemyHealth, float accuracy, float power) {
         print("battle called");
+        k = Random.Range(0, lg.wildPokemon[j].moves.Count);
+        float enemyAttack;
+        //----------------------------------------------------
+            //need to rework this to check it the current PP of a move != 0
+                enemyAttack = lg.wildPokemon[j].moves[k].power;
+                lg.wildPokemon[j].moves[k].currentPP--;
+        //----------------------------------------------------- 
+
+
         if(playerSpeed >= enemySpeed) { //player speed > enemy speed
             print("power" + power +", enemy health" + enemyHealth);
             enemyHealth -= power;
-            print(enemyHealth);
+            print("enemyHealth" + enemyHealth);
+            
+            // if(playerHealth <= 0) {
+
+            // } else {
+                if(enemyHealth <= 0) {
+                    playerHealth -= enemyAttack;
+                }
+            // } 
+            
+            print("PlayerHealth"+playerHealth);
             updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
-            changeMenu(BattleMenu.Selection);
+            
         } else if(playerSpeed < enemySpeed) { //player speed < enemy speed
             //add enemy  attack code
-            changeMenu(BattleMenu.Selection);
+
+            playerHealth -= enemyAttack;
+            if(playerHealth <= 0) {
+                enemyHealth -= power;
+            }
+            updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
+            
         }
     }
     public void updateBattleStatus(float playerHealth, float playerFullHealth,float playerLevel, float enemyHealth, float enemyFullHealth, float enmeyLevel) {
@@ -442,16 +475,22 @@ public class BattleManager : MonoBehaviour
         //updating player status
         playerPokemonName.text = playerName;
         // playerPokemonLevel.text = playerLevel.ToString();
+        if(playerHealth < 0) {
+        	playerHealth = 0;	
+        }
+        if(enemyHealth < 0) {
+        	enemyHealth = 0;
+        }
         HPInfo.text = playerHealth + "/" + playerFullHealth;
         // HPForeground.fillAmount = playerHealth/playerFullHealth;
-        HPForeground.fillAmount = playerHealth;
+        HPForeground.fillAmount = playerHealth/playerFullHealth;
         // print("Player HP" + playerHealth/playerFullHealth);
         
 
         //updating enemy status
         enemyPokemonName.text  = enemyName;
         // enemyPokemonLevel.text = enmeyLevel.ToString();
-        enemyHPForeground.fillAmount = enemyHealth;
+        enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
         print("Enemy HP" + enemyHealth);
         
         //need to create method when player is faints
@@ -459,50 +498,69 @@ public class BattleManager : MonoBehaviour
         //need to create method when enemy is faints
         //enemyFaint();
         //need to create method when both faint at same time
-        if(playerHealth == 0 && enemyHealth == 0) {
+        if(playerHealth <= 0 && enemyHealth <= 0) {
             Debug.Log("Both Pokemon Fainted");
-        } else if (enemyHealth == 0) {
+        } else if (enemyHealth <= 0) {
             
             enemyFainted();
-        } else if(playerHealth == 0) {
+        } else if(playerHealth <= 0) {
             
             playerFainted();
         }
+        changeMenu(BattleMenu.Selection);
         print("update battle UI exited");
     }
     void bothFainted() {
         Debug.Log("Both Pokemon Fainted");
-
     }
     void enemyFainted() {
         Debug.Log("Enemy Fainted");
         //need to add experience gained and update player stats
         player.ownedPokemon[i].pokemon.HP = (int)playerHealth;
-
             //Move1
-            if(player.ownedPokemon[i].moves[0].Name != null) {
-                    
+            	if(player.ownedPokemon[i].moves[0].Name != null) {                    
                     player.ownedPokemon[i].moves[0].currentPP = Move1CurPP;
+
+                    //for debugging only
+                    print(Move1.text + player.ownedPokemon[i].moves[0].currentPP);
                 }
                 //Move2
                 //Need to add else condition for null
                 if(player.ownedPokemon[i].moves[1].Name != null) {
                     player.ownedPokemon[i].moves[1].currentPP = Move2CurPP;
+
+                    //for debugging only
+                 	print(Move2.text + player.ownedPokemon[i].moves[1].currentPP);   
                 }
                 //Move3
                 //Need to add else condition for null
                 if(player.ownedPokemon[i].moves[2].Name != null) {
                     player.ownedPokemon[i].moves[2].currentPP = Move3CurPP;
+
+                    //for debugging only
+                    print(Move3.text + player.ownedPokemon[i].moves[2].currentPP);
                 }
                 //Move4
                 //Need to add else condition for null
                 if(player.ownedPokemon[i].moves[3].Name != null) {
                     player.ownedPokemon[i].moves[3].currentPP = Move4CurPP;
+
+                    //for debugging only
+                    print(Move4.text + player.ownedPokemon[i].moves[3].currentPP);
                 }
+                changeMenu(BattleMenu.Info);
+                //set Info menu to print out that enemy fainted
         gm.ExitBattle();
     }
     void playerFainted() {
+
         Debug.Log("Player Fainted");
+        changeMenu(BattleMenu.Info);
+        //set Info menu to print out that enemy fainted
+
+
+        player.ownedPokemon[i].pokemon.HP = (int)playerFullHealth;
+        gm.ExitBattle();
     }
 }
 public enum BattleMenu {

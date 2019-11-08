@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class LongGrass : MonoBehaviour {
 
+    public List<WildPokemon> wildPokemon = new List<WildPokemon>();
     public BiomeList grassType;
 
     private GameManager gm;
@@ -24,22 +26,15 @@ public class LongGrass : MonoBehaviour {
 	void Update () {
 	    
 	}
+    public void sendListToGM(){
+        foreach (WildPokemon Pokemon in wildPokemon)
+        {
+                gm.allPokemon.Add(Pokemon);
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        // Debug.Log("entering: " + triggered + " gm: " + gm);
-        // if(col.tag == "Long_Grass") {
-        //     Debug.Log("entering: " + triggered + " gm: " + gm);
-        //     if(col.GetComponent<PlayerMovement>())
-        //     {
-                //P = x / 187.5
-                //VC = 10, C = 8.5, Semi-Are = 6.75, Rare = 3.33, VR = 1.25
-                // float vc = 10 / 187.5f;
-                // float c = 8.5f / 187.5f;
-                // float sr = 6.75f / 187.5f;
-                // float r = 3.33f / 187.5f;
-                // float vr = 1.25f / 187.5f;
-
                 float p = Random.Range(0.0f, 100.0f);
                 if (triggered == false)
                 {
@@ -48,6 +43,7 @@ public class LongGrass : MonoBehaviour {
                         if (gm != null) {
                             raritySet = Rarity.VeryRare;
                             gm.EnterBattle();
+                            print("Rarity set OnTriggerEnter: " + raritySet);
                             triggered = true;
                         }
                     }
@@ -56,6 +52,7 @@ public class LongGrass : MonoBehaviour {
                         if (gm != null) {
                             raritySet = Rarity.Rare;
                             gm.EnterBattle();
+                            print("Rarity set OnTriggerEnter: " + raritySet);
                             triggered = true;
                         }
                     }
@@ -64,6 +61,7 @@ public class LongGrass : MonoBehaviour {
                         if (gm != null) {
                             raritySet = Rarity.SemiRare;
                             gm.EnterBattle();
+                            print("Rarity set OnTriggerEnter: " + raritySet);
                             triggered = true;
                         }
                     }
@@ -72,6 +70,7 @@ public class LongGrass : MonoBehaviour {
                         if (gm != null) {
                             raritySet  = Rarity.Common;
                             gm.EnterBattle();
+                            print("Rarity set OnTriggerEnter: " + raritySet);
                             triggered = true;
                         }
                             
@@ -82,6 +81,7 @@ public class LongGrass : MonoBehaviour {
                             Debug.Log("very common");
                             raritySet = Rarity.VeryCommon;
                             gm.EnterBattle();
+                            print("Rarity set OnTriggerEnter: " + raritySet);
                             triggered = true;
                         }
                     }   
@@ -89,57 +89,33 @@ public class LongGrass : MonoBehaviour {
         //     }
         // }
     }
+}
+[System.Serializable]
+public class WildPokemon
+{
+    // public string NickName;
 
-        //Might be forcing battle every grass step and not random
-        // private void OnTriggerStay2D(Collider2D collision)
-        // {
-        //     float p = Random.Range(0.0f, 100.0f);
+    //do not serailize this field, instead load it with ID
+    // [System.NonSerialized] public BasePokemon pokemon; 
+    // [System.NonSerialized]
+    public BasePokemon pokemon; 
+    // pokemon = 
+    // public int health = pokemon.HP;
+    public int basePokemonID;
 
-        //         if (triggered == false)
-        //         {
-        //                 if(p < vr*100)
-        //             {
-        //                 if (gm != null) {
-        //                     raritySet = Rarity.VeryRare;
-        //                     gm.EnterBattle();
-        //                     triggered = true;
-        //                 }
-        //             }
-        //             else if(p < r*100)
-        //             {
-        //                 if (gm != null) {
-        //                     raritySet = Rarity.Rare;
-        //                     gm.EnterBattle();
-        //                     triggered = true;
-        //                 }
-        //             }
-        //             else if(p < sr*100)
-        //             {
-        //                 if (gm != null) {
-        //                     raritySet = Rarity.SemiRare;
-        //                     gm.EnterBattle();
-        //                     triggered = true;
-        //                 }
-        //             }
-        //             else if(p < c*100)
-        //             {
-        //                 if (gm != null) {
-        //                     raritySet  = Rarity.Common;
-        //                     gm.EnterBattle();
-        //                     triggered = true;
-        //                 }
-                            
-        //             }
-        //             else if(p < vc*100)
-        //             {
-        //                 if (gm != null) {
-        //                     raritySet = Rarity.VeryCommon;
-        //                     gm.EnterBattle();
-        //                     triggered = true;
-        //                 }
-        //             }   
-        //         }
-        // }
+    public int level;
+    public List<PokemonMoves> moves = new List<PokemonMoves>();
+
+    public override string ToString()
+    {
+        string s = "PokID: " + basePokemonID + " Level: " + level;
+
+        foreach (PokemonMoves pm in moves)
+        {
+            s += ", " + pm;
+        }
+        return s;
+    }
 }
 
 // using System.Collections;

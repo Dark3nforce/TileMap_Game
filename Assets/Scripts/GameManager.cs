@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
     // public GameObject player;
     // SceneManager sm;
 
-    public List<BasePokemon> allPokemon = new List<BasePokemon>();
+    public List<WildPokemon> allPokemon = new List<WildPokemon>();
     public List<PokemonMoves> allMoves = new List<PokemonMoves>();
 
     // private Transform defencePodium;
@@ -19,33 +19,23 @@ public class GameManager : MonoBehaviour {
     // public GameObject emptyPoke;
 
     private BattleManager bm;
+    LongGrass lg;
     // private LongGrass lg;
     Player player;
+    int i = 1;
     
 
     public GameObject menu;
     // private MenuController mc;
 
 	void Start () {
-        // playerCamera.SetActive(true);
-        // battleCamera.SetActive(false);
-        // defencePodium = GameObject.Find("DefensePodium").GetComponent<Transform>();
-        // attackPodium = GameObject.Find("AttackPodium").GetComponent<Transform>();
-        // bm = GameObject.Find("Battle Camera").GetComponent<BattleManager>();
+        
         bm = GetComponent<BattleManager>();
-        // lg = gameObject.find().GetComponent<LongGrass>();
-        // lg = GameObject.Find("Testing_Battles").GetComponent<LongGrass>();
         player = GameObject.Find("Player").GetComponent<Player>();
-        // Debug.Log(lg);
-        // mc = GetComponent<MenuController>();
-
+        
     }
 	
 	void Update () {
-    //     if(Input.GetKeyDown(KeyCode.Space)) {
-    //         // EnterBattle(Rarity.Common);
-    //         EnterBattle();
-    //    } 
         if(Input.GetKeyDown(KeyCode.E)) {
             // Debug.Log("E button pressed");
             toggleMenuUI();
@@ -66,98 +56,98 @@ public class GameManager : MonoBehaviour {
             }
     }
 
-    // public void EnterBattle(Rarity rarity)
     public void EnterBattle()
     {
-        // playerCamera.SetActive(false);
-        // battleCamera.SetActive(true);
-        // var rarity = this.rarity;
-        // BasePokemon battlePokemon = GetRandomPokemonFromList(GetPokemonByRarity(rarity));
-
-        // Debug.Log(rarity);
-
-       // player.GetComponent<PlayerMovement>().isAllowedToMove = false;
-
-        // print("setting timeScale to 0");
         Time.timeScale = 0f;
-        // bm.start(rarity);
         SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
-        // SceneManager.LoadScene("Battle_Scene");
-        // bm.loadBattle(rarity);
-        // bm.loadBattle();
-
-        // GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
-
-        // dPoke.transform.parent = defencePodium;
-
-        // BasePokemon tempPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
-        // tempPoke.AddMember(battlePokemon);
-
-        // dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.image;
-
-        // bm.changeMenu(BattleMenu.Selection);
-        // Debug.Log("EnterBattle method finish");
-        // SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
-        
-
     }
 
     public void ExitBattle() {
         SceneManager.UnloadSceneAsync("Battle_Scene");
         Time.timeScale = 1f;
-        // lg.triggered = false;
-        // Debug.Log(lg.triggered);s
     }
 
-    public List<BasePokemon> GetPokemonByRarity(Rarity rarity)
+    public List<WildPokemon> GetPokemonByRarity(Rarity rarity)
     {
-        List<BasePokemon> returnPokemon = new List<BasePokemon>();
-        foreach (BasePokemon Pokemon in allPokemon)
-        {
-            if (Pokemon.rarity == rarity)
-                returnPokemon.Add(Pokemon);
+        
+        List<WildPokemon> returnPokemon = new List<WildPokemon>();
+        if(allPokemon != null) {
+            foreach (WildPokemon Pokemon in allPokemon)
+            {
+                print("current run thru of GetByRarity: " + i);
+                print(" : Rarity getPokemonByRarity: " + rarity);
+
+                //------------------------Problem------------------------
+                print("Pokemon  rarity:"+ Pokemon.pokemon.rarity);
+
+                if (Pokemon.pokemon.rarity == rarity) {
+                    //----------------------------------------------------
+                    i = 0;
+                    returnPokemon.Add(Pokemon);
+                } else if(rarity == Rarity.Common) {
+                    i++;
+                    GetPokemonByRarity(Rarity.VeryCommon);
+                } else if(rarity == Rarity.SemiRare) {
+                    i++;
+                    GetPokemonByRarity(Rarity.Common);
+                } else if(rarity == Rarity.Rare) {
+                    i++;
+                    GetPokemonByRarity(Rarity.SemiRare);
+                } else if(rarity == Rarity.VeryRare) {
+                    i++;
+                    GetPokemonByRarity(Rarity.SemiRare);
+                }
+            }
         }
+        else {
+            print("all pokemon is null");
+            ExitBattle();
+        }
+        
 
         return returnPokemon;
+        // for(int i = 0; i<lg.wildPokemon.count;i++) {
+
+        // }
     }
 
-    public BasePokemon GetRandomPokemonFromList(List<BasePokemon> pokeList)
+    public WildPokemon GetRandomPokemonFromList(List<WildPokemon> pokeList)
     {
-        BasePokemon poke = new BasePokemon();
+        WildPokemon poke = new WildPokemon();
         int pokeIndex = Random.Range(0, pokeList.Count - 1);
         poke = pokeList[pokeIndex];
         return poke;
     }
 }
 
-[System.Serializable]
-public class PokemonMoves
-{
-    public string Name;
-    public MoveType category;
-    public Stat moveStat;
-    public PokemonType moveType;
-    public int currentPP;
-    public int PP;
-    public float power;
-    public float accuracy;
+// [System.Serializable]
+// public class PokemonMoves
+// {
+//     public string Name;
+//     public MoveType category;
+//     public Stat moveStat;
+//     public PokemonType moveType;
+//     public int currentPP;
+//     public int PP;
+//     public float power;
+//     public float accuracy;
 
-    // public override string ToString()
-    // {
-    //     return Name + category + moveStat.maximum + moveType + PP;
-    // }
-}
+//     // public override string ToString()
+//     // {
+//     //     return Name + category + moveStat.maximum + moveType + PP;
+//     // }
+// }
 
-[System.Serializable]
-public class Stat
-{
-    public float minimum;
-    public float maximum;
-}
+// [System.Serializable]
+// public class Stat
+// {
+//     public float minimum;
+//     public float maximum;
+// }
 
-public enum MoveType
-{
-    Physical,
-    Special,
-    Status
-}
+// public enum MoveType
+// {
+//     Physical,
+//     Special,
+//     Status
+// }
