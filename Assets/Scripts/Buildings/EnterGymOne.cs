@@ -22,7 +22,10 @@ public class EnterGymOne : MonoBehaviour
         if (active && Input.GetButtonDown("Fire1"))
         {
             load("GymOne");
+
             // DontDestroyOnLoad(theManager);
+
+            player.transform.position = new Vector3(-81, 121, 0);
 
         }
 
@@ -30,11 +33,11 @@ public class EnterGymOne : MonoBehaviour
 
     public void load(string Location)
     {
-        SceneManager.LoadScene("GymOne", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("GymOne", LoadSceneMode.Additive);
         //SceneManager.LoadSceneAsync("pokecenter_interior");
         // SceneManager.UnloadSceneAsync("OverWorld");
 
-
+        
     }
 
 

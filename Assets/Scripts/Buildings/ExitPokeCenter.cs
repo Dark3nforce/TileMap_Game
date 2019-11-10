@@ -27,7 +27,7 @@ public class ExitPokeCenter : MonoBehaviour
             load("OverWorld");
 
             player.transform.position = new Vector3(-76, 13, 0);
-            DontDestroyOnLoad(player);
+            //DontDestroyOnLoad(player);
         }
         
     }

@@ -22,15 +22,17 @@ public class EnterPokeCenter : MonoBehaviour
         if (active && Input.GetButtonDown("Fire1"))
         {
             load("pokecenter_interior");
-           // DontDestroyOnLoad(theManager);
-           
+            // DontDestroyOnLoad(theManager);
+
+            player.transform.position = new Vector3(1271, 163, 0);
+
         }
 
     }
 
     public void load(string Location)
     {
-        SceneManager.LoadScene("pokecenter_interior", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("pokecenter_interior", LoadSceneMode.Additive);
         //SceneManager.LoadSceneAsync("pokecenter_interior");
        // SceneManager.UnloadSceneAsync("OverWorld");
         

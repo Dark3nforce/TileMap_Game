@@ -26,8 +26,8 @@ public class ExitGymOne : MonoBehaviour
 
             load("OverWorld");
 
-            player.transform.position = new Vector3(-93, 21, 0);
-            DontDestroyOnLoad(player);
+            player.transform.position = new Vector3(-94, 21, 0);
+          //  DontDestroyOnLoad(player);
         }
 
     }
