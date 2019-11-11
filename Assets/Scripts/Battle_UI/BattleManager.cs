@@ -328,7 +328,7 @@ public class BattleManager : MonoBehaviour
         enemySpeed = battlePokemon.pokemon.pokemonStats.SpeedStat;
         enemyName = battlePokemon.pokemon.PName;
         enemyHPForeground.fillAmount = enemyFullHealth;
-        // enemyLevel = battlePokemon.level;
+        enemyLevel = battlePokemon.pokemon.level;
 
 
         //---------------Player---------------------
@@ -352,7 +352,7 @@ public class BattleManager : MonoBehaviour
                 playerSpeed = player.ownedPokemon[i].pokemon.pokemonStats.SpeedStat;
                 playerName = player.ownedPokemon[i].pokemon.PName;
                 HPForeground.fillAmount = playerFullHealth;
-                // playerLevel = player.ownedPokemon[i].pokemon.level;
+                playerLevel = player.ownedPokemon[i].pokemon.level;
                     
                 // player.ownedPokemon[i].moves
                 // Move1.text = ;
@@ -431,7 +431,7 @@ public class BattleManager : MonoBehaviour
     }
 
     //needs to be improved upon
-    public void battle(float playerHealth, float enemyHealth, float accuracy, float power) {
+    public void battle(float pHealth, float eHealth, float acc, float pow) {
         print("battle called");
         k = Random.Range(0, lg.wildPokemon[j].moves.Count);
         float enemyAttack;
@@ -443,30 +443,37 @@ public class BattleManager : MonoBehaviour
 
 
         if(playerSpeed >= enemySpeed) { //player speed > enemy speed
-            print("power" + power +", enemy health" + enemyHealth);
-            enemyHealth -= power;
-            print("enemyHealth" + enemyHealth);
+            print("power" + pow +", enemy health" + eHealth);
+            eHealth -= pow;
+            print("enemyHealth" + eHealth);
             
             // if(playerHealth <= 0) {
 
             // } else {
-                if(enemyHealth <= 0) {
-                    playerHealth -= enemyAttack;
+                if(eHealth >= 0) {
+                    pHealth -= enemyAttack;
+                } else {
+                    enemyFainted();
                 }
             // } 
             
-            print("PlayerHealth"+playerHealth);
-            updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
+            print("PlayerHealth"+pHealth);
+            playerHealth = pHealth;
+            enemyHealth = eHealth;
+            updateBattleStatus(pHealth,playerFullHealth,playerLevel,eHealth,enemyFullHealth,enemyLevel);
             
         } else if(playerSpeed < enemySpeed) { //player speed < enemy speed
             //add enemy  attack code
 
-            playerHealth -= enemyAttack;
-            if(playerHealth <= 0) {
-                enemyHealth -= power;
+            pHealth -= enemyAttack;
+            if(pHealth >= 0) {
+                eHealth -= pow;
+            } else {
+                playerFainted();
             }
-            updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
-            
+            playerHealth = pHealth;
+            enemyHealth = eHealth;
+            updateBattleStatus(pHealth,playerFullHealth,playerLevel,eHealth,enemyFullHealth,enemyLevel);   
         }
     }
     public void updateBattleStatus(float playerHealth, float playerFullHealth,float playerLevel, float enemyHealth, float enemyFullHealth, float enmeyLevel) {
@@ -474,7 +481,7 @@ public class BattleManager : MonoBehaviour
         
         //updating player status
         playerPokemonName.text = playerName;
-        // playerPokemonLevel.text = playerLevel.ToString();
+        playerPokemonLevel.text = playerLevel.ToString();
         if(playerHealth < 0) {
         	playerHealth = 0;	
         }
@@ -489,7 +496,7 @@ public class BattleManager : MonoBehaviour
 
         //updating enemy status
         enemyPokemonName.text  = enemyName;
-        // enemyPokemonLevel.text = enmeyLevel.ToString();
+        enemyPokemonLevel.text = enmeyLevel.ToString();
         enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
         print("Enemy HP" + enemyHealth);
         
