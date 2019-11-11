@@ -103,12 +103,12 @@ public class WildPokemon
     // public int health = pokemon.HP;
     public int basePokemonID;
 
-    public int level;
+    // public int level;
     public List<PokemonMoves> moves = new List<PokemonMoves>();
 
     public override string ToString()
     {
-        string s = "PokID: " + basePokemonID + " Level: " + level;
+        string s = "PokID: " + basePokemonID;
 
         foreach (PokemonMoves pm in moves)
         {

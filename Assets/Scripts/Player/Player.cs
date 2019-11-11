@@ -88,12 +88,12 @@ public class OwnedPokemon
     // public int health = pokemon.HP;
     public int basePokemonID;
 
-    public int level;
+    
     public List<PokemonMoves> moves = new List<PokemonMoves>();
 
     public override string ToString()
     {
-        string s = NickName + " PokID: " + basePokemonID + " Level: " + level;
+        string s = NickName + " PokID: " + basePokemonID;
 
         foreach (PokemonMoves pm in moves)
         {

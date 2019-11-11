@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BasePokemon : MonoBehaviour {
 
     public string PName;
+    public int level;
     public Sprite image;
     public BiomeList biomeFound;
     public PokemonType type;
@@ -20,7 +21,6 @@ public class BasePokemon : MonoBehaviour {
     public bool canEvolve;
     public PokemonEvolution evolveTo;
 
-    private int level;
 
 	void Start () {
         maxHP = HP;
