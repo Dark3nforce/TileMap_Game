@@ -129,13 +129,15 @@ public class BattleManager : MonoBehaviour
        rarityBM = lg.raritySet;
        Debug.Log(rarityBM);
        loadBattle(rarityBM);
+       updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
     }
 
     // Update is called once per frame
     void Update()
     {
-        HPForeground.fillAmount = playerHealth/playerFullHealth;
-        enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
+        // HPForeground.fillAmount = playerHealth/playerFullHealth;
+        // enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
+        // updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
        if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
             if(currentSelection<4) {
                 currentSelection++;
@@ -324,7 +326,7 @@ public class BattleManager : MonoBehaviour
 
         dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.pokemon.image;
         enemyHealth = battlePokemon.pokemon.HP;
-        enemyFullHealth = battlePokemon.pokemon.HP;
+        enemyFullHealth = battlePokemon.pokemon.FullHP;
         enemySpeed = battlePokemon.pokemon.pokemonStats.SpeedStat;
         enemyName = battlePokemon.pokemon.PName;
         enemyHPForeground.fillAmount = enemyFullHealth;
@@ -348,7 +350,7 @@ public class BattleManager : MonoBehaviour
                 tempAtkPoke.AddMember(player.ownedPokemon[i].pokemon);
                 aPoke.GetComponent<SpriteRenderer>().sprite = player.ownedPokemon[i].pokemon.image;
                 playerHealth = player.ownedPokemon[i].pokemon.HP;
-                playerFullHealth = player.ownedPokemon[i].pokemon.HP;
+                playerFullHealth = player.ownedPokemon[i].pokemon.FullHP;
                 playerSpeed = player.ownedPokemon[i].pokemon.pokemonStats.SpeedStat;
                 playerName = player.ownedPokemon[i].pokemon.PName;
                 HPForeground.fillAmount = playerFullHealth;
@@ -453,7 +455,7 @@ public class BattleManager : MonoBehaviour
                 if(eHealth >= 0) {
                     pHealth -= enemyAttack;
                 } else {
-                    enemyFainted();
+                    updateBattleStatus(pHealth,playerFullHealth,playerLevel,eHealth,enemyFullHealth,enemyLevel);
                 }
             // } 
             
@@ -469,7 +471,7 @@ public class BattleManager : MonoBehaviour
             if(pHealth >= 0) {
                 eHealth -= pow;
             } else {
-                playerFainted();
+                updateBattleStatus(pHealth,playerFullHealth,playerLevel,eHealth,enemyFullHealth,enemyLevel);
             }
             playerHealth = pHealth;
             enemyHealth = eHealth;
@@ -489,16 +491,15 @@ public class BattleManager : MonoBehaviour
         	enemyHealth = 0;
         }
         HPInfo.text = playerHealth + "/" + playerFullHealth;
-        // HPForeground.fillAmount = playerHealth/playerFullHealth;
-        HPForeground.fillAmount = playerHealth/playerFullHealth;
-        // print("Player HP" + playerHealth/playerFullHealth);
+        HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
+        
         
 
         //updating enemy status
         enemyPokemonName.text  = enemyName;
         enemyPokemonLevel.text = enmeyLevel.ToString();
-        enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
-        print("Enemy HP" + enemyHealth);
+        enemyHPForeground.rectTransform.localScale = new Vector3(enemyHealth/enemyFullHealth,1,1);
+        print("Enemy HP" + enemyHealth/enemyFullHealth);
         
         //need to create method when player is faints
         //playerFaint();
@@ -529,7 +530,7 @@ public class BattleManager : MonoBehaviour
                     player.ownedPokemon[i].moves[0].currentPP = Move1CurPP;
 
                     //for debugging only
-                    print(Move1.text + player.ownedPokemon[i].moves[0].currentPP);
+                    // print(Move1.text + player.ownedPokemon[i].moves[0].currentPP);
                 }
                 //Move2
                 //Need to add else condition for null
@@ -537,7 +538,7 @@ public class BattleManager : MonoBehaviour
                     player.ownedPokemon[i].moves[1].currentPP = Move2CurPP;
 
                     //for debugging only
-                 	print(Move2.text + player.ownedPokemon[i].moves[1].currentPP);   
+                 	// print(Move2.text + player.ownedPokemon[i].moves[1].currentPP);   
                 }
                 //Move3
                 //Need to add else condition for null
@@ -545,7 +546,7 @@ public class BattleManager : MonoBehaviour
                     player.ownedPokemon[i].moves[2].currentPP = Move3CurPP;
 
                     //for debugging only
-                    print(Move3.text + player.ownedPokemon[i].moves[2].currentPP);
+                    // print(Move3.text + player.ownedPokemon[i].moves[2].currentPP);
                 }
                 //Move4
                 //Need to add else condition for null
@@ -553,7 +554,7 @@ public class BattleManager : MonoBehaviour
                     player.ownedPokemon[i].moves[3].currentPP = Move4CurPP;
 
                     //for debugging only
-                    print(Move4.text + player.ownedPokemon[i].moves[3].currentPP);
+                    // print(Move4.text + player.ownedPokemon[i].moves[3].currentPP);
                 }
                 changeMenu(BattleMenu.Info);
                 //set Info menu to print out that enemy fainted

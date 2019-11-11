@@ -12,7 +12,8 @@ public class BasePokemon : MonoBehaviour {
     public PokemonType type;
     public Rarity rarity;
     public int HP;
-    private int maxHP;
+    public int FullHP;
+    public int maxHP;
     public Stat AttackStat;
     public Stat DefenceStat;
 
