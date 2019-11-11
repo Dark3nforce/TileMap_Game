@@ -34,9 +34,9 @@ public class EnterPokeCenter : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("pokecenter_interior", LoadSceneMode.Additive);
         //SceneManager.LoadSceneAsync("pokecenter_interior");
-       // SceneManager.UnloadSceneAsync("OverWorld");
-        
-        
+        // SceneManager.UnloadSceneAsync("OverWorld");
+
+
     }
 
 
