@@ -162,8 +162,18 @@ public class BattleManager : MonoBehaviour
         // enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
         // updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
 
-        HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
-        enemyHPForeground.rectTransform.localScale = new Vector3((enemyHealth)/enemyFullHealth,1,1);
+        // HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
+        // enemyHPForeground.rectTransform.localScale = new Vector3((enemyHealth)/enemyFullHealth,1,1);
+
+        // do {
+        //     enemyHPForeground.rectTransform.localScale = new Vector3(enemyCurHealth/enemyFullHealth,1,1);
+        //     enemyCurHealth--;
+        // } while(enemyHealth<=enemyCurHealth);
+
+        // do {
+        //     HPForeground.rectTransform.localScale = new Vector3(playerCurHealth/playerFullHealth,1,1);
+        //     playerCurHealth--;
+        // } while(playerHealth<=playerCurHealth);
 
        if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
             if(currentSelection<4) {
@@ -556,10 +566,37 @@ public class BattleManager : MonoBehaviour
     }
     float calcDamage(float level,MoveType type,PokemonType attType,PokemonType attckerType,float atkStat,float pow, float defStat, PokemonType defenderType) {
             float Z = Random.Range(217,255);
-            if(attType == attckerType)
-                return Mathf.Floor(((((((((((2*level/5+2)*atkStat*pow)/defStat)/50)+2)*(float)1.5)*typeModifiers(type,attType,defenderType)/10)*Z)/255)));    
-            else
-                return Mathf.Floor(((((((((((2*level/5+2)*atkStat*pow)/defStat)/50)+2)*1)*typeModifiers(type,attType,defenderType)/10)*Z)/255)));    
+            float output;
+            if(attType == attckerType) {
+                // return Mathf.Floor(((((((((((2*level/5+2)*atkStat*pow)/defStat)/50)+2)*(float)1.5)*typeModifiers(type,attType,defenderType)/10)*Z)/255)));
+                output = 2*level/5+2;
+                output *= atkStat;
+                output *= pow;
+                output /= defStat;
+                output /=50;
+                output +=2;
+                output *=(float)1.5;
+                output *=(typeModifiers(type,attType,defenderType)*10);
+                output /= 10;
+                output *= Z;
+                output /= 255;
+                return Mathf.Floor(output);
+            }
+                    
+            else {
+                output = 2*level/5+2;
+                output *=atkStat;
+                output *= pow;
+                output /=defStat;
+                output /= 50;
+                output +=2;
+                output *=1;
+                output *=(typeModifiers(type,attType,defenderType)*10);
+                output /=10;
+                output *= Z;
+                output /=255;
+                return Mathf.Floor(output);
+            }    
     }
     public void updateBattleStatus() {
         
@@ -575,7 +612,9 @@ public class BattleManager : MonoBehaviour
         }
         HPInfo.text = playerHealth + "/" + playerFullHealth;
         // HPForeground.rectTransform.localScale = new Vector3(Mathf.Lerp(playerHealth,playerCurHealth,playerHealth/playerFullHealth),1,1);
+
         HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
+        
         // do {
         //     HPForeground.rectTransform.localScale = new Vector3(playerCurHealth/playerFullHealth,1,1);
         //     playerCurHealth--;
