@@ -97,7 +97,7 @@ MonoBehaviour:
   level: 1
   image: {fileID: 21300000, guid: 3758d8af407a97546b2c4d4f81849853, type: 3}
   biomeFound: 0
-  type: 6
+  type: 2
   rarity: 0
   HP: 45
   FullHP: 45

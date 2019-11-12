@@ -48,22 +48,26 @@ public class BattleManager : MonoBehaviour
     int Move1CurPP;
     string Move1MaxPP;
     string Move1PPDisplay;
-    string Move1Type;
+    PokemonType Move1Type;
+    MoveType Move1Category;
     public Text Move2;
     int Move2CurPP;
     string Move2MaxPP;
     string Move2PPDisplay;
-    string Move2Type;
+    PokemonType Move2Type;
+    MoveType Move2Category;
     public Text Move3;
     int Move3CurPP;
     string Move3MaxPP;
     string Move3PPDisplay;
-    string Move3Type;
+    PokemonType Move3Type;
+    MoveType Move3Category;
     public Text Move4;
     int Move4CurPP;
     string Move4MaxPP;
     string Move4PPDisplay;
-    string Move4Type;
+    PokemonType Move4Type;
+    MoveType Move4Category;
     private string Move1Selected = "> Move 1";
     private string Move1UnSelected = "Move 1";
     private string Move2Selected = "> Move 2";
@@ -118,6 +122,21 @@ public class BattleManager : MonoBehaviour
     int j;
     int k;
 
+
+    //Pokemon Stats Player
+    float attackStat;
+    float specAttackStat;
+    float defenseStat;
+    float specDefenseStat;
+    PokemonType playerType;
+
+    //Pokemon Stats Enemy
+    float attackStatEnemy;
+    float specAttackStatEnemy;
+    float defenseStatEnemy;
+    float specDefenseStatEnemy;
+    PokemonType enemyType;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -133,7 +152,7 @@ public class BattleManager : MonoBehaviour
        loadBattle(rarityBM);
        enemyCurHealth = enemyHealth;
        playerCurHealth = playerHealth;
-       updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
+       updateBattleStatus();
     }
 
     // Update is called once per frame
@@ -171,10 +190,10 @@ public class BattleManager : MonoBehaviour
                         Move4.text = Move4UnSelected;
                         //setting move1 stats
                         PP.text = Move1PPDisplay;
-                        pType.text = Move1Type;
+                        pType.text = Move1Type.ToString();
                         if(Input.GetKeyDown(KeyCode.Return)){
                             Debug.Log("Move1 Selected");
-                            battle(playerHealth,enemyHealth,move1Accuracy,move1Power);
+                            battle(move1Power,Move1Category,Move1Type,move1Power);
                         } else if(Input.GetKeyDown(KeyCode.Escape)) {
                             changeMenu(BattleMenu.Selection);
                         }
@@ -188,10 +207,10 @@ public class BattleManager : MonoBehaviour
                         Move4.text = Move4UnSelected;
                         //setting move2 stats
                         PP.text = Move2PPDisplay;
-                        pType.text = Move2Type;
+                        pType.text = Move2Type.ToString();
                         if(Input.GetKeyDown(KeyCode.Return)){
                             Debug.Log("Move2 Selected");
-                            battle(playerHealth,enemyHealth,move2Accuracy,move2Power);
+                            battle(move2Power,Move2Category,Move2Type,move2Power);
                         } else if(Input.GetKeyDown(KeyCode.Escape)) {
                             changeMenu(BattleMenu.Selection);
                         }
@@ -203,10 +222,10 @@ public class BattleManager : MonoBehaviour
                         Move4.text = Move4UnSelected;
                         //setting move3 stats
                         PP.text = Move3PPDisplay;
-                        pType.text = Move3Type;
+                        pType.text = Move3Type.ToString();
                         if(Input.GetKeyDown(KeyCode.Return)){
                             Debug.Log("Move3 Selected");
-                            battle(playerHealth,enemyHealth,move3Accuracy,move3Power);
+                            battle(move3Power,Move3Category,Move3Type,move3Power);
                         } else if(Input.GetKeyDown(KeyCode.Escape)) {
                             changeMenu(BattleMenu.Selection);
                         }
@@ -218,10 +237,10 @@ public class BattleManager : MonoBehaviour
                         Move4.text = Move4Selected; //Arrow here
                         //setting move4 stats
                         PP.text = Move4PPDisplay;
-                        pType.text = Move4Type;
+                        pType.text = Move4Type.ToString();
                         if(Input.GetKeyDown(KeyCode.Return)){
                             Debug.Log("Move4 Selected");
-                            battle(playerHealth,enemyHealth,move4Accuracy,move4Power);
+                            battle(move4Power,Move4Category,Move4Type,move4Power);
                         } else if(Input.GetKeyDown(KeyCode.Escape)) {
                             changeMenu(BattleMenu.Selection);
                         }
@@ -368,7 +387,8 @@ public class BattleManager : MonoBehaviour
                     Move1.text = player.ownedPokemon[i].moves[0].Name;
                     Move1CurPP = player.ownedPokemon[i].moves[0].currentPP;
                     Move1MaxPP = player.ownedPokemon[i].moves[0].PP.ToString();
-                    Move1Type = player.ownedPokemon[i].moves[0].moveType.ToString();
+                    Move1Type = player.ownedPokemon[i].moves[0].moveType;
+                    Move1Category = player.ownedPokemon[i].moves[0].category;
                     Move1PPDisplay = Move1CurPP + "/" + Move1MaxPP;
                     Move1Selected = "> " + Move1.text;
                     Move1UnSelected = Move1.text;
@@ -381,7 +401,8 @@ public class BattleManager : MonoBehaviour
                     Move2.text = player.ownedPokemon[i].moves[1].Name;
                     Move2CurPP = player.ownedPokemon[i].moves[1].currentPP;
                     Move2MaxPP = player.ownedPokemon[i].moves[1].PP.ToString();
-                    Move2Type = player.ownedPokemon[i].moves[1].moveType.ToString();
+                    Move2Type = player.ownedPokemon[i].moves[1].moveType;
+                    Move2Category = player.ownedPokemon[i].moves[1].category;
                     Move2PPDisplay = Move2CurPP + "/" + Move2MaxPP;
                     Move2Selected = "> " + Move2.text;
                     Move2UnSelected = Move2.text;
@@ -395,7 +416,8 @@ public class BattleManager : MonoBehaviour
                     Move3.text = player.ownedPokemon[i].moves[2].Name;
                     Move3CurPP = player.ownedPokemon[i].moves[2].currentPP;
                     Move3MaxPP = player.ownedPokemon[i].moves[2].PP.ToString();
-                    Move3Type = player.ownedPokemon[i].moves[2].moveType.ToString();
+                    Move3Type = player.ownedPokemon[i].moves[2].moveType;
+                    Move3Category = player.ownedPokemon[i].moves[2].category;
                     Move3PPDisplay = Move3CurPP + "/" + Move3MaxPP;
                     Move3Selected = "> " + Move3.text;
                     Move3UnSelected = Move3.text;
@@ -410,7 +432,8 @@ public class BattleManager : MonoBehaviour
                     Move4.text = player.ownedPokemon[i].moves[3].Name;
                     Move4CurPP = player.ownedPokemon[i].moves[3].currentPP;
                     Move4MaxPP = player.ownedPokemon[i].moves[3].PP.ToString();
-                    Move4Type = player.ownedPokemon[i].moves[3].moveType.ToString();
+                    Move4Type = player.ownedPokemon[i].moves[3].moveType;
+                    Move4Category = player.ownedPokemon[i].moves[3].category;
                     Move4PPDisplay = Move4CurPP + "/" + Move4MaxPP;
                     Move4Selected = "> " + Move4.text;
                     Move4UnSelected = Move4.text;
@@ -424,7 +447,7 @@ public class BattleManager : MonoBehaviour
                 i++;
             }
         }
-        updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
+        updateBattleStatus();
 
 
 
@@ -437,8 +460,11 @@ public class BattleManager : MonoBehaviour
     }
 
     //needs to be improved upon
-    public void battle(float pHealth, float eHealth, float acc, float pow) {
+    public void battle(float movePow, MoveType type,PokemonType moveType, float pow) {
         print("battle called");
+        bool playerHasAttacked = false;
+        bool enemyHasAttacked = false;
+
         k = Random.Range(0, lg.wildPokemon[j].moves.Count);
         float enemyAttack;
         //----------------------------------------------------
@@ -450,41 +476,56 @@ public class BattleManager : MonoBehaviour
         enemyCurHealth = enemyHealth;
         playerCurHealth = playerHealth;
 
-        if(playerSpeed >= enemySpeed) { //player speed > enemy speed
-            print("power" + pow +", enemy health" + eHealth);
-            eHealth -= pow;
-            print("enemyHealth" + eHealth);
-            
-            // if(playerHealth <= 0) {
 
-            // } else {
-                if(eHealth >= 0) {
-                    pHealth -= enemyAttack;
-                } else {
-                    updateBattleStatus(pHealth,playerFullHealth,playerLevel,eHealth,enemyFullHealth,enemyLevel);
-                }
-            // } 
-            
-            print("PlayerHealth"+pHealth);
-            playerHealth = pHealth;
-            enemyHealth = eHealth;
-            updateBattleStatus(pHealth,playerFullHealth,playerLevel,eHealth,enemyFullHealth,enemyLevel);
+        if(playerSpeed > enemySpeed) { //player speed > enemy speed
+
+            //player Attack
+            if(type == MoveType.Physical) {
+                enemyHealth -= calcDamage(playerLevel,type,moveType,playerType,attackStat,pow,defenseStatEnemy,enemyType);
+            } else if(type == MoveType.Special) {
+                enemyHealth -= calcDamage(playerLevel,type,moveType,playerType,specAttackStat,pow,specDefenseStatEnemy,enemyType);
+            }
+            print("EnemyHealth"+enemyHealth);
+            updateBattleStatus();
+            playerHasAttacked = true;
             
         } else if(playerSpeed < enemySpeed) { //player speed < enemy speed
             //add enemy  attack code
-
-            pHealth -= enemyAttack;
-            if(pHealth >= 0) {
-                eHealth -= pow;
-            } else {
-                updateBattleStatus(pHealth,playerFullHealth,playerLevel,eHealth,enemyFullHealth,enemyLevel);
+            if(lg.wildPokemon[j].moves[k].category == MoveType.Physical) {
+                playerHealth -= calcDamage(enemyLevel,lg.wildPokemon[j].moves[k].category,lg.wildPokemon[j].moves[k].moveType,enemyType,attackStatEnemy,pow,defenseStat,playerType);
+            } else if(lg.wildPokemon[j].moves[k].category == MoveType.Special) {
+                playerHealth -= calcDamage(enemyLevel,lg.wildPokemon[j].moves[k].category,lg.wildPokemon[j].moves[k].moveType,enemyType,specAttackStatEnemy,pow,specDefenseStat,playerType);
             }
-            playerHealth = pHealth;
-            enemyHealth = eHealth;
-            updateBattleStatus(pHealth,playerFullHealth,playerLevel,eHealth,enemyFullHealth,enemyLevel);   
+            print("PlayerHealth"+playerHealth);
+            updateBattleStatus();
+            enemyHasAttacked = true;
         }
+        if(playerHasAttacked) {
+            if(lg.wildPokemon[j].moves[k].category == MoveType.Physical) {
+                playerHealth -= calcDamage(enemyLevel,lg.wildPokemon[j].moves[k].category,lg.wildPokemon[j].moves[k].moveType,enemyType,attackStatEnemy,pow,defenseStat,playerType);
+            } else if(lg.wildPokemon[j].moves[k].category == MoveType.Special) {
+                playerHealth -= calcDamage(enemyLevel,lg.wildPokemon[j].moves[k].category,lg.wildPokemon[j].moves[k].moveType,enemyType,specAttackStatEnemy,pow,specDefenseStat,playerType);
+            }
+            print("PlayerHealth"+playerHealth);
+        } else if(enemyHasAttacked) {
+            if(type == MoveType.Physical) {
+                enemyHealth -= calcDamage(playerLevel,type,moveType,playerType,attackStat,pow,defenseStatEnemy,enemyType);
+            } else if(type == MoveType.Special) {
+                enemyHealth -= calcDamage(playerLevel,type,moveType,playerType,specAttackStat,pow,specDefenseStatEnemy,enemyType);
+            }
+            print("EnemyHealth"+enemyHealth);
+        }
+        updateBattleStatus();
     }
-    public void updateBattleStatus(float playerHealth, float playerFullHealth,float playerLevel, float enemyHealth, float enemyFullHealth, float enmeyLevel) {
+    float calcDamage(float level,MoveType type,PokemonType attType,PokemonType attckerType,float atkStat,float pow, float defStat, PokemonType defenderType) {
+            float Z = Random.Range(217,255);
+            
+            if(attType == attckerType)
+                return Mathf.Floor(((((((((((2*level/5+2)*atkStat*pow)/defStat)/50)+2)*(float)1.5)*typeModifiers(type,attType,defenderType)/10)*Z)/255)));    
+            else
+                return Mathf.Floor(((((((((((2*level/5+2)*atkStat*pow)/defStat)/50)+2)*1)*typeModifiers(type,attType,defenderType)/10)*Z)/255)));    
+    }
+    public void updateBattleStatus() {
         print("update battle UI entered");
         
         //updating player status
@@ -508,7 +549,7 @@ public class BattleManager : MonoBehaviour
 
         //updating enemy status
         enemyPokemonName.text  = enemyName;
-        enemyPokemonLevel.text = enmeyLevel.ToString();
+        enemyPokemonLevel.text = enemyLevel.ToString();
 
         // enemyHPForeground.rectTransform.localScale = new Vector3(Mathf.Lerp(enemyCurHealth,enemyHealth,enemyHealth/enemyFullHealth),1,1);
         do {
@@ -588,23 +629,281 @@ public class BattleManager : MonoBehaviour
         gm.ExitBattle();
     }
 
-    public float typeModifiers() {
-        // enum mods {fire = 0,water,grass,electricity,ice,psychic,normal,fight,flying,rock,bug,poison,ghost,dragon};
-        // enum output {"0","0.25","0.5","1","2","4"};
-        // float[,] typemods = new float[6,15];
-        // typemods[mods.fire,mods.fire] = 0.5;
-        // float[][] typemods = new float[][]{
-        //     new float[] {},
-        //     new float[] {}
-        // };
-        // enum Mods { Fire, Water, ... }
-        // int[,] typemods = new int[6,15];
-        // typemods[mods.fire][mods.fire] = 0.5;
+    public float typeModifiers(MoveType type, PokemonType attType, PokemonType defenderType) {
+        print("Move Category: " + type+ " AttackType: " + attType + " DefenderType: "+ defenderType);
+
+        double[,] typeSpecPokemonType = new double[6,16];
+            //Fire Atk
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Fire] = 0.5;
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Water] = 0.5;    
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Grass] = 2;
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Electric] = 1;
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Ice] = 2;        
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Psychic] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Normal] = 1;
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Fighting] = 1;  
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Flying] = 1;    
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Ground] = 1;                          
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Rock] = 0.5; 
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Bug] = 2;               
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Poison] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Ghost] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Fire, (int)PokemonType.Dragon] = 0.5;  
+            //Water Atk
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Fire] = 2;
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Water] = 0.5;    
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Grass] = 0.5;
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Electric] = 1;
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Ice] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Psychic] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Normal] = 1;
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Fighting] = 1;  
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Flying] = 1;    
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Ground] = 2;                          
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Rock] = 2; 
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Bug] = 1;               
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Poison] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Ghost] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Water, (int)PokemonType.Dragon] = 0.5;
+            //Grass Atk
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Fire] = 0.5;
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Water] = 2;    
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Grass] = 0.5;
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Electric] = 1;
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Ice] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Psychic] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Normal] = 1;
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Fighting] = 1;  
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Flying] = 0.5;    
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Ground] = 2;                          
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Rock] = 2; 
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Bug] = 0.5;               
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Poison] = 0.5;        
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Ghost] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Grass, (int)PokemonType.Dragon] = 0.5; 
+            //Electric Atk
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Fire] = 1;
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Water] = 2;    
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Grass] = 0.5;
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Electric] = 0.5;
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Ice] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Psychic] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Normal] = 1;
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Fighting] = 1;  
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Flying] = 2;    
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Ground] = 0;                          
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Rock] = 1; 
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Bug] = 1;               
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Poison] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Ghost] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Electric, (int)PokemonType.Dragon] = 0.5;
+            //Ice Atk
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Fire] = 1;
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Water] = 0.5;    
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Grass] = 2;
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Electric] = 1;
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Ice] = 0.5;        
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Psychic] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Normal] = 1;
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Fighting] = 1;  
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Flying] = 2;    
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Ground] = 2;                          
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Rock] = 1; 
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Bug] = 1;               
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Poison] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Ghost] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Ice, (int)PokemonType.Dragon] = 2;
+            //Psychic Atk
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Fire] = 1;
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Water] = 1;    
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Grass] = 1;
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Electric] = 1;
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Ice] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Psychic] = 0.5;        
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Normal] = 1;
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Fighting] = 2;  
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Flying] = 1;    
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Ground] = 1;                          
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Rock] = 1; 
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Bug] = 1;               
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Poison] = 2;        
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Ghost] = 1;        
+            typeSpecPokemonType[(int)PokemonType.Psychic, (int)PokemonType.Dragon] = 1; 
+
+            double[,] typePhysPokemonType = new double[10,16];
+            //Normal Atk
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Fire] = 1;
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Water] = 1;    
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Grass] = 1;
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Electric] = 1;
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Ice] = 1;        
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Psychic] = 1;        
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Normal] = 1;
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Fighting] = 1;  
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Flying] = 1;    
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Ground] = 1;                          
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Rock] = 0.5; 
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Bug] = 1;               
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Poison] = 1;        
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Ghost] = 0;        
+            typePhysPokemonType[(int)PokemonType.Normal, (int)PokemonType.Dragon] = 1;
+            //Fighting
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Fire] = 1;
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Water] = 1;    
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Grass] = 1;
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Electric] = 1;
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Ice] = 2;        
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Psychic] = 0.5;        
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Normal] = 2;
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Fighting] = 1;  
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Flying] = 0.5;    
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Ground] = 1;                          
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Rock] = 2; 
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Bug] = 0.5;               
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Poison] = 0.5;        
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Ghost] = 0;        
+            typePhysPokemonType[(int)PokemonType.Fighting, (int)PokemonType.Dragon] = 1; 
+            //Flying
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Fire] = 1;
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Water] = 1;    
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Grass] = 2;
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Electric] = 0.5;
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Ice] = 1;        
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Psychic] = 1;        
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Normal] = 1;
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Fighting] = 2;  
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Flying] = 1;    
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Ground] = 1;                          
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Rock] = 0.5; 
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Bug] = 2;               
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Poison] = 1;        
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Ghost] = 1;        
+            typePhysPokemonType[(int)PokemonType.Flying, (int)PokemonType.Dragon] = 1;
+            //Ground
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Fire] = 2;
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Water] = 1;    
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Grass] = 0.5;
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Electric] = 2;
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Ice] = 1;        
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Psychic] = 1;        
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Normal] = 1;
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Fighting] = 1;  
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Flying] = 0;    
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Ground] = 1;                          
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Rock] = 2; 
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Bug] = 0.5;               
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Poison] = 2;        
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Ghost] = 1;        
+            typePhysPokemonType[(int)PokemonType.Ground, (int)PokemonType.Dragon] = 1;
+            //Rock
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Fire] = 2;
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Water] = 1;    
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Grass] = 1;
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Electric] = 1;
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Ice] = 2;        
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Psychic] = 1;        
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Normal] = 1;
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Fighting] = 0.5;  
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Flying] = 2;    
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Ground] = 0.5;                          
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Rock] = 1; 
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Bug] = 1;               
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Poison] = 1;        
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Ghost] = 1;        
+            typePhysPokemonType[(int)PokemonType.Rock, (int)PokemonType.Dragon] = 1;
+            //Bug
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Fire] = 0.5;
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Water] = 1;    
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Grass] = 2;
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Electric] = 1;
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Ice] = 1;        
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Psychic] = 1;        
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Normal] = 1;
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Fighting] = 0.5;  
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Flying] = 0.5;    
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Ground] = 1;                          
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Rock] = 1; 
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Bug] = 1;               
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Poison] = 2;        
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Ghost] = 1;        
+            typePhysPokemonType[(int)PokemonType.Bug, (int)PokemonType.Dragon] = 1;
+            //Poison
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Fire] = 1;
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Water] = 1;    
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Grass] = 2;
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Electric] = 1;
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Ice] = 1;        
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Psychic] = 1;        
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Normal] = 1;
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Fighting] = 1;  
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Flying] = 1;    
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Ground] = 0.5;                          
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Rock] = 0.5; 
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Bug] = 2;               
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Poison] = 0.5;        
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Ghost] = 0.5;        
+            typePhysPokemonType[(int)PokemonType.Poison, (int)PokemonType.Dragon] = 1;
+            //Ghost
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Fire] = 1;
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Water] = 1;    
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Grass] = 1;
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Electric] = 1;
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Ice] = 1;        
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Psychic] = 0;        
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Normal] = 0;
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Fighting] = 1;  
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Flying] = 1;    
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Ground] = 1;                          
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Rock] = 1; 
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Bug] = 1;               
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Poison] = 1;        
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Ghost] = 2;        
+            typePhysPokemonType[(int)PokemonType.Ghost, (int)PokemonType.Dragon] = 1;
+            //Ghost
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Fire] = 1;
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Water] = 1;    
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Grass] = 1;
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Electric] = 1;
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Ice] = 1;        
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Psychic] = 1;        
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Normal] = 1;
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Fighting] = 1;  
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Flying] = 1;    
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Ground] = 1;                          
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Rock] = 1; 
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Bug] = 1;               
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Poison] = 1;        
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Ghost] = 1;        
+            typePhysPokemonType[(int)PokemonType.Dragon, (int)PokemonType.Dragon] = 1;
+
+        if(type == MoveType.Special) {
+            return (float)typeSpecPokemonType[(int)attType, (int)defenderType];
+        } else if(type == MoveType.Physical) {
+            return (float)typePhysPokemonType[(int)attType, (int)defenderType];
+        } else {
+            return 1;
+        }
         
 
-        return 0;
     }
 }
+// public enum PokemonType {
+//     Fire = 0,
+//     Water,
+//     Grass,
+//     Electric,
+//     Ice,
+//     Psychic,
+//     Normal,
+//     Fighting,
+//     Flying,
+//     Ground,
+//     Rock,
+//     Bug,
+//     Poison,
+//     Ghost,
+//     Dragon
+//     }
 public enum BattleMenu {
     Selection,
     Pokemon,
