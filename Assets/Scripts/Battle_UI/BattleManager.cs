@@ -75,12 +75,14 @@ public class BattleManager : MonoBehaviour
 
     string enemyName;
     float enemyHealth;
+    float enemyCurHealth;
     float enemyFullHealth;
     float enemyLevel;
     float enemySpeed;
 
     string playerName;
     float playerHealth;
+    float playerCurHealth;
     float playerFullHealth;
     float playerLevel;
     float playerSpeed;
@@ -129,6 +131,8 @@ public class BattleManager : MonoBehaviour
        rarityBM = lg.raritySet;
        Debug.Log(rarityBM);
        loadBattle(rarityBM);
+       enemyCurHealth = enemyHealth;
+       playerCurHealth = playerHealth;
        updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
     }
 
@@ -443,6 +447,8 @@ public class BattleManager : MonoBehaviour
                 lg.wildPokemon[j].moves[k].currentPP--;
         //----------------------------------------------------- 
 
+        enemyCurHealth = enemyHealth;
+        playerCurHealth = playerHealth;
 
         if(playerSpeed >= enemySpeed) { //player speed > enemy speed
             print("power" + pow +", enemy health" + eHealth);
@@ -491,14 +497,25 @@ public class BattleManager : MonoBehaviour
         	enemyHealth = 0;
         }
         HPInfo.text = playerHealth + "/" + playerFullHealth;
-        HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
+        // HPForeground.rectTransform.localScale = new Vector3(Mathf.Lerp(playerHealth,playerCurHealth,playerHealth/playerFullHealth),1,1);
+        // HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
+        do {
+            HPForeground.rectTransform.localScale = new Vector3(playerCurHealth/playerFullHealth,1,1);
+            playerCurHealth--;
+        } while(playerHealth<=playerCurHealth);
         
         
 
         //updating enemy status
         enemyPokemonName.text  = enemyName;
         enemyPokemonLevel.text = enmeyLevel.ToString();
-        enemyHPForeground.rectTransform.localScale = new Vector3(enemyHealth/enemyFullHealth,1,1);
+
+        // enemyHPForeground.rectTransform.localScale = new Vector3(Mathf.Lerp(enemyCurHealth,enemyHealth,enemyHealth/enemyFullHealth),1,1);
+        do {
+            enemyHPForeground.rectTransform.localScale = new Vector3(enemyCurHealth/enemyFullHealth,1,1);
+            enemyCurHealth--;
+        } while(enemyHealth<=enemyCurHealth);
+        // enemyHPForeground.rectTransform.localScale = new Vector3((enemyHealth)/enemyFullHealth,1,1);
         print("Enemy HP" + enemyHealth/enemyFullHealth);
         
         //need to create method when player is faints
@@ -569,6 +586,23 @@ public class BattleManager : MonoBehaviour
 
         player.ownedPokemon[i].pokemon.HP = (int)playerFullHealth;
         gm.ExitBattle();
+    }
+
+    public float typeModifiers() {
+        // enum mods {fire = 0,water,grass,electricity,ice,psychic,normal,fight,flying,rock,bug,poison,ghost,dragon};
+        // enum output {"0","0.25","0.5","1","2","4"};
+        // float[,] typemods = new float[6,15];
+        // typemods[mods.fire,mods.fire] = 0.5;
+        // float[][] typemods = new float[][]{
+        //     new float[] {},
+        //     new float[] {}
+        // };
+        // enum Mods { Fire, Water, ... }
+        // int[,] typemods = new int[6,15];
+        // typemods[mods.fire][mods.fire] = 0.5;
+        
+
+        return 0;
     }
 }
 public enum BattleMenu {
