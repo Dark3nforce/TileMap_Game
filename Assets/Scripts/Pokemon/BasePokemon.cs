@@ -12,7 +12,8 @@ public class BasePokemon : MonoBehaviour {
     public PokemonType type;
     public Rarity rarity;
     public int HP;
-    private int maxHP;
+    public int FullHP;
+    public int maxHP;
     public Stat AttackStat;
     public Stat DefenceStat;
 
@@ -58,20 +59,35 @@ public enum Rarity
 
 public enum PokemonType
 {
-    Flying,
-    Ground,
-    Rock,
-    Steel,
-    Fire,
-    Water,
-    Grass,
-    Ice,
-    Electric,
-    Psychic,
-    Dark,
-    Dragon,
-    Fighting,
-    Normal
+    // Flying,
+    // Ground,
+    // Rock,
+    // Steel,
+    // Fire,
+    // Water,
+    // Grass,
+    // Ice,
+    // Electric,
+    // Psychic,
+    // Dark,
+    // Dragon,
+    // Fighting,
+    // Normal
+    Fire = 0,
+    Water = 1,
+    Grass = 2,
+    Electric = 3,
+    Ice =4,
+    Psychic=5,
+    Normal=6,
+    Fighting=7,
+    Flying=8,
+    Ground=9,
+    Rock=10,
+    Bug=11,
+    Poison=12,
+    Ghost=13,
+    Dragon=14
 }
 
 [System.Serializable]
