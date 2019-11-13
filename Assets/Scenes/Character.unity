@@ -278,13 +278,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -294,7 +295,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -304,17 +305,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -370,13 +371,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -386,7 +388,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -396,17 +398,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -603,13 +605,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -619,7 +622,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -629,17 +632,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -721,13 +724,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -737,7 +741,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -747,17 +751,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -839,13 +843,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -855,7 +860,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -865,17 +870,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -957,13 +962,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -973,7 +979,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -983,17 +989,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -1075,13 +1081,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -1091,7 +1098,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -1101,17 +1108,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -1193,13 +1200,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -1209,7 +1217,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -1219,17 +1227,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -84607,13 +84615,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -84623,7 +84632,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -84633,17 +84642,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -84725,13 +84734,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -84741,7 +84751,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -84751,17 +84761,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -84909,13 +84919,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -84925,7 +84936,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -84935,17 +84946,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -85033,13 +85044,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -85049,7 +85061,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -85059,17 +85071,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -85151,13 +85163,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -85167,7 +85180,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -85177,17 +85190,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -85269,13 +85282,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -85285,7 +85299,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -85295,17 +85309,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -85336,43 +85350,44 @@ MonoBehaviour:
     pokemon: {fileID: 5900891777610994904, guid: 32b4d76a360a44d7b86596b01cffcf32,
       type: 3}
     basePokemonID: 0
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 5
         maximum: 20
-      moveType: 6
+      moveType: 13
       currentPP: 30
       PP: 30
       power: 40
       accuracy: 100
     - Name: Ember
-      category: 1
+      category: 0
       moveStat:
         minimum: 20
         maximum: 40
-      moveType: 0
+      moveType: 4
       currentPP: 15
       PP: 15
       power: 60
       accuracy: 65
     - Name: Ember
-      category: 1
+      category: 0
       moveStat:
         minimum: 20
         maximum: 40
-      moveType: 0
+      moveType: 4
       currentPP: 15
       PP: 15
       power: 60
       accuracy: 65
     - Name: Ember
-      category: 1
+      category: 0
       moveStat:
         minimum: 20
         maximum: 40
-      moveType: 0
+      moveType: 4
       currentPP: 15
       PP: 15
       power: 60
@@ -85467,13 +85482,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -85483,7 +85499,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -85493,17 +85509,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -85585,13 +85601,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -85601,7 +85618,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -85611,17 +85628,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -85703,13 +85720,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -85719,7 +85737,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -85729,17 +85747,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -85827,13 +85845,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -85843,7 +85862,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -85853,17 +85872,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -90139,13 +90158,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -90155,7 +90175,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -90165,17 +90185,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -90283,13 +90303,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -90299,7 +90320,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -90309,17 +90330,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -90401,13 +90422,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -90417,7 +90439,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -90427,17 +90449,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -90519,13 +90541,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -90535,7 +90558,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -90545,17 +90568,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -90637,13 +90660,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -90653,7 +90677,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -90663,17 +90687,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -90755,13 +90779,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -90771,7 +90796,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -90781,17 +90806,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -91232,13 +91257,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -91248,7 +91274,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -91258,17 +91284,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -91350,13 +91376,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -91366,7 +91393,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -91376,17 +91403,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -91578,13 +91605,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -91594,7 +91622,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -91604,17 +91632,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -91696,13 +91724,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -91712,7 +91741,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -91722,17 +91751,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -91788,13 +91817,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -91804,7 +91834,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -91814,17 +91844,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -91944,13 +91974,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -91960,7 +91991,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -91970,17 +92001,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -92062,13 +92093,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -92078,7 +92110,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -92088,17 +92120,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -92154,13 +92186,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -92170,7 +92203,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -92180,17 +92213,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -92298,13 +92331,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -92314,7 +92348,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -92324,17 +92358,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -92428,13 +92462,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -92444,7 +92479,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -92454,17 +92489,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -92504,21 +92539,27 @@ MonoBehaviour:
   allPokemon:
   - pokemon: {fileID: 0}
     basePokemonID: 0
+    level: 0
     moves: []
   - pokemon: {fileID: 0}
     basePokemonID: 0
+    level: 0
     moves: []
   - pokemon: {fileID: 0}
     basePokemonID: 0
+    level: 0
     moves: []
   - pokemon: {fileID: 0}
     basePokemonID: 0
+    level: 0
     moves: []
   - pokemon: {fileID: 0}
     basePokemonID: 0
+    level: 0
     moves: []
   - pokemon: {fileID: 0}
     basePokemonID: 0
+    level: 0
     moves: []
   allMoves: []
   menu: {fileID: 694700889}
@@ -92610,13 +92651,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -92626,7 +92668,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -92636,17 +92678,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
@@ -93033,13 +93075,14 @@ MonoBehaviour:
   - pokemon: {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6,
       type: 3}
     basePokemonID: 101
+    level: 1
     moves:
     - Name: Tackle
       category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 6
+      moveType: 13
       currentPP: 35
       PP: 35
       power: 40
@@ -93049,7 +93092,7 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 20
@@ -93059,17 +93102,17 @@ MonoBehaviour:
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 10
       PP: 10
       power: 90
       accuracy: 100
     - Name: Razor Leaf
-      category: 1
+      category: 0
       moveStat:
         minimum: 0
         maximum: 0
-      moveType: 2
+      moveType: 6
       currentPP: 25
       PP: 25
       power: 55
