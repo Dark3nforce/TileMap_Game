@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-guid: 93324a471a6d44bb8297d17d8b191e52
-labels:
-- gvh
-- gvh_dotnet-3.5
-- gvh_version-6.3.0
+guid: 3107dcb2f2975884e8f748e4241b716c
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -18,7 +14,7 @@ PluginImporter:
   - first:
       Any: 
     second:
-      enabled: 0
+      enabled: 1
       settings: {}
   - first:
       Editor: Editor
