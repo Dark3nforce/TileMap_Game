@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 20673128}
   - component: {fileID: 20673127}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: HealthForeground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,18 +145,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20673125}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 399201678}
-  m_RootOrder: 0
+  m_Father: {fileID: 466227620}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: -0.000011444092}
-  m_SizeDelta: {x: 209, y: 20}
-  m_Pivot: {x: 0, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 14.906998, y: -9.91}
+  m_SizeDelta: {x: -49.715, y: -40.78}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20673127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 0
+  m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 142289378}
   - component: {fileID: 142289377}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: HealthForeground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -594,14 +594,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1138071528}
-  m_RootOrder: 0
+  m_Father: {fileID: 1415471357}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0.00002117455}
-  m_SizeDelta: {x: 209, y: 16}
-  m_Pivot: {x: 0, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 14.906982, y: 2.0499992}
+  m_SizeDelta: {x: -49.715, y: -64.7}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &142289377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.011921406, a: 1}
+  m_Color: {r: 0.12941177, g: 1, b: 0.12941177, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 0
+  m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -876,7 +876,7 @@ GameObject:
   - component: {fileID: 399201680}
   - component: {fileID: 399201679}
   m_Layer: 5
-  m_Name: Background
+  m_Name: HealthBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -892,8 +892,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 20673126}
+  m_Children: []
   m_Father: {fileID: 466227620}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -915,7 +914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.12941177, g: 0.12941177, b: 0.12941177, a: 0.99215686}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -973,6 +972,7 @@ RectTransform:
   - {fileID: 1238021509}
   - {fileID: 280283859}
   - {fileID: 399201678}
+  - {fileID: 20673126}
   m_Father: {fileID: 1378862601}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1636,7 +1636,7 @@ GameObject:
   - component: {fileID: 1138071530}
   - component: {fileID: 1138071529}
   m_Layer: 5
-  m_Name: Background
+  m_Name: HealthBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1652,15 +1652,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 142289376}
+  m_Children: []
   m_Father: {fileID: 1415471357}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 14.906982, y: -0.099998474}
-  m_SizeDelta: {x: -49.71, y: -60.4}
+  m_AnchoredPosition: {x: 14.906982, y: 2.0499992}
+  m_SizeDelta: {x: -49.715, y: -64.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138071529
 MonoBehaviour:
@@ -2027,6 +2026,7 @@ RectTransform:
   - {fileID: 1246527948}
   - {fileID: 1670688759}
   - {fileID: 1138071528}
+  - {fileID: 142289376}
   m_Father: {fileID: 1378862601}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2915,24 +2915,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allPokemon:
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
+  - {fileID: 5900891777610994904, guid: f6554920830d16244a265f1f3b4765f7, type: 3}
+  - {fileID: 3735767057491635775, guid: 3a03b8b43b611264286af632e0762aa6, type: 3}
+  - {fileID: 6876473659914758365, guid: 98c3fa9d0a9eba449a9f6b4de8e98ad9, type: 3}
+  - {fileID: 5672179643844261084, guid: b39ee2cdf74ef0d4fa4d42c57bcffa18, type: 3}
+  - {fileID: 4258350337317684576, guid: 202fc7eedec77ef4d82146c638f3b46b, type: 3}
+  - {fileID: 2405054582829893953, guid: 519b6c2dd27077144b25a1f0b108093d, type: 3}
   allMoves: []
   menu: {fileID: 0}
 --- !u!4 &1965821308
