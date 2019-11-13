@@ -134,8 +134,18 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         HPForeground.fillAmount = playerHealth/playerFullHealth;
         enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
+=======
+        // HPForeground.fillAmount = playerHealth/playerFullHealth;
+        // enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
+        // updateBattleStatus(playerHealth,playerFullHealth,playerLevel,enemyHealth,enemyFullHealth,enemyLevel);
+
+        HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
+        enemyHPForeground.rectTransform.localScale = new Vector3((enemyHealth)/enemyFullHealth,1,1);
+
+>>>>>>> parent of f85c552... fixed battlescene
        if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
             if(currentSelection<4) {
                 currentSelection++;
@@ -476,8 +486,20 @@ public class BattleManager : MonoBehaviour
             updateBattleStatus(pHealth,playerFullHealth,playerLevel,eHealth,enemyFullHealth,enemyLevel);   
         }
     }
+<<<<<<< HEAD
     public void updateBattleStatus(float playerHealth, float playerFullHealth,float playerLevel, float enemyHealth, float enemyFullHealth, float enmeyLevel) {
         print("update battle UI entered");
+=======
+    float calcDamage(float level,MoveType type,PokemonType attType,PokemonType attckerType,float atkStat,float pow, float defStat, PokemonType defenderType) {
+            float Z = Random.Range(217,255);
+            if(attType == attckerType)
+                return Mathf.Floor(((((((((((2*level/5+2)*atkStat*pow)/defStat)/50)+2)*(float)1.5)*typeModifiers(type,attType,defenderType)/10)*Z)/255)));    
+            else
+                return Mathf.Floor(((((((((((2*level/5+2)*atkStat*pow)/defStat)/50)+2)*1)*typeModifiers(type,attType,defenderType)/10)*Z)/255)));    
+    }
+    public void updateBattleStatus() {
+        
+>>>>>>> parent of f85c552... fixed battlescene
         
         //updating player status
         playerPokemonName.text = playerName;
@@ -489,9 +511,19 @@ public class BattleManager : MonoBehaviour
         	enemyHealth = 0;
         }
         HPInfo.text = playerHealth + "/" + playerFullHealth;
+<<<<<<< HEAD
         // HPForeground.fillAmount = playerHealth/playerFullHealth;
         HPForeground.fillAmount = playerHealth/playerFullHealth;
         // print("Player HP" + playerHealth/playerFullHealth);
+=======
+        // HPForeground.rectTransform.localScale = new Vector3(Mathf.Lerp(playerHealth,playerCurHealth,playerHealth/playerFullHealth),1,1);
+        HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
+        // do {
+        //     HPForeground.rectTransform.localScale = new Vector3(playerCurHealth/playerFullHealth,1,1);
+        //     playerCurHealth--;
+        // } while(playerHealth<=playerCurHealth);
+        
+>>>>>>> parent of f85c552... fixed battlescene
         
 
         //updating enemy status
