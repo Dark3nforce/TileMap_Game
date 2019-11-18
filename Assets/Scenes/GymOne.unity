@@ -6403,11 +6403,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
         type: 3}
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ad337804747d99643a644aaffbead321,
+        type: 3}
     - target: {fileID: 50354309302074784, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
         type: 3}
       propertyPath: m_BodyType
@@ -6435,7 +6456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sign: {fileID: 1627101223}
   signText: {fileID: 1627101222}
-  text: I'm the buff beef boy gym leader. Let's get this started!
+  text: 'Austin: I''m the buff beef boy gym leader. Let''s get this started!'
   active: 0
 --- !u!61 &850655998
 BoxCollider2D:
@@ -13951,6 +13972,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5492935059393410920, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -13976,25 +14017,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 2.1
       objectReference: {fileID: 0}
-    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+    - target: {fileID: 1149018284039999176, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
         type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b7f785bc6f3a844aa3b39d5dc2e520, type: 3}
