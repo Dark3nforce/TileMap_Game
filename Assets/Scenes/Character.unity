@@ -91020,8 +91020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98242bc50ea934644af5a36f59f3dee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  active: 0
 --- !u!1001 &1506836358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93089,20 +93087,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 50354309302074784, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: c082ca0b99ccda940bc012e878940038, type: 2}
     - target: {fileID: 50354309302074786, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 113.39
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 50354309302074786, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.53
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 50354309302074786, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
         type: 3}
@@ -93149,6 +93142,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074784, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: c082ca0b99ccda940bc012e878940038, type: 2}
     - target: {fileID: 50354309302074785, guid: 1df771acbdf05ed44b4dd1b2fd5ac1d1,
         type: 3}
       propertyPath: myRigidBod
