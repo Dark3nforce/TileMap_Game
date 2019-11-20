@@ -349,7 +349,7 @@ namespace Firebase.Sample.Auth {
       DebugLog("Attempting to sign anonymously...");
       DisableUI();
             SceneManager.UnloadSceneAsync("Firebase");
-            SceneManager.LoadSceneAsync("Character");
+            SceneManager.LoadSceneAsync("OverWorld");
       return auth.SignInAnonymouslyAsync().ContinueWithOnMainThread(HandleSignInWithUser);
     }
 
@@ -387,7 +387,7 @@ namespace Firebase.Sample.Auth {
       if (LogTaskCompletion(task, "Sign-in")) {
         DebugLog(String.Format("{0} signed in", task.Result.DisplayName));
                 SceneManager.UnloadSceneAsync("Firebase");
-                SceneManager.LoadSceneAsync("Character");
+                SceneManager.LoadSceneAsync("OverWorld");
       }
     }
 
