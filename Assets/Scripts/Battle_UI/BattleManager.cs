@@ -495,11 +495,13 @@ public class BattleManager : MonoBehaviour
 
         k = Random.Range(0, lg.wildPokemon[j].moves.Count);
         float enemyAttack;
+        
         //----------------------------------------------------
             //need to rework this to check it the current PP of a move != 0
                 enemyAttack = lg.wildPokemon[j].moves[k].power;
                 lg.wildPokemon[j].moves[k].currentPP--;
-        //----------------------------------------------------- 
+        //-----------------------------------------------------
+        print(lg.wildPokemon[j].moves[k].Name); 
 
         enemyCurHealth = enemyHealth;
         playerCurHealth = playerHealth;
