@@ -360,6 +360,7 @@ public class BattleManager : MonoBehaviour
 
         BasePokemon tempDefPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
         tempDefPoke.AddMember(battlePokemon.pokemon);
+        tempDefPoke.transform.localScale += battlePokemon.pokemon.scalePos;
 
         dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.pokemon.image;
         enemyHealth = battlePokemon.pokemon.HP;
@@ -381,6 +382,7 @@ public class BattleManager : MonoBehaviour
         aPoke.transform.parent = attackPodium;
 
         BasePokemon tempAtkPoke = aPoke.AddComponent<BasePokemon>() as BasePokemon;
+        
         //checking player pokemon's health
         //if health is zero,check next and so on
         //if health is not zero, deploy pokemon
@@ -471,6 +473,8 @@ public class BattleManager : MonoBehaviour
                 i++;
             }
         }
+        tempAtkPoke.transform.localScale += player.ownedPokemon[i].pokemon.scalePos;
+        tempAtkPoke.transform.position += player.ownedPokemon[i].pokemon.pos;
         updateBattleStatus();
 
 

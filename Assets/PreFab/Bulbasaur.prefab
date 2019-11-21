@@ -120,3 +120,5 @@ MonoBehaviour:
     nextEvolution: {fileID: 6876473659914758365, guid: 98c3fa9d0a9eba449a9f6b4de8e98ad9,
       type: 3}
     levelUpLevel: 16
+  scalePos: {x: 0.4, y: 0.4, z: 0}
+  pos: {x: 0, y: 0.2, z: 0}

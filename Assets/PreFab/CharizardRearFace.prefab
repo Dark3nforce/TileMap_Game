@@ -119,3 +119,5 @@ MonoBehaviour:
   evolveTo:
     nextEvolution: {fileID: 0}
     levelUpLevel: 0
+  scalePos: {x: 20, y: 20, z: 0}
+  pos: {x: 0, y: -3, z: 0}
