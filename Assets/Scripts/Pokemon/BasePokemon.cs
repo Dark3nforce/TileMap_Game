@@ -22,6 +22,10 @@ public class BasePokemon : MonoBehaviour {
     public bool canEvolve;
     public PokemonEvolution evolveTo;
 
+    // public Transform
+    public Vector3 scalePos;
+    public Vector3 pos;
+
 
 	void Start () {
         maxHP = HP;
