@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Character.unity
-    guid: 592f5d8e934358643b6230fdede64b9d
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GymOne.unity
     guid: d5e3787d4e6aa38449d0292831b50725
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Firebase.unity
     guid: 69d49c774007fb74281e166379d8e47c
   - enabled: 1

@@ -11,6 +11,7 @@ public class BattleManager : MonoBehaviour
     public Player player;
     
     public BattleMenu currentMenu;
+    public BattleMessageType currentMessageType;
     [Header("Selection")]
     public GameObject SelectionMenu;
     public GameObject SelectionInfo;
@@ -121,6 +122,8 @@ public class BattleManager : MonoBehaviour
     int i=0;
     int j;
     int k;
+    double typeMultiplier;
+    bool isWeatherEffectActive = false;
 
 
     //Pokemon Stats Player
@@ -331,13 +334,67 @@ public class BattleManager : MonoBehaviour
                 InfoMenu.gameObject.SetActive(false);
                 break;    
             case BattleMenu.Info:
-                SelectionMenu.gameObject.SetActive(true);
-                SelectionInfo.gameObject.SetActive(true);
+                SelectionMenu.gameObject.SetActive(false);
+                SelectionInfo.gameObject.SetActive(false);
                 movesMenu.gameObject.SetActive(false);
                 movesDetails.gameObject.SetActive(false);
                 InfoMenu.gameObject.SetActive(true);
                 break;    
         }
+    }
+
+
+    //Messages to be displayed at the end or beginning of a round or battle
+    public void battleStatusTextOptions(BattleMessageType t, string playerMoveUsed, string enemyMoveUsed) {
+        currentMessageType = t;
+        string outputMessage = "";
+        switch(t) {
+            case BattleMessageType.StatusEffect:
+                //needs to check for status effects at end of battle round and update health
+                //then display who and what type of status
+                outputMessage = "(Pokemon) is (Effect)! \n";
+                updateMessageStatus(outputMessage);
+                break;
+            case BattleMessageType.WeatherEffect:
+                if(isWeatherEffectActive) {
+                    // outputMessage = ""
+                    //output message based on weather active
+                } else {
+                    break;
+                }
+                break;
+            case BattleMessageType.StartTrainerBattle:
+                //starting a battle with trainer needs to be made first
+                break;
+            case BattleMessageType.StartWildBattle:
+                outputMessage = "Wild " + enemyPokemonName + " Appeared!";
+                break;
+            case BattleMessageType.PlayerAttack:
+                outputMessage = playerPokemonName + " used " + playerMoveUsed + "!";
+                break;
+            case BattleMessageType.EnemyAttack:
+                outputMessage = enemyPokemonName + " used " + enemyMoveUsed + "!";
+                break;
+            case BattleMessageType.MoveEffectiveness:
+                switch(typeMultiplier) {
+                    case 0:
+                        outputMessage = "No Effect";
+                        break;
+                    case 0.5:
+                        outputMessage = "It's not very Effective!";
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        outputMessage = "It's Super Effective!\n A critical hit!";
+                        break;             
+                }
+                break;                        
+        }
+    }
+
+    public void currentStatusEffect() {
+
     }
 
 
@@ -572,6 +629,7 @@ public class BattleManager : MonoBehaviour
     }
     float calcDamage(float level,MoveType type,PokemonType attType,PokemonType attckerType,float atkStat,float pow, float defStat, PokemonType defenderType) {
             float Z = Random.Range(217,255);
+            typeMultiplier = typeModifiers(type,attType,defenderType);
             float output;
             if(attType == attckerType) {
                 // return Mathf.Floor(((((((((((2*level/5+2)*atkStat*pow)/defStat)/50)+2)*(float)1.5)*typeModifiers(type,attType,defenderType)/10)*Z)/255)));
@@ -654,6 +712,25 @@ public class BattleManager : MonoBehaviour
             playerFainted();
         }
         changeMenu(BattleMenu.Selection);
+    }
+
+    
+    void updateInfoStatus() {
+        //selection info - info panel
+        changeMenu(BattleMenu.Selection);
+        SelectionInfoText.text = "What will "+ playerPokemonName +" do?";
+    }
+
+    //should be called at start and end of battle
+    //updates after every attack and defense
+    //attack made, crit hit/super effective/normal/not very effective, status effect
+    void updateMessageStatus(string messageTxt) {
+        changeMenu(BattleMenu.Info);
+        // string messageTxt = "";
+
+
+
+        InfoText.text = messageTxt;
     }
     void bothFainted() {
         Debug.Log("Both Pokemon Fainted");
@@ -982,4 +1059,13 @@ public enum BattleMenu {
     Bag,
     Fight,
     Info
+}
+public enum BattleMessageType {
+    StatusEffect,
+    WeatherEffect,
+    StartWildBattle,
+    StartTrainerBattle,
+    PlayerAttack,
+    EnemyAttack,
+    MoveEffectiveness //crit hit,supereffective, etc.
 }
