@@ -178,6 +178,17 @@ public class BattleManager : MonoBehaviour
         //     playerCurHealth--;
         // } while(playerHealth<=playerCurHealth);
 
+        // if(enemyHealth < enemyCurHealth) {
+        //     float enemyHealthDif = enemyCurHealth-enemyHealth;
+        //     // enemyHPForeground.rectTransform.localScale = new Vector3(enemyHealth/enemyFullHealth,1,1);
+        //     // enemyHPForeground.fillAmount = Mathf.Lerp(enemyCurHealth/enemyFullHealth, enemyHealth/enemyFullHealth, Time.deltaTime);
+        //     enemyHPForeground.fillAmount = enemyCurHealth/enemyFullHealth;
+        // }
+        // if(playerHealth < playerCurHealth) {
+        //     HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
+        //     // HPForeground.fillAmount = Mathf.Lerp(playerCurHealth/playerFullHealth,playerHealth/playerFullHealth, Time.deltaTime * 10f);
+        // }
+
        if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
             if(currentSelection<4) {
                 currentSelection++;
@@ -345,6 +356,7 @@ public class BattleManager : MonoBehaviour
 
 
     //Messages to be displayed at the end or beginning of a round or battle
+    //not being used yet
     public void battleStatusTextOptions(BattleMessageType t, string playerMoveUsed, string enemyMoveUsed) {
         currentMessageType = t;
         string outputMessage = "";
@@ -393,6 +405,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    //not being used yet
     public void currentStatusEffect() {
 
     }
@@ -549,6 +562,8 @@ public class BattleManager : MonoBehaviour
         // print("battle called");
         // bool playerHasAttacked = false;
         // bool enemyHasAttacked = false;
+        float enemyPreviousHealth = enemyHealth;
+        float playerPreviousHealth = playerHealth;
 
         k = Random.Range(0, lg.wildPokemon[j].moves.Count);
         float enemyAttack;
@@ -564,25 +579,29 @@ public class BattleManager : MonoBehaviour
         playerCurHealth = playerHealth;
         
 
-
         if(playerSpeed >=enemySpeed) { //player speed > enemy speed
 
             //player Attack
             if(type == MoveType.Physical) {
+
                 enemyHealth -= calcDamage(playerLevel,type,moveType,playerType,attackStat,pow,defenseStatEnemy,enemyType);
                 print("player attacked");
+                updateEnemyHealthBar(enemyHealth);
             } else if(type == MoveType.Special) {
                 enemyHealth -= calcDamage(playerLevel,type,moveType,playerType,specAttackStat,pow,specDefenseStatEnemy,enemyType);
                 print("player attacked");
+                updateEnemyHealthBar(enemyHealth);
             }
             
             if(enemyHealth >= 0) {
                 if(lg.wildPokemon[j].moves[k].category == MoveType.Physical) {
                     playerHealth -= calcDamage(enemyLevel,lg.wildPokemon[j].moves[k].category,lg.wildPokemon[j].moves[k].moveType,enemyType,attackStatEnemy,lg.wildPokemon[j].moves[k].power,defenseStat,playerType);
                     print("enemy attacked");
+                    updatePlayerHealthBar(playerHealth);
                 } else if(lg.wildPokemon[j].moves[k].category == MoveType.Special) {
                     playerHealth -= calcDamage(enemyLevel,lg.wildPokemon[j].moves[k].category,lg.wildPokemon[j].moves[k].moveType,enemyType,specAttackStatEnemy,lg.wildPokemon[j].moves[k].power,specDefenseStat,playerType);
                     print("enemy attacked");
+                    updatePlayerHealthBar(playerHealth);
                 }
             }
             print("EnemyHealth"+enemyHealth);
@@ -594,18 +613,22 @@ public class BattleManager : MonoBehaviour
             if(lg.wildPokemon[j].moves[k].category == MoveType.Physical) {
                 playerHealth -= calcDamage(enemyLevel,lg.wildPokemon[j].moves[k].category,lg.wildPokemon[j].moves[k].moveType,enemyType,attackStatEnemy,lg.wildPokemon[j].moves[k].power,defenseStat,playerType);
                 print("enemy attacked");
+                updatePlayerHealthBar(playerHealth);
             } else if(lg.wildPokemon[j].moves[k].category == MoveType.Special) {
                 playerHealth -= calcDamage(enemyLevel,lg.wildPokemon[j].moves[k].category,lg.wildPokemon[j].moves[k].moveType,enemyType,specAttackStatEnemy,lg.wildPokemon[j].moves[k].power,specDefenseStat,playerType);
                 print("enemy attacked");
+                updatePlayerHealthBar(playerHealth);
             }
             print("PlayerHealth"+playerHealth);
             if(playerHealth > 0) {
                 if(type == MoveType.Physical) {
                     enemyHealth -= calcDamage(playerLevel,type,moveType,playerType,attackStat,pow,defenseStatEnemy,enemyType);
                     print("player attacked");
+                    updateEnemyHealthBar(enemyHealth);
                 } else if(type == MoveType.Special) {
                     enemyHealth -= calcDamage(playerLevel,type,moveType,playerType,specAttackStat,pow,specDefenseStatEnemy,enemyType);
                     print("player attacked");
+                    updateEnemyHealthBar(enemyHealth);
                 }
             }
             updateBattleStatus();
@@ -662,6 +685,60 @@ public class BattleManager : MonoBehaviour
                 return Mathf.Floor(output);
             }    
     }
+
+    //update enemy healthBar
+    public void updateEnemyHealthBar(float enemyHealth) {
+        float midLimit = enemyFullHealth * 0.50f;
+        float lowLimit = enemyFullHealth * 0.15f;
+        float health = enemyHealth;
+
+        // if(enemyHealth < lowLimit) {
+        //     enemyHPForeground.color = Color.red;
+        // } else if (enemyHealth < midLimit) {
+        //     enemyHPForeground.color = Color.yellow;
+        // } else {
+        //     enemyHPForeground.color = Color.green;
+        // }
+
+        if(health < midLimit) {
+            enemyHPForeground.color = Color.Lerp(Color.red, Color.yellow, health/midLimit);
+            // enemyHPForeground.rectTransform.localScale = new Vector3((enemyHealth)/enemyFullHealth,1,1);
+            // enemyHPForeground.fillAmount = Mathf.Lerp(enemyPreviousHealth,health/enemyFullHealth, Time.deltaTime * 10f);
+            enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
+        } else {
+            enemyHPForeground.color = Color.Lerp(Color.yellow, Color.green, (health - midLimit)/(enemyFullHealth - midLimit));
+            // enemyHPForeground.rectTransform.localScale = new Vector3((enemyHealth)/enemyFullHealth,1,1);
+            // enemyHPForeground.fillAmount = Mathf.Lerp(enemyPreviousHealth,health/enemyFullHealth, Time.deltaTime * 10f);
+            enemyHPForeground.fillAmount = enemyHealth/enemyFullHealth;
+        }
+    }
+    //upate player healthBar
+    public void updatePlayerHealthBar(float playerHealth) {
+        float midLimit = playerFullHealth * 0.50f;
+        float lowLimit = playerFullHealth * 0.15f;
+        float health = playerHealth;
+
+        // if(enemyHealth < lowLimit) {
+        //     enemyHPForeground.color = Color.red;
+        // } else if (enemyHealth < midLimit) {
+        //     enemyHPForeground.color = Color.yellow;
+        // } else {
+        //     enemyHPForeground.color = Color.green;
+        // }
+
+        if(health < midLimit) {
+            HPForeground.color = Color.Lerp(Color.red, Color.yellow, health/midLimit);
+            // HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
+            // HPForeground.fillAmount = Mathf.Lerp(playerPreviousHealth,health/playerFullHealth, Time.deltaTime * 10f);
+            HPForeground.fillAmount = playerHealth/playerFullHealth;
+        } else {
+            HPForeground.color = Color.Lerp(Color.yellow, Color.green, (health - midLimit)/(playerFullHealth - midLimit));
+            // HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
+            // HPForeground.fillAmount = Mathf.Lerp(playerPreviousHealth,health/playerFullHealth, Time.deltaTime * 10f);
+            HPForeground.fillAmount = playerHealth/playerFullHealth;
+        }
+    }
+
     public void updateBattleStatus() {
         
         
@@ -675,9 +752,12 @@ public class BattleManager : MonoBehaviour
         	enemyHealth = 0;
         }
         HPInfo.text = playerHealth + "/" + playerFullHealth;
+
+        //--------------------------- comment out later ----------------------------
         // HPForeground.rectTransform.localScale = new Vector3(Mathf.Lerp(playerHealth,playerCurHealth,playerHealth/playerFullHealth),1,1);
 
-        HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
+
+        // HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
         
         // do {
         //     HPForeground.rectTransform.localScale = new Vector3(playerCurHealth/playerFullHealth,1,1);
@@ -695,7 +775,10 @@ public class BattleManager : MonoBehaviour
         //     enemyHPForeground.rectTransform.localScale = new Vector3(enemyCurHealth/enemyFullHealth,1,1);
         //     enemyCurHealth--;
         // } while(enemyHealth<=enemyCurHealth);
-        enemyHPForeground.rectTransform.localScale = new Vector3((enemyHealth)/enemyFullHealth,1,1);
+
+
+        // enemyHPForeground.rectTransform.localScale = new Vector3((enemyHealth)/enemyFullHealth,1,1);
+        // -------------------------------- end of comment out ----------------------------------------
         
         //need to create method when player is faints
         //playerFaint();
